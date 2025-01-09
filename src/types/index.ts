@@ -60,3 +60,29 @@ export interface AgentHeaderProps {
 export interface ChatInputProps {
   onSend: (message: string) => void;
 }
+export interface ButtonProps {
+  variant: "outline" | "solid";
+  children: React.ReactNode;
+  onClick?: () => void;
+}
+
+export interface LocationSwitcherProps {
+  country: string;
+  onContinue?: () => void;
+  onSwitch?: () => void;
+}
+
+export interface BadgeProps {
+  icon: string;
+  text: string;
+  linkText: string;
+  linkIcon: string;
+}
+
+export interface HeroSectionProps {
+  badge: BadgeProps;
+  title: string;
+  description: string;
+  ctaText: string;
+  heroImage: string;
+}

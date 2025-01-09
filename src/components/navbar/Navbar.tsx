@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef } from "react";
 import NavLink2 from "../ui/elements/NavLink2";
 import { Icon } from "../ui/elements/Icon";
@@ -8,15 +9,15 @@ import { InsightsMegaMenu } from "./InsightsMegaMenu";
 import { MoreMegaMenu } from "./MoreMegaMenu";
 
 const Navbar = () => {
+  const [activeMenu, setActiveMenu] = useState<string | null>("About");
   const navLinks = [
-    { text: "About", isActive: true },
-    { text: "Join EMCC", isActive: false },
-    { text: "Knowledge", isActive: false },
-    { text: "Insights", isActive: false },
-    { text: "More +", isActive: false },
+    { text: "About", isactive: activeMenu === "About" },
+    { text: "Join EMCC", isactive: activeMenu === "Join EMCC" },
+    { text: "Knowledge", isactive: activeMenu === "Knowledge" },
+    { text: "Insights", isactive: activeMenu === "Insights" },
+    { text: "More +", isactive: activeMenu === "More +" },
   ];
 
-  const [activeMenu, setActiveMenu] = useState<string | null>("about");
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = (text: string) => {

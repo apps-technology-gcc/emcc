@@ -104,6 +104,9 @@ interface NavLink2Props
     | "success"
     | "danger"
     | "warning";
+  isactive?: boolean;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 const NavLink2 = React.forwardRef<HTMLAnchorElement, NavLink2Props>(
@@ -120,6 +123,9 @@ const NavLink2 = React.forwardRef<HTMLAnchorElement, NavLink2Props>(
       iconPosition = "left",
       tag,
       tagVariant = "primary",
+      isactive = false,
+      onMouseEnter,
+      onMouseLeave,
       ...props
     },
     ref
@@ -135,13 +141,22 @@ const NavLink2 = React.forwardRef<HTMLAnchorElement, NavLink2Props>(
       </>
     );
 
+    const activeClass = isactive ? "text-green-500" : "text-neutral-800";
+
     return (
       <LinkComponent
         ref={ref}
         href={href}
-        className={navLinkVariants({ variant, size, underline, className })}
+        className={`${navLinkVariants({
+          variant,
+          size,
+          underline,
+          className,
+        })} ${activeClass}`}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         {...props}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
       >
         {content}
       </LinkComponent>
