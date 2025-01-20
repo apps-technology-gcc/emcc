@@ -2,13 +2,14 @@ import * as React from "react";
 import { StrengthCard } from "./StrengthCard";
 import { StrengthsSectionProps } from "./types";
 import { Text } from "@/src/components/ui/elements/Text";
+import Section from "@/src/components/layout/Section";
 
 export const StrengthsSection: React.FC<StrengthsSectionProps> = ({
   strengths,
 }) => {
   return (
-    <section
-      className="flex flex-col justify-center self-stretch px-14 py-20 bg-white max-md:px-5"
+    <Section
+      className="flex flex-col justify-center self-stretch py-20 bg-white max-md:px-5"
       aria-labelledby="strengths-title"
     >
       <div className="flex flex-col w-full max-md:max-w-full">
@@ -32,6 +33,6 @@ export const StrengthsSection: React.FC<StrengthsSectionProps> = ({
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

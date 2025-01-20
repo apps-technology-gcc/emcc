@@ -4,6 +4,7 @@ import * as React from "react";
 import NavLink from "@/src/components/ui/elements/NavLink";
 import { NewsCard } from "@/src/components/card/NewsCard";
 import { Text } from "@/src/components/ui/elements/Text";
+import Section from "@/src/components/layout/Section";
 
 const filterCategories = [
   "A-Z",
@@ -77,7 +78,10 @@ export const WhatsNew: React.FC = () => {
   const [activeFilter, setActiveFilter] = React.useState("A-Z");
 
   return (
-    <section className="flex flex-col justify-center self-stretch px-14 py-20 bg-white max-md:px-5">
+    <Section
+      bgColor="white"
+      className="flex flex-col justify-center self-stretch py-20 bg-white max-md:px-5"
+    >
       <div className="flex flex-col w-full max-md:max-w-full">
         <div className="flex flex-col gap-5 max-w-full w-[700px]">
           <div className="flex flex-col max-w-full text-2xl font-semibold uppercase text-zinc-900 w-[168px]">
@@ -128,6 +132,6 @@ export const WhatsNew: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
