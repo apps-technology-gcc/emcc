@@ -2,6 +2,7 @@
 import * as React from "react";
 import { SearchBar } from "./SearchBar";
 import { WelcomeHeader } from "./WelcomeHeader";
+import Section from "@/src/components/layout/Section";
 
 export const WelcomeSection: React.FC = () => {
   const handleSearch = (query: string) => {
@@ -9,7 +10,7 @@ export const WelcomeSection: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-start px-14 py-20 w-full bg-white max-md:px-5 max-md:max-w-full">
+    <Section bgColor="white">
       <div className="flex flex-col max-w-full w-[960px]">
         <WelcomeHeader
           title="Welcome"
@@ -22,6 +23,6 @@ export const WelcomeSection: React.FC = () => {
           />
         </div>
       </div>
-    </div>
+    </Section>
   );
 };

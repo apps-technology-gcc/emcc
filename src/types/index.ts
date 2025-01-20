@@ -86,3 +86,35 @@ export interface HeroSectionProps {
   ctaText: string;
   heroImage: string;
 }
+export interface SearchBarProps {
+  placeholder: string;
+  onSearch: (query: string) => void;
+}
+
+export interface WelcomeHeaderProps {
+  title: string;
+  description: string;
+}
+
+export interface StrengthCardProps {
+  imageSrc: string;
+  title: string;
+  iconSrc?: string;
+}
+
+export interface StrengthsSectionProps {
+  strengths: StrengthCardProps[];
+}
+
+export interface NewsCardProps {
+  imageUrl: string;
+  title: string;
+  description: string;
+  imageAlt: string;
+}
+
+export interface FilterButtonProps {
+  label: string;
+  isActive?: boolean;
+  onClick?: () => void;
+}

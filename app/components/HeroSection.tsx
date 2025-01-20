@@ -8,6 +8,7 @@ import ideaGif from "@/public/gif/idea.gif";
 import smileSvg from "@/public/smile.svg";
 
 import Image from "next/image";
+import Section from "@/src/components/layout/Section";
 export const HeroSection: React.FC<HeroSectionProps> = ({
   badge,
   title,
@@ -16,7 +17,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   heroImage,
 }) => {
   return (
-    <div className="justify-end relative pl-14 w-full bg-white max-md:pl-5 max-md:max-w-full">
+    <Section bgColor="white" className="relative">
       <div className="flex  py-[81.5px]  max-md:flex-col">
         <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
           <div className="pt-20 flex w-auto gap-12 flex-col self-stretch  my-auto  max-md:mt-10 max-md:-mr-3 max-md:max-w-full">
@@ -63,17 +64,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               className="object-cover w-full h-full"
             />
           </div>
-          {/* Width
-140px
-Heigh
-t
-140px
-To
-p
-424px
-Lef
-t
-193px */}
           <div className="absolute px-3 py-[35px] p-5 top-[424px] left-[193px] bg-[#ffffff] w-[140px] h-[140px]">
             <Image
               src={smileSvg}
@@ -85,6 +75,6 @@ t
           </div>
         </div>
       </div>
-    </div>
+    </Section>
   );
 };

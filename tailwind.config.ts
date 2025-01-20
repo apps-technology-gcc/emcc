@@ -8,6 +8,18 @@ module.exports = {
     "./stories/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: {
+      xs: "640px",
+      sm: "768px",
+      md: "1044px",
+      lg: "1190px",
+      xl: "1210px",
+      "2xl": "1210px",
+    },
+    container: {
+      padding: "20px",
+      center: true,
+    },
     extend: {
       colors: {
         // Core colors
@@ -82,7 +94,7 @@ module.exports = {
     },
   },
   plugins: [
-    require("tailwind-scrollbar"),
+    // require("tailwind-scrollbar"),
     // require("tailwindcss-bg-clip")(),
     // function ({ addUtilities }) {
     //   addUtilities({
