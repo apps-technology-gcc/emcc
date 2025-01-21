@@ -20,7 +20,7 @@ export const Cookies: React.FC<CookieConsentProps> = ({
       <div className="flex gap-8 items-center self-stretch my-auto text-sm text-center min-w-[240px]">
         <div className="flex gap-5 items-center self-stretch my-auto min-w-[240px]">
           <button
-            onClick={onManage}
+            // onClick={onManage}
             className="gap-2.5 self-stretch my-auto underline border-solid border-b-[0.5px] border-b-zinc-900 decoration-auto decoration-solid text-zinc-900 underline-offset-auto"
           >
             Manage Settings
@@ -29,12 +29,17 @@ export const Cookies: React.FC<CookieConsentProps> = ({
             variant="default"
             btnType="primary"
             outline
-            onClick={onReject}
+            // onClick={onReject}
             className=""
           >
             Reject All
           </Button>
-          <Button variant="default" btnType="primary" onClick={onAccept}>
+          <Button
+            variant="default"
+            btnType="primary"
+
+            // onClick={onAccept}
+          >
             Accept All
           </Button>
         </div>

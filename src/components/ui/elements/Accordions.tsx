@@ -79,7 +79,10 @@ const Accordion = React.forwardRef<
         >
           {title}
         </Text>
-        <Icon className="text-neutralDark" name={isOpen ? "remove" : "add"} />
+        <Icon
+          className="text-neutralDark text-[20px]"
+          name={isOpen ? "remove" : "add"}
+        />
       </div>
 
       <div className={cn(contentVariants({ variant, isOpen }))}>

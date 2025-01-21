@@ -99,7 +99,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <Text variant="button" as="span">
           {children}
         </Text>
-        {Icon && <span>{Icon}</span>}
+        {Icon && <>{Icon}</>}
       </button>
     );
   }

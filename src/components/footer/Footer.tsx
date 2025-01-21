@@ -36,9 +36,15 @@ const legalLinks = [
 const socialLinks = ["Facebook", "Instagram", "LinkedIn", "YouTube"];
 
 export const Footer: React.FC = () => {
-  const handleCookieAccept = () => {};
-  const handleCookieReject = () => {};
-  const handleCookieManage = () => {};
+  const handleCookieAccept = () => {
+    console.log("change");
+  };
+  const handleCookieReject = () => {
+    console.log("change");
+  };
+  const handleCookieManage = () => {
+    console.log("change");
+  };
 
   return (
     <div className="flex relative flex-col bg-neutral-100">
