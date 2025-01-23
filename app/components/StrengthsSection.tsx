@@ -9,6 +9,7 @@ export const StrengthsSection: React.FC<StrengthsSectionProps> = ({
 }) => {
   return (
     <Section
+      bgColor="white"
       className="flex flex-col justify-center self-stretch py-20 bg-white max-md:px-5"
       aria-labelledby="strengths-title"
     >
@@ -22,7 +23,7 @@ export const StrengthsSection: React.FC<StrengthsSectionProps> = ({
             role="presentation"
           />
         </header>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-8 items-start mt-12 w-full max-md:mt-10 max-md:max-w-full">
+        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 gap-8 items-start mt-12 w-full max-md:mt-10 max-md:max-w-full">
           {strengths.map((strength, index) => (
             <StrengthCard
               key={index}

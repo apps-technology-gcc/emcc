@@ -14,7 +14,7 @@ const Breadcrumbs = ({
   return (
     <div className="flex items-center gap-2.5">
       {list.map((item, index) => (
-        <div key={index}>
+        <div key={index} className="flex items-center gap-2.5">
           {item.href ? (
             <Link
               key={item.name}
@@ -38,15 +38,23 @@ const Breadcrumbs = ({
             <Text
               variant="button"
               key={item.name}
-              className={cn(
-                "text-gray-500  hover:text-gray-900",
-                list.length !== 1 && "underline"
-              )}
+              className={cn("text-gray-500  hover:text-gray-900")}
             >
               {item.name}
             </Text>
           )}
-          {list.indexOf(item) < list.length - 1 && <span>/</span>}
+          {list.indexOf(item) < list.length - 1 && (
+            <span
+              className={cn(
+                "text-gray-500",
+                textVariants({
+                  variant: "button",
+                })
+              )}
+            >
+              /
+            </span>
+          )}
         </div>
       ))}
     </div>

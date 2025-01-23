@@ -20,18 +20,14 @@ import PresidentImg from "@/public/president.png";
 import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
-import BoardText from "../components/BoardText";
-import BoardMember from "../components/BoardMember";
+import Timeline from "./components/TimeLine";
 const page = () => {
   const bredList = [
     {
       name: "About Us",
       //   href: "/",
     },
-    {
-      name: "Board & Governance",
-      href: "board-and-governance",
-    },
+
     // {
     //   name: "Contact",
     //   href: "/contact",
@@ -46,7 +42,7 @@ const page = () => {
             variant={"h1_page_title"}
             className="uppercase text-white"
           >
-            Board & Governance
+            ABOUT EMCC <br /> Global
           </Text>
           <Text variant={"body"} className="text-white">
             Posuere diam massa in morbi posuere nullam. Accumsan dictum lacus
@@ -61,164 +57,28 @@ const page = () => {
       </Breadcrumb>
       <Section bgColor="white">
         <div className="grid grid-cols-11 gap-16">
-          <div className="col-span-7 flex flex-col gap-20">
+          <div className="col-span-7 flex flex-col gap-12">
             <div className="flex flex-col gap-12">
-              <SectionTitle title="Executive Board & Governance" />
+              <SectionTitle title="EMCC Timeline 2006-2016" />
               <div className="flex flex-col gap-8">
                 <Text variant={"body"} className="text-neutral">
-                  The EMCC Middle East Board & Executive team exists to provide
-                  advice, support and resource to Subscription Members. The
-                  Executive team looks over the operations by bringing over the
-                  global standard of coaching and mentorship to the Middle East.
+                  Lorem ipsum dolor sit amet consectetur. Mi sit turpis eu
+                  euismod. Et cras urna sagittis lacus ipsum est turpis
+                  tincidunt ipsum. Aliquam velit urna fusce consequat lacus
+                  dolor. Amet ultrices mi pellentesque in dignissim amet. Vitae
+                  tempor blandit nisi arcu. Nulla faucibus adipiscing nibh orci
+                  in sapien dignissim. Ornare volutpat eleifend ornare est. Quis
+                  sit congue natoque facilisis elementum diam purus consectetur
+                  massa.
                 </Text>
-
-                <SectionLink title=" Our Organisational Structure" />
               </div>
-              <div className="flex flex-col">
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="What We Do"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="Our Members"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="Our Mission"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-              </div>
-            </div>
-            {/* President */}
-            {/* <div className=" flex flex-col rounded-md">
-              <Text
-                variant={"section_title"}
-                className="text-neutralDark mb-8 "
-              >
-                
-              </Text>
-              <div className="flex items-start gap-8 flex-wrap md:flex-nowrap">
-                <div className="min-w-[200px]">
-                  <Image
-                    alt="President"
-                    src={PresidentImg}
-                    width={200}
-                    height={230}
-                    className="flex-auto"
-                  />
-                </div>
-                <div className="flex items-start flex-col gap-5">
-                  <Text variant={"card_title_large"}>Afifa Mohammad</Text>
-                  <Text variant={"body"} className="text-neutral">
-                  
-                  </Text>
-                </div>
-              </div>
-            </div> */}
-            <BoardMember
-              title="President"
-              name="Afifa Mohammad"
-              description="  Lorem ipsum dolor sit amet consectetur. Lorem senectus amet
-                    nullam mollis. Velit risus felis a a. Adipiscing platea a
-                    tincidunt tellus. Libero ac vivamus sit lacus velit et ac
-                    tempor mattis. Morbi dictum dictumst ac sed diam morbi. Ut
-                    proin pharetra nam vitae. Egestas tellus ultrices dolor
-                    risus donec commodo."
-              // email="emailname@domain.com"
-              imageSrc={PresidentImg.src}
-            />
-            {/* FREELANCER */}
-            {/* <div className=" flex flex-col rounded-md">
-              <Text
-                variant={"section_title"}
-                className="text-neutralDark mb-8 "
-              >
-                Board Secretary
-              </Text>
-              <div className="flex items-start gap-8 flex-wrap md:flex-nowrap">
-                <div className="min-w-[200px]">
-                  <Image
-                    alt="President"
-                    src={FreelancerImg}
-                    width={200}
-                    height={230}
-                    className="flex-auto"
-                  />
-                </div>
-                <div className="flex items-start flex-col gap-5">
-                  <Text variant={"card_title_large"}>Mohammad Abdullah</Text>
-                  <Text variant={"body"} className="text-neutral">
-                    Lorem ipsum dolor sit amet consectetur. Lorem senectus amet
-                    nullam mollis. Velit risus felis a a. Adipiscing platea a
-                    tincidunt tellus. Libero ac vivamus sit lacus velit et ac
-                    tempor mattis. Morbi dictum dictumst ac sed diam morbi. Ut
-                    proin pharetra nam vitae. Egestas tellus ultrices dolor
-                    risus donec commodo.
-                  </Text>
-                  <div className="flex items-center gap-2.5">
-                    <Icon name="email" className="text-[20px]" />
-                    <Text variant={"small"}>emailname@domain.com</Text>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-            <BoardMember
-              title="Board Secretary"
-              name="Mohammad Abdullah"
-              description="Lorem ipsum dolor sit amet consectetur. Lorem senectus amet nullam mollis. Velit risus felis a a. Adipiscing platea a tincidunt tellus. Libero ac vivamus sit lacus velit et ac tempor mattis. Morbi dictum dictumst ac sed diam morbi. Ut proin pharetra nam vitae. Egestas tellus ultrices dolor risus donec commodo."
-              email="emailname@domain.com"
-              imageSrc={FreelancerImg.src}
-            />
-            {/* BOARD */}
-
-            <BoardText
-              text=" The Board is accountable to our members and oversees the
-                Councils’ regionalactivities in the Middle East. It’s made up of
-                senior leaders from a broad range of industry and sectors,
-                member firms and organisations."
-            />
-            <div className=" flex flex-col rounded-md">
-              <Text
-                variant={"section_title"}
-                className="text-neutralDark mb-8 "
-              >
-                Board Secretary
-              </Text>
-              <div className="grid mb-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-              </div>
-              <SectionLink title="Executive Board Structure" />
-            </div>
-            <div className=" flex flex-col rounded-md">
-              <Text
-                variant={"section_title"}
-                className="text-neutralDark mb-8 "
-              >
-                Board Advisors (Non-Executive Board Members)
-              </Text>
-              <div className="grid mb-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-              </div>
-              <SectionLink title="Advisory Board Structure" />
+              <Timeline />
             </div>
           </div>
           <div className="col-span-4">
             <div className="flex flex-col gap-12">
               <div className="">
-                <div className="p-5 mb-[17px] bg-primary-100">
+                <div className="p-5 mb-[17px] bg-pink-400">
                   <Text
                     variant={"side_nav_header"}
                     className="text-neutralDark"

@@ -12,11 +12,20 @@ import { Button } from "@/src/components/ui/elements/Button";
 import { Icon } from "@/src/components/ui/elements/Icon";
 import Image from "next/image";
 import world_map from "@/public/world_map.png";
-import flag from "@/public/flag.png";
 import { cn } from "@/src/lib/utils";
 import NavLink2 from "@/src/components/ui/elements/NavLink2";
 import sqricon from "@/public/sqricon.svg";
-import Guiding from "../components/Guiding";
+import PresidentImg from "@/public/president.png";
+import FreelancerImg from "@/public/freelancer.png";
+import MemberCard from "@/src/components/card/MemberCard";
+import SectionLink from "@/src/components/common/SectionLink";
+import AboutGlobalImg from "@/public/about-global.png";
+import Guiding from "../../components/Guiding";
+import TextContentSection from "../../components/TextContentSection";
+import AccordionGroup from "../../components/AccordionGroup";
+import EmccFlag from "@/public/emcc-flag.svg";
+import flag from "@/public/flag.png";
+
 const page = () => {
   const bredList = [
     {
@@ -44,6 +53,92 @@ const page = () => {
         "EMCC works towards professionalism of Mentoring and Coaching based on research and best practice...",
     },
   ];
+  const textContentData = {
+    "The Work We Do": [
+      {
+        id: 1,
+        content:
+          "EMCCs vision is to be the ‘go to body’ for setting the highest quality standards in Mentoring and Coaching. In this section, we set out the standards that we believe you should use as a guide, whether you are a coach, mentor, coach or mentor supervisor, or trainer or programme provider. It comprises competences, CPD guidance, supervision competences and guidance, the Global Code of Ethics, diversity and regulation. It aims to answer some important questions:",
+      },
+      {
+        id: 2,
+        content:
+          "We currently have two individual membership categories so that you can select the membership which is right for you and that best matches your experience, expertise and extent of your practice.",
+      },
+      {
+        id: 3,
+        content:
+          "See below for a brief description of each category. Further down the page is a guide to help you to map your coaching and mentoring capability to decide the category for you. Once you have made your selection click on the appropriate membership category listed in the box on the right of this page.",
+      },
+      {
+        id: 4,
+        content:
+          "This will tell you more about the membership benefits, the price and take you to the joining application form",
+      },
+    ],
+    "Our Strategy": [
+      {
+        id: 1,
+        content:
+          "EMCCs vision is to be the ‘go to body’ for setting the highest quality standards in Mentoring and Coaching. In this section, we set out the standards that we believe you should use as a guide, whether you are a coach, mentor, coach or mentor supervisor, or trainer or programme provider. It comprises competences, CPD guidance, supervision competences and guidance, the Global Code of Ethics, diversity and regulation. It aims to answer some important questions:",
+      },
+      {
+        id: 2,
+        content:
+          "We currently have two individual membership categories so that you can select the membership which is right for you and that best matches your experience, expertise and extent of your practice.",
+      },
+      {
+        id: 3,
+        content:
+          "See below for a brief description of each category. Further down the page is a guide to help you to map your coaching and mentoring capability to decide the category for you. Once you have made your selection click on the appropriate membership category listed in the box on the right of this page.",
+      },
+      {
+        id: 4,
+        content:
+          "This will tell you more about the membership benefits, the price and take you to the joining application form.",
+      },
+    ],
+  };
+
+  const accordionData1 = [
+    {
+      id: 1,
+      title: "Our Founders",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 2,
+      title: "Our History",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 3,
+      title: "What We Do",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 4,
+      title: "Our Mission",
+      content: "This is the content<br/>This is another paragraph",
+    },
+  ];
+  const accordionData2 = [
+    {
+      id: 1,
+      title: "Our Strategic Priorities",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 2,
+      title: "Our Partnerships",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 3,
+      title: "Find Out More",
+      content: "This is the content<br/>This is another paragraph",
+    },
+  ];
 
   return (
     <>
@@ -54,7 +149,7 @@ const page = () => {
             variant={"h1_page_title"}
             className="uppercase text-white"
           >
-            About Us
+            ABOUT EMCC <br /> Global
           </Text>
           <Text variant={"body"} className="text-white">
             Posuere diam massa in morbi posuere nullam. Accumsan dictum lacus
@@ -69,131 +164,38 @@ const page = () => {
       </Breadcrumb>
       <Section bgColor="white">
         <div className="grid grid-cols-11 gap-16">
-          <div className="col-span-7">
+          <div className="col-span-7 flex flex-col gap-20">
             <div className="flex flex-col gap-12">
-              <SectionTitle title="The Work We Do" />
-              <div className="flex flex-col gap-8">
-                <Text variant={"body"} className="text-neutral">
-                  EMCCs vision is to be the ‘go to body’ for setting the highest
-                  quality standards in Mentoring and Coaching. In this section,
-                  we set out the standards that we believe you should use as a
-                  guide, whether you are a coach, mentor, coach or mentor
-                  supervisor, or trainer or programme provider. It comprises
-                  competences, CPD guidance, supervision competences and
-                  guidance, the Global Code of Ethics, diversity and regulation.
-                  It aims to answer some important questions:
-                </Text>
-                <Text variant={"body"} className="text-neutral">
-                  We currently have two individual membership categories so that
-                  you can select the membership which is right for you and that
-                  best matches your experience, expertise and extent of your
-                  practice.
-                </Text>
-                <Text variant={"body"} className="text-neutral">
-                  See below for a brief description of each category. Further
-                  down the page is a guide to help you to map your coaching and
-                  mentoring capability to decide the category for you. Once you
-                  have made your selection click on the appropriate membership
-                  category listed in the box on the right of this page.
-                </Text>
-                <Text variant={"body"} className="text-neutral">
-                  This will tell you more about the membership benefits, the
-                  price and take you to the joining application form
-                </Text>
-              </div>
-              <div className="flex flex-col">
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="What We Do"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="Our Members"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="Our Mission"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-              </div>
+              <TextContentSection
+                title="The Work We Do"
+                texts={textContentData["The Work We Do"]}
+              />
+
+              <AccordionGroup items={accordionData1} />
+              <Image src={AboutGlobalImg} width={450} height={500} alt="path" />
             </div>
             <Guiding
               sectionTitle=" Our Guiding Values"
               values={guidingValues}
             />
-            <div className="flex mt-20 flex-col gap-12">
-              <SectionTitle title="Our Strategy" />
-              <div className="flex flex-col gap-8">
-                <Text variant={"body"} className="text-neutral">
-                  EMCCs vision is to be the ‘go to body’ for setting the highest
-                  quality standards in Mentoring and Coaching. In this section,
-                  we set out the standards that we believe you should use as a
-                  guide, whether you are a coach, mentor, coach or mentor
-                  supervisor, or trainer or programme provider. It comprises
-                  competences, CPD guidance, supervision competences and
-                  guidance, the Global Code of Ethics, diversity and regulation.
-                  It aims to answer some important questions:
-                </Text>
-                <Text variant={"body"} className="text-neutral">
-                  We currently have two individual membership categories so that
-                  you can select the membership which is right for you and that
-                  best matches your experience, expertise and extent of your
-                  practice.
-                </Text>
-                <Text variant={"body"} className="text-neutral">
-                  See below for a brief description of each category. Further
-                  down the page is a guide to help you to map your coaching and
-                  mentoring capability to decide the category for you. Once you
-                  have made your selection click on the appropriate membership
-                  category listed in the box on the right of this page.
-                </Text>
-                <Text variant={"body"} className="text-neutral">
-                  This will tell you more about the membership benefits, the
-                  price and take you to the joining application form
-                </Text>
-              </div>
-              <div className="flex flex-col">
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="Our Strategic Priorities"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="Our Partnerships"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-                <div className="border-b border-spacing-5 border-border">
-                  <Accordion
-                    className="mb-[5px]"
-                    title="Find Out More"
-                    content="This is the content<br/>This is another paragraph"
-                  />
-                </div>
-              </div>
+            <div className="flex flex-col gap-12">
+              <TextContentSection
+                title="Our Strategy"
+                texts={textContentData["Our Strategy"]}
+              />
+              <AccordionGroup items={accordionData2} />
+
               <Button
                 className="max-w-fit"
                 outline
-                btnType={"primary"}
-                Icon={<Icon name="download" />}
                 variant={"default"}
+                btnType={"primary"}
+                Icon={<Icon name="download" className="text-[20px]" />}
               >
                 Download Strategic Priorities
               </Button>
             </div>
-            <div className="flex mt-20 flex-col gap-12">
+            <div className="flex flex-col gap-12">
               <SectionTitle title="Our Region" />
               <div className="flex flex-col gap-8">
                 <Text variant={"body"} className="text-neutral">
@@ -210,66 +212,34 @@ const page = () => {
                 className=""
                 src={world_map}
               />
-              <div className="flex items-center gap-5 gap-y-[14px] flex-wrap">
-                <div className="min-w-[220px] flex items-center gap-2.5">
-                  <Image
-                    width={24}
-                    height={16}
-                    alt="flag"
-                    className=""
-                    src={flag}
-                  />
-                  <Text variant={"placeholder"}>United Arab Emirates</Text>
+              <div className="flex flex-col gap-5">
+                <Text variant={"card_title_large"}>Councils</Text>
+                <div className="flex items-center gap-5 gap-y-[14px] flex-wrap">
+                  <div className="min-w-[220px] flex items-center gap-2.5">
+                    <Image
+                      width={24}
+                      height={16}
+                      alt="flag"
+                      className=""
+                      src={EmccFlag}
+                    />
+                    <Text variant={"placeholder"}>United Arab Emirates</Text>
+                  </div>
                 </div>
-                <div className="min-w-[220px] flex items-center gap-2.5">
-                  <Image
-                    width={24}
-                    height={16}
-                    alt="flag"
-                    className=""
-                    src={flag}
-                  />
-                  <Text variant={"placeholder"}>United Arab Emirates</Text>
-                </div>
-                <div className="min-w-[220px] flex items-center gap-2.5">
-                  <Image
-                    width={24}
-                    height={16}
-                    alt="flag"
-                    className=""
-                    src={flag}
-                  />
-                  <Text variant={"placeholder"}>United Arab Emirates</Text>
-                </div>
-                <div className="min-w-[220px] flex items-center gap-2.5">
-                  <Image
-                    width={24}
-                    height={16}
-                    alt="flag"
-                    className=""
-                    src={flag}
-                  />
-                  <Text variant={"placeholder"}>United Arab Emirates</Text>
-                </div>
-                <div className="min-w-[220px] flex items-center gap-2.5">
-                  <Image
-                    width={24}
-                    height={16}
-                    alt="flag"
-                    className=""
-                    src={flag}
-                  />
-                  <Text variant={"placeholder"}>United Arab Emirates</Text>
-                </div>
-                <div className="min-w-[220px] flex items-center gap-2.5">
-                  <Image
-                    width={24}
-                    height={16}
-                    alt="flag"
-                    className=""
-                    src={flag}
-                  />
-                  <Text variant={"placeholder"}>United Arab Emirates</Text>
+              </div>
+              <div className="flex flex-col gap-5">
+                <Text variant={"card_title_large"}>Councils</Text>
+                <div className="flex items-center gap-5 gap-y-[14px] flex-wrap">
+                  <div className="min-w-[220px] flex items-center gap-2.5">
+                    <Image
+                      width={24}
+                      height={16}
+                      alt="flag"
+                      className=""
+                      src={flag}
+                    />
+                    <Text variant={"placeholder"}>United Arab Emirates</Text>
+                  </div>
                 </div>
               </div>
             </div>
@@ -277,7 +247,7 @@ const page = () => {
           <div className="col-span-4">
             <div className="flex flex-col gap-12">
               <div className="">
-                <div className="p-5 mb-[17px] bg-primary-100">
+                <div className="p-5 mb-[17px] bg-pink-400">
                   <Text
                     variant={"side_nav_header"}
                     className="text-neutralDark"

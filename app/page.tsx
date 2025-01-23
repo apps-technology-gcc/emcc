@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { HeroSection } from "./components/HeroSection";
 import { WelcomeSection } from "./components/WelcomeSection";
 import ServiceSection from "./components/ServiceSection";
@@ -9,6 +10,11 @@ import TextSection from "./components/TextSection";
 import FormSection from "./components/FormSection";
 import Section from "@/src/components/layout/Section";
 import { WhatsNew } from "./components/WhatsNew";
+import ModalWrapper from "@/src/components/modal/ModalWrapper";
+import { Text } from "@/src/components/ui/elements/Text";
+import { Button } from "@/src/components/ui/elements/Button";
+import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
+import { SearchInput } from "@/src/components/ui/elements/form/Search";
 
 const page = () => {
   const heroData = {
@@ -55,8 +61,85 @@ const page = () => {
         "https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/c3a89345b907e08139c00626d1d1a3c5cce9fae5babd7a258c0d51b9207f56e2?apiKey=7d86919144c846178294e9d8a4321223&",
     },
   ];
+  const [modalName, setModalName] = useState("select_location");
+  const [isOpenMainModal, setIsOpenMainModal] = useState(true);
+  const closeModel = () => {
+    setIsOpenMainModal(!isOpenMainModal);
+  };
+  const switchLocation = () => {
+    setModalName("select_location");
+  };
   return (
     <>
+      <ModalWrapper
+        isOpen={isOpenMainModal && modalName === "initial"}
+        closeModel={closeModel}
+      >
+        <div className="flex w-auto max-w-[504px] flex-col gap-12">
+          <div className="flex flex-col gap-5">
+            <Text variant={"card_title_large"} className="text-neutralDark">
+              Visiting From UAE?
+            </Text>
+            <Text variant={"body"} className="text-neutral">
+              You can switch to this country to see information tailored to your
+              location.
+            </Text>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-8 flex-wrap">
+            <Button
+              className="min-w-max"
+              variant={"default"}
+              btnType={"primary"}
+              outline
+            >
+              CONTINUE TO UAE
+            </Button>
+            <Button
+              className="min-w-max"
+              variant={"default"}
+              btnType={"primary"}
+            >
+              SWITCH LOCATIONS
+            </Button>
+          </div>
+        </div>
+      </ModalWrapper>
+      <ModalWrapper
+        isOpen={isOpenMainModal && modalName === "select_location"}
+        closeModel={closeModel}
+      >
+        <div className="flex w-auto md:min-w-[662px] flex-col gap-8">
+          <div className="flex items-center gap-12 justify-between">
+            <Text variant={"card_title_large"} className="text-neutralDark">
+              Select your Country / Region
+            </Text>
+            <div className="w-[320px]">
+              <SearchInput
+                id="Search"
+                // control={control}
+                name="country"
+                options={[]}
+                // checkbox
+                // isMulti
+                placeholder="Select a country"
+                onChange={(value) => console.log(value)}
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-5">
+            <Text variant={"card_title_small"}>EMCC Global</Text>
+            Logo With Name
+          </div>
+          <div className="flex flex-col gap-5">
+            <Text variant={"card_title_small"}>EMCC Global</Text>
+            Logo With Name
+          </div>
+          <div className="flex flex-col gap-5">
+            <Text variant={"card_title_small"}>EMCC Global</Text>
+            Logo With Name
+          </div>
+        </div>
+      </ModalWrapper>
       <HeroSection {...heroData} />
       <WelcomeSection />
       <ServiceSection />
@@ -64,7 +147,7 @@ const page = () => {
       <StrengthsSection strengths={strengths} />
       <div
         // bgColor=""
-        className="!flex flex-wrap gap-10 self-stretch pr-14 bg-green-100 max-md:pr-5"
+        className="!flex flex-wrap md:gap-10 self-stretch pr-14 bg-green-100 max-md:pr-0"
       >
         <TextSection />
         <FormSection />

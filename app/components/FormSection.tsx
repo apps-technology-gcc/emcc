@@ -1,6 +1,7 @@
 "use client";
 import { Button } from "@/src/components/ui/elements/Button";
 import Radio from "@/src/components/ui/elements/form/Radio";
+import Link from "@/src/components/ui/elements/Link";
 import { Text, textVariants } from "@/src/components/ui/elements/Text";
 import { cn } from "@/src/lib/utils";
 import * as React from "react";
@@ -27,7 +28,7 @@ function FormSection() {
     console.log("Updated");
   };
   return (
-    <form className="flex flex-col self-start py-12 min-w-[240px] w-[652px] max-md:max-w-full">
+    <form className="flex px-5 p-12 flex-col self-start min-w-[240px] w-[652px] max-md:max-w-full max-md:pr-5">
       <div className="flex flex-col w-full max-md:max-w-full">
         <label
           htmlFor="searchOptions"
@@ -99,24 +100,30 @@ function FormSection() {
         </Button>
       </form>
       <div className="flex flex-col gap-5 mt-8 w-full text-sm text-indigo-600 max-md:max-w-full">
-        <Text
-          variant={"button"}
-          className="gap-2.5 self-stretch text-primary-600"
-        >
-          Browse Middle-East member directory
-        </Text>
-        <Text
-          variant={"button"}
-          className="gap-2.5 self-stretch max-md:max-w-full text-primary-600"
-        >
-          Browse accredited members (Coaches, Mentors, Supervisors)
-        </Text>
-        <Text
-          variant={"button"}
-          className="gap-2.5 self-stretch text-primary-600"
-        >
-          Browse accredited training providers by region
-        </Text>
+        <Link href="#">
+          <Text
+            variant={"button"}
+            className="gap-2.5 self-stretch text-primary-600"
+          >
+            Browse Middle-East member directory
+          </Text>
+        </Link>
+        <Link href="#">
+          <Text
+            variant={"button"}
+            className="gap-2.5 self-stretch max-md:max-w-full text-primary-600"
+          >
+            Browse accredited members (Coaches, Mentors, Supervisors)
+          </Text>
+        </Link>
+        <Link href="#">
+          <Text
+            variant={"button"}
+            className="gap-2.5 self-stretch text-primary-600"
+          >
+            Browse accredited training providers by region
+          </Text>
+        </Link>
       </div>
     </form>
   );

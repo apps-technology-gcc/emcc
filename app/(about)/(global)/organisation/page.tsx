@@ -19,7 +19,11 @@ import PresidentImg from "@/public/president.png";
 import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
-import RightSide from "../components/RightSide";
+import RightSide from "../../components/RightSide";
+import TextContentSection from "../../components/TextContentSection";
+import AccordionGroup from "../../components/AccordionGroup";
+import BoardText from "../../components/BoardText";
+import FilingsTable from "./comopnents/FilingsTable";
 const page = () => {
   const bredList = [
     {
@@ -27,13 +31,45 @@ const page = () => {
       //   href: "/",
     },
     {
-      name: "Executive Leadership Team",
+      name: "Our Organisation",
       href: "board-and-governance",
     },
     // {
     //   name: "Contact",
     //   href: "/contact",
     // },
+  ];
+
+  const textContentData = {
+    "Our Organisation": [
+      {
+        id: 1,
+        content:
+          "EMCCs vision is to be the ‘go to body’ for setting the highest quality standards in Mentoring and Coaching. In this section, we set out the standards that we believe you should use as a guide, whether you are a coach, mentor, coach or mentor supervisor, or trainer or programme provider. It comprises competences, CPD guidance, supervision competences and guidance, the Global Code of Ethics, diversity and regulation. It aims to answer some important questions:",
+      },
+    ],
+  };
+  const accItems = [
+    {
+      id: 1,
+      title: "EMCC Global Council Members",
+      content: "EMCC Global Council Members",
+    },
+    {
+      id: 2,
+      title: "EMCC Global Executive Board",
+      content: "EMCC Global Executive Board",
+    },
+    {
+      id: 3,
+      title: "EMCC Special Ambassadors",
+      content: "EMCC Special Ambassadors",
+    },
+    {
+      id: 4,
+      title: "EMCC Volunteers",
+      content: "EMCC Volunteers",
+    },
   ];
   return (
     <>
@@ -44,12 +80,13 @@ const page = () => {
             variant={"h1_page_title"}
             className="uppercase text-white"
           >
-            Leadership & Organisation
+            Our Organisation
           </Text>
           <Text variant={"body"} className="text-white">
-            Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id
-            vel risus gravida eget at. Nascetur pellentesque aenean ac lorem
-            integer consectetur augue imperdiet nunc.
+            Posuere diam massa in morbi posuere nullam. Accumsan dictum lacus
+            nibh aliquam tincidunt faucibus quis vehicula ac. Tempor fringilla
+            odio id tortor felis suspendisse porta placerat rhoncus. Vestibulum
+            semper vitae pellentesque fames quam purus nec faucibus porttitor.
           </Text>
         </div>
       </Banner>
@@ -60,19 +97,20 @@ const page = () => {
         <div className="grid grid-cols-11 gap-16">
           <div className="col-span-7 flex flex-col gap-20">
             <div className="flex flex-col gap-12">
-              <SectionTitle title="Executive Leadership Team" />
-              <div className="flex flex-col gap-8">
-                <Text variant={"body"} className="text-neutral">
-                  Lorem ipsum dolor sit amet consectetur. Parturient in aliquam
-                  id euismod massa consequat. Eget condimentum non sapien donec
-                  netus dignissim mattis consectetur. Purus libero dapibus cras
-                  et aliquam orci vulputate aliquam. Eu egestas blandit sit nunc
-                  viverra mauris.
-                </Text>
+              <TextContentSection
+                title="Our Organisation"
+                texts={textContentData["Our Organisation"]}
+              />
 
-                {/* <SectionLink title=" Our Organisational Structure" /> */}
-              </div>
+              <AccordionGroup items={accItems} />
             </div>
+            <BoardText
+              text=" The Board is accountable to our members and oversees the
+                Councils’ regionalactivities in the Middle East. It’s made up of
+                senior leaders from a broad range of industry and sectors,
+                member firms and organisations."
+            />
+
             {/* BOARD Members*/}
 
             <div className=" flex flex-col rounded-md">
@@ -80,36 +118,19 @@ const page = () => {
                 variant={"section_title"}
                 className="text-neutralDark mb-8 "
               >
-                Executive Directors & Board Members
+                Global Executive Board
               </Text>
+              {/* <FilingsTable /> */}
               <div className="grid mb-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
                 <MemberCard />
                 <MemberCard />
                 <MemberCard />
               </div>
-              <SectionLink title="Executive Board Structure" />
-            </div>
-            <div className=" flex flex-col rounded-md">
-              <Text
-                variant={"section_title"}
-                className="text-neutralDark mb-8 "
-              >
-                Country Directors
-              </Text>
-              <div className="grid mb-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-              </div>
-              <SectionLink title="Advisory Board Structure" />
+              {/* <SectionLink title="Executive Board Structure" /> */}
             </div>
           </div>
           <RightSide
+            isGlobal={true}
             aboutTitle="About Us"
             aboutContent="Learn more about our mission and values."
             accordionList={[

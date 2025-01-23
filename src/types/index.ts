@@ -118,3 +118,9 @@ export interface FilterButtonProps {
   isActive?: boolean;
   onClick?: () => void;
 }
+export interface FilingRowData {
+  type: string;
+  description: string;
+  date: string;
+  previewUrl: string;
+}

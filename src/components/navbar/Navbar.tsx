@@ -7,6 +7,7 @@ import { JoinEmccMegaMenu } from "./JoinEmccMenu";
 import { KnowledgeMegaMenu } from "./Knowledge";
 import { InsightsMegaMenu } from "./InsightsMegaMenu";
 import { MoreMegaMenu } from "./MoreMegaMenu";
+import Section from "../layout/Section";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>("About");
@@ -34,8 +35,8 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex relative flex-col bg-white">
-      <div className="flex z-10 flex-wrap gap-10 justify-between items-center px-14 py-5 w-full border-b-2 border-solid border-green-300 max-md:px-5 max-md:max-w-full">
+    <div className="bg-white py-5 relative border-b-2 border-solid  border-green-300">
+      <div className="flex container z-10 flex-wrap gap-10 justify-between items-center  w-full  max-md:px-5 max-md:max-w-full">
         <div className="flex gap-2.5 items-center self-stretch my-auto w-[89px]">
           <img
             loading="lazy"

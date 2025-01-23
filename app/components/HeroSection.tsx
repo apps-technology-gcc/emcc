@@ -17,8 +17,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   heroImage,
 }) => {
   return (
-    <Section bgColor="white" className="relative">
-      <div className="flex  py-[81.5px]  max-md:flex-col">
+    <Section bgColor="white" className="relative !py-0">
+      <div className="flex  lg:py-[81.5px]  max-md:flex-col">
         <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
           <div className="pt-20 flex w-auto gap-12 flex-col self-stretch  my-auto  max-md:mt-10 max-md:-mr-3 max-md:max-w-full">
             <Badge
@@ -44,7 +44,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </div>
         </div>
       </div>
-      <div className="absolute min-h-[600px] bg-primary-600 right-0 top-0 h-full w-[46.5%]">
+      <div className="absolute hidden md:block h-[600px] bg-primary-600 right-0 top-0 w-[46.5%]">
         <div className="relative w-full h-full">
           <div className="absolute z-10 top-[30px] -left-[30px] bg-[#70FFD7] w-[240px] h-[240px]">
             <Image

@@ -8,6 +8,7 @@ pnpm-debug.log*
 .pnp.js
 
 # Next.js build and cache files
+.next
 .next/
 .next/cache/
 out/
