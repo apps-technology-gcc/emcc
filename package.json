@@ -27,6 +27,7 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.5",
     "react-hook-form": "^7.51.0",
+    "react-organizational-chart": "^2.2.1",
     "react-otp-input": "^3.1.1",
     "swiper": "^11.2.1",
     "tailwind-merge": "^2.0.0",

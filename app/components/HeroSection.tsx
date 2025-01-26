@@ -18,9 +18,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 }) => {
   return (
     <Section bgColor="white" className="relative !py-0">
-      <div className="flex  lg:py-[81.5px]  max-md:flex-col">
+      <div className="flex md:min-h-[600px] items-center max-md:flex-col">
         <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-          <div className="pt-20 flex w-auto gap-12 flex-col self-stretch  my-auto  max-md:mt-10 max-md:-mr-3 max-md:max-w-full">
+          <div className="flex w-auto gap-12 flex-col self-stretch  my-auto  max-md:mt-10 max-md:-mr-3 max-md:max-w-full">
             <Badge
               icon={badge.icon}
               text={badge.text}

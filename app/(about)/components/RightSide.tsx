@@ -6,6 +6,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import sqricon from "@/public/sqricon.svg"; // Default image (can be dynamic)
 import { cn } from "@/src/lib/utils";
+import ModalWrapper from "@/src/components/modal/ModalWrapper";
+import { Input, Label } from "@/src/components/ui/elements/form/Input";
+import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
+import FileUpload from "@/src/components/ui/elements/form/FileUpload";
+import Checkbox from "@/src/components/ui/elements/form/Checkbox";
+
+import { Tree, TreeNode } from "react-organizational-chart";
 
 interface RightSideProps {
   aboutTitle: string;
@@ -37,8 +44,193 @@ const RightSide: React.FC<RightSideProps> = ({
   applyButtonUrl,
   isGlobal = false,
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+  const [modelName, setModelName] = useState("register");
+
   return (
     <div className="col-span-4">
+      <ModalWrapper
+        closeModal={closeModal}
+        isOpen={isOpen && modelName == "register"}
+      >
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <Text variant={"section_title"}>
+              Register your interest in becoming a board member
+            </Text>
+            <Text variant={"body"}>
+              Please submit your information below to register your interest for
+              the board position. A member of our team will be get back to you
+              soon.
+            </Text>
+          </div>
+          <form
+            action=""
+            className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5"
+          >
+            <div className="w-full">
+              <Input
+                name="name"
+                type="text"
+                label="Your Name"
+                placeholder="Your Name"
+              />
+            </div>
+            <div className="w-full">
+              <Input
+                name="name"
+                type="text"
+                label="Contact Email"
+                placeholder="Contact Email"
+              />
+            </div>
+
+            {/* Your Country */}
+            <div className="w-full">
+              <SearchSelect
+                options={[
+                  { label: "Option 1", value: "option1" },
+                  { label: "Option 2", value: "option2" },
+                  { label: "Option 3", value: "option3" },
+                ]}
+                label="Your Country"
+                placeholder="Your Country"
+                isMulti={false}
+                name="position"
+              />
+            </div>
+
+            <div className="w-full">
+              <SearchSelect
+                options={[
+                  { label: "Option 1", value: "option1" },
+                  { label: "Option 2", value: "option2" },
+                  { label: "Option 3", value: "option3" },
+                ]}
+                label="Your City"
+                placeholder="Your City"
+                isMulti={false}
+                name="position"
+              />
+            </div>
+            <div className="w-full">
+              <Input
+                name="name"
+                type="text"
+                label="LinkedIn Profile URL"
+                placeholder="LinkedIn Profile URL"
+              />
+            </div>
+            <div className="w-full flex flex-col gap-2.5">
+              <Label label="Upload Your CV" />
+              <FileUpload type="attach" />
+            </div>
+
+            <div className="col-span-2 flex flex-col gap-8">
+              <div className="w-full">
+                <Input
+                  cols={50}
+                  rows={7}
+                  name="message"
+                  type="textarea"
+                  label="Message"
+                />
+              </div>
+              <div className="w-full">
+                <Checkbox id="agree" label="I agree all statements in" />
+              </div>
+              <div className="flex">
+                <Button variant={"default"} btnType={"primary"}>
+                  Submit
+                </Button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </ModalWrapper>
+      <ModalWrapper
+        closeModal={closeModal}
+        isOpen={isOpen == true && modelName == "chart"}
+      >
+        <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-5">
+            <Text variant={"section_title"}>
+              Register your interest in becoming a board member
+            </Text>
+            <Text variant={"body"}>
+              Please submit your information below to register your interest for
+              the board position. A member of our team will be get back to you
+              soon.
+            </Text>
+          </div>
+          <div className="w-full flex justify-center">
+            <Tree
+              lineWidth={"2px"}
+              lineColor={"#000"}
+              lineBorderRadius={"10px"}
+              label={
+                <div className="bg-blue-600 max-w-fit text-white p-4 rounded-lg shadow-md">
+                  Executive Director <br /> Operations
+                </div>
+              }
+            >
+              <TreeNode
+                label={
+                  <div className="bg-blue-600  max-w-fit text-white p-4 rounded-lg shadow-md">
+                    Country Director <br /> UAE
+                  </div>
+                }
+              >
+                <TreeNode
+                  label={
+                    <div className="bg-blue-600 text-white p-4 rounded-lg shadow-md">
+                      Community Outreach Director
+                    </div>
+                  }
+                />
+                <TreeNode
+                  label={
+                    <div className="bg-blue-600 text-white p-4 rounded-lg shadow-md">
+                      Partnership & Sponsorship
+                    </div>
+                  }
+                />
+                <TreeNode
+                  label={
+                    <div className="bg-blue-600 text-white p-4 rounded-lg shadow-md">
+                      Membership & Events
+                    </div>
+                  }
+                />
+                <TreeNode
+                  label={
+                    <div className="bg-blue-600 text-white p-4 rounded-lg shadow-md">
+                      Marketing & Communication
+                    </div>
+                  }
+                />
+                <TreeNode
+                  label={
+                    <div className="bg-blue-600 text-white p-4 rounded-lg shadow-md">
+                      Knowledge & Development
+                    </div>
+                  }
+                />
+                <TreeNode
+                  label={
+                    <div className="bg-blue-600 text-white p-4 rounded-lg shadow-md">
+                      Admin/IT
+                    </div>
+                  }
+                />
+              </TreeNode>
+            </Tree>
+          </div>
+        </div>
+      </ModalWrapper>
       <div className="flex flex-col gap-12">
         <div className="">
           <div
@@ -97,7 +289,12 @@ const RightSide: React.FC<RightSideProps> = ({
         <div className="flex bg-background flex-col px-5 py-8 rounded-md gap-8">
           <Text variant={"card_title_large"}>{applyTitle}</Text>
           <Text variant={"body"}>{applyContent}</Text>
-          <Button variant={"default"} btnType={"primary"} outline>
+          <Button
+            onClick={() => setIsOpen(true)}
+            variant={"default"}
+            btnType={"primary"}
+            outline
+          >
             <a href={applyButtonUrl}>{applyButtonLabel}</a>
           </Button>
         </div>

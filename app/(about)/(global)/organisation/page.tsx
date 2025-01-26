@@ -23,7 +23,7 @@ import RightSide from "../../components/RightSide";
 import TextContentSection from "../../components/TextContentSection";
 import AccordionGroup from "../../components/AccordionGroup";
 import BoardText from "../../components/BoardText";
-import FilingsTable from "./comopnents/FilingsTable";
+import FilingsTable from "../board-and-governance-global/comopnents/FilingsTable";
 const page = () => {
   const bredList = [
     {

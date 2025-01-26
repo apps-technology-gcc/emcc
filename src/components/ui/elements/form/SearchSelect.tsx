@@ -4,7 +4,7 @@ import { Icon } from "../Icon";
 
 import CheckboxInput from "./Checkbox";
 import { cn } from "../../../../lib/utils";
-import { Text } from "../Text";
+import { Text, textVariants } from "../Text";
 
 export interface SelectOption {
   [key: string]: any;
@@ -203,7 +203,8 @@ const SearchSelect: React.FC<SearchSelectProps> = ({
             className={cn(
               "absolute inset-0 w-full px-2.5 py-2",
               "bg-transparent outline-none",
-              "z-20" // Increased z-index
+              "z-20", // Increased z-index
+              textVariants({ variant: "placeholder" })
             )}
             autoFocus
           />

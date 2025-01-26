@@ -24,7 +24,7 @@ const communitiesItems = [
 
 export const MoreMegaMenu: React.FC = () => {
   return (
-    <div className="grid grid-cols-3 gap-5 p-12 bg-white rounded-none shadow-sm text-zinc-900 max-md:px-5">
+    <div className="grid grid-cols-3 gap-5 p-12 bg-white rounded-none text-zinc-900 max-md:px-5">
       <div className="flex  justify-start border-border h-full flex-col flex-1 shrink basis-0 min-w-[240px]">
         <div className="flex flex-col justify-center w-full">
           <div className="flex flex-col justify-center gap-5 w-full text-xs">

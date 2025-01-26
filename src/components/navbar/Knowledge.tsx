@@ -25,7 +25,7 @@ export const KnowledgeMegaMenu: React.FC = () => {
   const items2 = ["Our History, Our Culture", "Our Strategy"];
   const items1 = ["Our Organisation", "Board & Governance", "ESG"];
   return (
-    <div className="grid grid-cols-3 gap-5 p-12 bg-white rounded-none shadow-sm text-zinc-900 max-md:px-5">
+    <div className="grid grid-cols-3 gap-5 p-12 bg-white rounded-none text-zinc-900 max-md:px-5">
       <div className="flex flex-col self-start min-w-[240px] w-[370px]">
         <div className="flex mb-5 flex-col w-full text-base font-medium">
           <div className="flex flex-col justify-center items-start w-full">

@@ -79,7 +79,7 @@ const SurveySection = () => {
           <div className="bg-primary-600 flex items-center justify-center w-[82px] rounded-bl-md rounded-tl-md">
             <Text
               variant={"section_title"}
-              className="uppercase text-white transform rotate-90"
+              className="uppercase text-white transform rotate-180"
             >
               Survey
             </Text>

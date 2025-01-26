@@ -26,6 +26,7 @@ import BoardText from "../../components/BoardText";
 import BoardMember from "../../components/BoardMember";
 import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
 import Link from "@/src/components/ui/elements/Link";
+import FilingsTable from "./comopnents/FilingsTable";
 
 const page = () => {
   const bredList = [
@@ -206,6 +207,40 @@ const page = () => {
                   onChange={(value) => console.log(value)}
                 />
               </div>
+              <FilingsTable />
+              <div className="flex flex-wrap items-center justify-between gap-12">
+                <div className="flex  items-center gap-5">
+                  <div className="flex items-center gap-2.5">
+                    <Icon
+                      name="chevron_left"
+                      className="text-neutralDark text-[16px]"
+                    />
+                    <Text variant="small">Page 2 of 16</Text>
+                    <Icon
+                      name="chevron_right"
+                      className="text-neutralDark text-[16px]"
+                    />
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <Text variant="small">Go to page</Text>
+                    <input
+                      name="page"
+                      className="h-6 w-6 border border-borer rounded-sm"
+                      type="text"
+                    />
+                    <Text variant="small">Go</Text>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Text variant="small">Showing 10 of 100</Text>
+                  <input
+                    name="page"
+                    className="h-6 w-6 border border-borer rounded-sm"
+                    type="text"
+                  />
+                  <Text variant="small">Per page</Text>
+                </div>
+              </div>
 
               <TextContentSection
                 texts={textContentData["Governance Documents"]}
@@ -216,6 +251,7 @@ const page = () => {
                 {links.map((link, index) => {
                   return (
                     <Link
+                      key={index}
                       href="/"
                       variant="secondary"
                       className="underline flex max-w-fit border-b border-black"

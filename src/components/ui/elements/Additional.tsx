@@ -34,14 +34,14 @@ const NavigationMegaMenuBtn = ({
   );
 };
 
-const TextLink = () => {
+const TextLink = ({ title }: { title: string }) => {
   return (
     <button className="flex items-center gap-2.5">
-      <div className="bg-green-300 h-8 w-8 flex items-center justify-center rounded-full">
-        <Icon name="contactless" className="" />
+      <div className="bg-[#4DFBED] h-8 w-8 flex items-center justify-center rounded-full">
+        <Icon name="arrow_outward" className="text-[20px]" />
       </div>
       <Text variants="button" className="hover:underline" as="span">
-        TextLink
+        {title}
       </Text>
     </button>
   );

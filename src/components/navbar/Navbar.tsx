@@ -10,7 +10,9 @@ import { MoreMegaMenu } from "./MoreMegaMenu";
 import Section from "../layout/Section";
 
 const Navbar = () => {
-  const [activeMenu, setActiveMenu] = useState<string | null>("About");
+  const [activeMenu, setActiveMenu] = useState<
+    "About" | "Join EMCC" | "Knowledge" | "Insights" | "More +" | null
+  >("About");
   const navLinks = [
     { text: "About", isactive: activeMenu === "About" },
     { text: "Join EMCC", isactive: activeMenu === "Join EMCC" },
@@ -21,7 +23,7 @@ const Navbar = () => {
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const handleMouseEnter = (text: string) => {
+  const handleMouseEnter = (text: any) => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
@@ -72,7 +74,7 @@ const Navbar = () => {
       </div>
       {activeMenu && (
         <div
-          className="absolute left-0 right-0 top-full w-full bg-white shadow-lg z-20"
+          className="absolute left-0 right-0 top-full w-full bg-white z-20"
           onMouseEnter={() => handleMouseEnter(activeMenu)}
           onMouseLeave={handleMouseLeave}
         >
@@ -81,12 +83,19 @@ const Navbar = () => {
             onMouseEnter={() => handleMouseEnter(activeMenu)}
           />
           <div className="max-w-7xl mx-auto px-4 py-6">
-            {/* <AboutMegaMenu /> */}
-            {/* <JoinEmccMegaMenu /> */}
-            {/* <KnowledgeMegaMenu />
-             */}
-            {/* <InsightsMegaMenu /> */}
-            <MoreMegaMenu />
+            {activeMenu === "About" ? (
+              <AboutMegaMenu />
+            ) : activeMenu === "Insights" ? (
+              <InsightsMegaMenu />
+            ) : activeMenu === "Join EMCC" ? (
+              <JoinEmccMegaMenu />
+            ) : activeMenu === "Knowledge" ? (
+              <KnowledgeMegaMenu />
+            ) : activeMenu === "More +" ? (
+              <MoreMegaMenu />
+            ) : (
+              <></>
+            )}
           </div>
         </div>
       )}

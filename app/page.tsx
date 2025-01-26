@@ -15,7 +15,8 @@ import { Text } from "@/src/components/ui/elements/Text";
 import { Button } from "@/src/components/ui/elements/Button";
 import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
 import { SearchInput } from "@/src/components/ui/elements/form/Search";
-
+import CountryItem from "@/src/components/common/CountryItem";
+import flag from "@/public/flag.png";
 const page = () => {
   const heroData = {
     badge: {
@@ -61,7 +62,7 @@ const page = () => {
         "https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/c3a89345b907e08139c00626d1d1a3c5cce9fae5babd7a258c0d51b9207f56e2?apiKey=7d86919144c846178294e9d8a4321223&",
     },
   ];
-  const [modalName, setModalName] = useState("select_location");
+  const [modalName, setModalName] = useState("initial");
   const [isOpenMainModal, setIsOpenMainModal] = useState(true);
   const closeModel = () => {
     setIsOpenMainModal(!isOpenMainModal);
@@ -73,7 +74,7 @@ const page = () => {
     <>
       <ModalWrapper
         isOpen={isOpenMainModal && modalName === "initial"}
-        closeModel={closeModel}
+        closeModal={closeModel}
       >
         <div className="flex w-auto max-w-[504px] flex-col gap-12">
           <div className="flex flex-col gap-5">
@@ -87,6 +88,7 @@ const page = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 items-center gap-8 flex-wrap">
             <Button
+              onClick={() => setIsOpenMainModal(false)}
               className="min-w-max"
               variant={"default"}
               btnType={"primary"}
@@ -95,6 +97,7 @@ const page = () => {
               CONTINUE TO UAE
             </Button>
             <Button
+              onClick={() => setModalName("select_location")}
               className="min-w-max"
               variant={"default"}
               btnType={"primary"}
@@ -106,7 +109,7 @@ const page = () => {
       </ModalWrapper>
       <ModalWrapper
         isOpen={isOpenMainModal && modalName === "select_location"}
-        closeModel={closeModel}
+        closeModal={closeModel}
       >
         <div className="flex w-auto md:min-w-[662px] flex-col gap-8">
           <div className="flex items-center gap-12 justify-between">
@@ -128,15 +131,32 @@ const page = () => {
           </div>
           <div className="flex flex-col gap-5">
             <Text variant={"card_title_small"}>EMCC Global</Text>
-            Logo With Name
+            <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
+              <CountryItem name="Asia" />
+              <CountryItem name="Asia" image={flag.src} />
+            </div>
           </div>
           <div className="flex flex-col gap-5">
             <Text variant={"card_title_small"}>EMCC Global</Text>
-            Logo With Name
+            <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
+              {/* <CountryItem name="Asia"  /> */}
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+            </div>
           </div>
           <div className="flex flex-col gap-5">
             <Text variant={"card_title_small"}>EMCC Global</Text>
-            Logo With Name
+            <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
+              {/* <CountryItem name="Asia"  /> */}
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+            </div>
           </div>
         </div>
       </ModalWrapper>
@@ -147,7 +167,7 @@ const page = () => {
       <StrengthsSection strengths={strengths} />
       <div
         // bgColor=""
-        className="!flex flex-wrap md:gap-10 self-stretch pr-14 bg-green-100 max-md:pr-0"
+        className="!flex flex-wrap md:gap-10 self-stretch pr-14 bg-[#D9F2ED] max-md:pr-0"
       >
         <TextSection />
         <FormSection />

@@ -1,7 +1,8 @@
 import { FC, ReactNode } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
+
 import { Text } from "./Text";
+import { cn } from "@/src/lib/utils";
 
 const tagVariants = cva("inline-flex items-center ", {
   variants: {
@@ -17,7 +18,7 @@ const tagVariants = cva("inline-flex items-center ", {
     },
     iconPosition: {
       left: "flex-row",
-      right: "flex-row-reverse",
+      right: "",
     },
   },
   defaultVariants: {
@@ -75,7 +76,12 @@ const Tag: FC<TagProps> = ({
   }
 
   return (
-    <span className={tagVariants({ variant, style, iconPosition, className })}>
+    <span
+      className={cn(
+        "gap-2.5",
+        tagVariants({ variant, style, iconPosition, className })
+      )}
+    >
       {iconPosition === "left" ? icon : null}
       <Text as="span" variant={getTextVariant()}>
         {children}

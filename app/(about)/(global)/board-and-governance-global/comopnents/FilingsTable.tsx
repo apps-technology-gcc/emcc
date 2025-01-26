@@ -50,9 +50,13 @@ function FilingsTable() {
     >
       <FilingTableHeader />
       <div className="flex flex-col w-full max-md:max-w-full">
-        <div className="flex flex-col w-full max-md:max-w-full">
+        <div className="flex border flex-col w-full max-md:max-w-full">
           {filingData.map((filing, index) => (
-            <FilingRow key={index} data={filing} />
+            <FilingRow
+              isLast={index === filingData.length - 1}
+              key={index}
+              data={filing}
+            />
           ))}
         </div>
       </div>

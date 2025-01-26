@@ -63,7 +63,7 @@ const wrapperVariants = cva("flex flex-col", {
 const labelVariants = cva("font-normal", {
   variants: {
     size: {
-      default: "text-body_2",
+      default: textVariants({ variant: "label" }),
       sm: "text-body_3",
       lg: "text-body_1",
     },
@@ -84,9 +84,11 @@ export interface InputProps
   name: string;
   label?: string;
   labelPosition?: "left" | "right";
-  type?: "text" | "password" | "email" | "number" | "tel" | "url";
+  type?: "text" | "password" | "email" | "number" | "tel" | "url" | "textarea";
   size?: "default" | "sm" | "lg";
   error?: boolean;
+  cols?: number;
+  rows?: number;
   errorMsg?: string;
   validation?: object;
   required?: boolean;
@@ -111,6 +113,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       className,
       placeholder,
       useForm = false,
+      cols,
+      rows,
       ...props
     },
     ref
@@ -138,7 +142,31 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className,
           textVariants({
             variant: "placeholder",
-            font: "tinos",
+            align: "left",
+          })
+        )}
+      />
+    );
+
+    const renterTextArea = (field = {}) => (
+      <textarea
+        {...field}
+        {...props}
+        ref={ref}
+        cols={cols ? cols : 50}
+        rows={rows ? rows : 8}
+        name={name}
+        type="textarea"
+        placeholder={placeholder}
+        className={cn(
+          "min-h-[90px]",
+          inputVariants({
+            variant: isError ? "error" : "default",
+            size,
+          }),
+          className,
+          textVariants({
+            variant: "placeholder",
             align: "left",
           })
         )}
@@ -162,8 +190,12 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               control={formContext.control}
               name={name}
               rules={validation}
-              render={({ field }) => renderInput(field)}
+              render={({ field }) =>
+                type === "textarea" ? renterTextArea(field) : renderInput(field)
+              }
             />
+          ) : type === "textarea" ? (
+            renterTextArea()
           ) : (
             renderInput()
           )}
@@ -197,7 +229,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
 Input.displayName = "Input";
 
-const Label = ({
+export const Label = ({
   label,
   required,
   variant = "default",
