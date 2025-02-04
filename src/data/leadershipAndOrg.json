@@ -1,0 +1,137 @@
+{
+  "banner": {
+    "title": "Leadership & Organisation",
+    "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at. Nascetur pellentesque aenean ac lorem integer consectetur augue imperdiet nunc."
+  },
+  "breadcrumb": [
+    {
+      "name": "About Us"
+    },
+    {
+      "name": "Executive Leadership Team",
+      "href": "board-and-governance"
+    }
+  ],
+  "executiveLeadership": {
+    "title": "Executive Leadership Team",
+    "description": [
+      "Lorem ipsum dolor sit amet consectetur. Parturient in aliquam id euismod massa consequat. Eget condimentum non sapien donec netus dignissim mattis consectetur. Purus libero dapibus cras et aliquam orci vulputate aliquam. Eu egestas blandit sit nunc viverra mauris."
+    ]
+  },
+  "executiveDirectors": {
+    "title": "Executive Directors & Board Members",
+    "members": [
+      {
+        "name": "John Doe",
+        "role": "CEO",
+        "imageSrc": "/images/john-doe.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "Jane Smith",
+        "role": "CTO",
+        "imageSrc": "/images/jane-smith.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "Alice Johnson",
+        "role": "CFO",
+        "imageSrc": "/images/alice-johnson.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      }
+    ]
+  },
+  "countryDirectors": {
+    "title": "Country Directors",
+    "members": [
+      {
+        "name": "Michael Brown",
+        "role": "Country Director - USA",
+        "imageSrc": "/images/michael-brown.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "Sarah Lee",
+        "role": "Country Director - Canada",
+        "imageSrc": "/images/sarah-lee.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "David Wilson",
+        "role": "Country Director - UK",
+        "imageSrc": "/images/david-wilson.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "Emily Davis",
+        "role": "Country Director - Australia",
+        "imageSrc": "/images/emily-davis.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "James Miller",
+        "role": "Country Director - Germany",
+        "imageSrc": "/images/james-miller.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "Olivia Garcia",
+        "role": "Country Director - France",
+        "imageSrc": "/images/olivia-garcia.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "Daniel Martinez",
+        "role": "Country Director - Spain",
+        "imageSrc": "/images/daniel-martinez.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      },
+      {
+        "name": "Sophia Hernandez",
+        "role": "Country Director - Italy",
+        "imageSrc": "/images/sophia-hernandez.png",
+        "description": "Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id vel risus gravida eget at."
+      }
+    ]
+  },
+  "sidebar": {
+    "aboutEMCC": {
+      "title": "About EMCC ME",
+      "accordion": {
+        "title": "Key Information",
+        "listItems": [
+          "Vision & Mission",
+          "Strategic Objectives",
+          "Our Organisational Structure"
+        ]
+      },
+      "links": [
+        { "text": "Board & Governance", "href": "/board-and-governance" },
+        {
+          "text": "Leadership & Organisation",
+          "href": "/leadership-and-organisation"
+        }
+      ]
+    },
+    "moreAboutUs": {
+      "title": "More About Us",
+      "cards": [
+        {
+          "icon": "esg-icon",
+          "title": "ESG",
+          "description": "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi."
+        },
+        {
+          "icon": "research-icon",
+          "title": "Research",
+          "description": "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi."
+        }
+      ]
+    },
+    "applyToJoin": {
+      "title": "Apply to Join Our Board",
+      "description": "Lorem ipsum dolor sit amet consectetur. Lorem senectus amet nullam mollis. Velit risus felis a a. Adipiscing platea a tincidunt tellus. Libero ac vivamus sit lacus velit et ac tempor mattis. Morbi dictum dictumst ac sed diam morbi. Ut proin pharetra nam vitae. Egestas tellus ultrices dolor risus donec commodo.",
+      "buttonText": "Register Your Interest"
+    }
+  }
+}

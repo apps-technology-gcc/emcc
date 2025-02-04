@@ -19,7 +19,13 @@ import PresidentImg from "@/public/president.png";
 import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
-import RightSide from "../components/RightSide";
+
+import BannerSection from "../components/BannerSection";
+import TextContentSection from "@/src/components/common/TextContentSection";
+import BoardMembersGridSection from "../components/BoardMembersGridSection";
+import SidebarSection from "../components/SidebarSection";
+import pageContentJson from "@/src/data/leadershipAndOrg.json";
+
 const page = () => {
   const bredList = [
     {
@@ -30,106 +36,38 @@ const page = () => {
       name: "Executive Leadership Team",
       href: "board-and-governance",
     },
-    // {
-    //   name: "Contact",
-    //   href: "/contact",
-    // },
   ];
+  const [pageContent, setPageContent] =
+    useState<LeadershipData>(pageContentJson);
   return (
     <>
       <Banner bgImage={bgImage.src}>
-        <div className="max-w-[763px] flex flex-col gap-12">
-          <Text
-            font={"tinos"}
-            variant={"h1_page_title"}
-            className="uppercase text-white"
-          >
-            Leadership & Organisation
-          </Text>
-          <Text variant={"body"} className="text-white">
-            Lorem ipsum dolor sit amet consectetur. Mattis interdum odio arcu id
-            vel risus gravida eget at. Nascetur pellentesque aenean ac lorem
-            integer consectetur augue imperdiet nunc.
-          </Text>
-        </div>
+        <BannerSection {...pageContent.banner} />
       </Banner>
       <Breadcrumb>
-        <Breadcrumbs list={bredList} />
+        <Breadcrumbs list={pageContent.breadcrumb} />
       </Breadcrumb>
       <Section bgColor="white">
-        <div className="grid grid-cols-11 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-11 gap-16">
           <div className="col-span-7 flex flex-col gap-20">
-            <div className="flex flex-col gap-12">
-              <SectionTitle title="Executive Leadership Team" />
-              <div className="flex flex-col gap-8">
-                <Text variant={"body"} className="text-neutral">
-                  Lorem ipsum dolor sit amet consectetur. Parturient in aliquam
-                  id euismod massa consequat. Eget condimentum non sapien donec
-                  netus dignissim mattis consectetur. Purus libero dapibus cras
-                  et aliquam orci vulputate aliquam. Eu egestas blandit sit nunc
-                  viverra mauris.
-                </Text>
-
-                {/* <SectionLink title=" Our Organisational Structure" /> */}
-              </div>
-            </div>
-            {/* BOARD Members*/}
-
-            <div className=" flex flex-col rounded-md">
-              <Text
-                variant={"section_title"}
-                className="text-neutralDark mb-8 "
-              >
-                Executive Directors & Board Members
-              </Text>
-              <div className="grid mb-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-              </div>
-              <SectionLink title="Executive Board Structure" />
-            </div>
-            <div className=" flex flex-col rounded-md">
-              <Text
-                variant={"section_title"}
-                className="text-neutralDark mb-8 "
-              >
-                Country Directors
-              </Text>
-              <div className="grid mb-8 gap-8 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-                <MemberCard />
-              </div>
-              <SectionLink title="Advisory Board Structure" />
-            </div>
+            <TextContentSection
+              title={pageContent.executiveLeadership.title}
+              texts={pageContent.executiveLeadership.description}
+            />
+            <BoardMembersGridSection
+              title={pageContent.executiveDirectors.title}
+              members={pageContent.executiveDirectors.members}
+              linkTitle="Executive Board Structure"
+            />
+            <BoardMembersGridSection
+              title={pageContent.countryDirectors.title}
+              members={pageContent.countryDirectors.members}
+              linkTitle="Advisory Board Structure"
+            />
           </div>
-          <RightSide
-            aboutTitle="About Us"
-            aboutContent="Learn more about our mission and values."
-            accordionList={[
-              {
-                title: "Basic Accordion",
-                listItems: ["Item 1", "Item 2", "Item 3"],
-              },
-              { title: "Advanced Accordion", listItems: ["Item 4", "Item 5"] },
-            ]}
-            boardLink="/board"
-            leadershipLink="/leadership"
-            moreAboutItems={[
-              { title: "ESG", description: "Details about ESG..." },
-              { title: "Research", description: "Details about Research..." },
-            ]}
-            applyTitle="Join Us"
-            applyContent="Apply to become part of our team."
-            applyButtonLabel="Register Now"
-            applyButtonUrl="/apply"
-          />
+          <div className="col-span-4">
+            <SidebarSection {...pageContent.sidebar} />
+          </div>
         </div>
       </Section>
     </>

@@ -16,7 +16,7 @@ interface GuidingProps {
 
 const Guiding: React.FC<GuidingProps> = ({ values, sectionTitle }) => {
   return (
-    <div className="mt-20 gap-12 flex flex-col p-5 rounded-md bg-[#D9F2ED]">
+    <div className="gap-12 flex flex-col p-5 rounded-md bg-[#D9F2ED]">
       <Text variant="section_title" className="text-neutralDark">
         {sectionTitle}
       </Text>

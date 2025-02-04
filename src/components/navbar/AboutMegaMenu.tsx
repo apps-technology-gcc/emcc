@@ -23,7 +23,7 @@ const communitiesItems = [
 export const AboutMegaMenu: React.FC = () => {
   return (
     <div className="grid grid-cols-3 gap-5 p-12 bg-white rounded-none text-zinc-900 max-md:px-5">
-      <div className="flex flex-col self-start min-w-[240px] w-[370px]">
+      <div className="flex flex-col self-start">
         <div className="flex flex-col w-full text-base font-medium">
           <div className="flex flex-col justify-center items-start w-full">
             <div className="flex gap-5 items-center max-w-full w-[105px]">

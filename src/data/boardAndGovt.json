@@ -1,0 +1,134 @@
+{
+  "banner": {
+    "title": "Board & Governance",
+    "description": "The EMCC Middle East Board & Executive team exists to provide advice, support and resource to Subscription Members. The Executive team looks over the operations by bringing over the global standard of coaching and mentorship to the Middle East."
+  },
+  "breadcrumb": [
+    { "name": "About Us", "href": "/about" },
+    { "name": "Board & Governance", "href": "/about/board-and-governance" }
+  ],
+  "executiveBoard": {
+    "title": "Executive Board & Governance",
+    "description": "The Board is accountable to our members and oversees the Councils' regional activities in the Middle East. It's made up of senior leaders from a broad range of industry and sectors, member firms and organisations.",
+    "accordions": [
+      {
+        "title": "Board Responsibilities",
+        "content": "The board is responsible for strategic direction, policy development, financial oversight, and ensuring alignment with EMCC global standards. We maintain strong governance practices and transparency in all operations."
+      },
+      {
+        "title": "Executive Board Structure",
+        "content": "Our governance model includes the Executive Board, Advisory Board, and specialized committees focusing on standards, accreditation, and professional development."
+      },
+      {
+        "title": "Advisory Board Structure",
+        "content": "We aim to establish EMCC ME as the premier professional body for coaching and mentoring in the Middle East, fostering excellence and innovation in the field."
+      }
+    ]
+  },
+  "president": {
+    "title": "President",
+    "name": "Afifa Mohammad",
+    "description": "Lorem ipsum dolor sit amet consectetur. Lorem senectus amet nullam mollis. Velit risus felis a a. Adipiscing platea a tincidunt tellus. Libero ac vivamus sit lacus velit et ac tempor mattis. Morbi dictum dictumst ac sed diam morbi. Ut proin pharetra nam vitae. Egestas tellus ultrices dolor risus donec commodo.",
+    "imageSrc": "/images/president.jpg"
+  },
+  "boardSecretary": {
+    "title": "Board Secretary",
+    "name": "Mohammad Abdullah",
+    "description": "Lorem ipsum dolor sit amet consectetur. Leo leo risus varius gravida tellus. Aliquet mi sit tristique mauris egestas molestie volutpat.",
+    "email": "emailname@domain.com",
+    "imageSrc": "/images/secretary.jpg"
+  },
+  "boardText": "Lorem ipsum dolor sit amet consectetur. Lorem senectus amet nullam mollis. Velit risus felis a a. Adipiscing platea a tincidunt tellus. Libero ac vivamus sit lacus velit et ac tempor mattis. Morbi dictum dictumst ac sed diam morbi. Ut proin pharetra nam vitae. Egestas tellus ultrices dolor risus donec commodo.",
+  "boardMembers": {
+    "title": "Executive Board Members",
+    "members": [
+      {
+        "name": "Mohammad Abdullah",
+        "position": "Executive Director, Community Development",
+        "email": "emailname@domain.com",
+        "imageSrc": "/images/member1.jpg",
+        "bio": "Leading initiatives in community engagement and professional development programs."
+      },
+      {
+        "name": "Jane Cooper",
+        "position": "Executive Director, Operations",
+        "email": "emailname@domain.com",
+        "imageSrc": "/images/member2.jpg",
+        "bio": "Overseeing operational excellence and program implementation."
+      },
+      {
+        "name": "Wade Warren",
+        "position": "Executive Director, Strategy",
+        "email": "emailname@domain.com",
+        "imageSrc": "/images/member3.jpg",
+        "bio": "Developing strategic initiatives and international partnerships."
+      }
+    ]
+  },
+  "boardAdvisors": {
+    "title": "Board Advisors (Non-Executive Board Members)",
+    "members": [
+      {
+        "name": "Oliver Queen",
+        "position": "Industry Advisor",
+        "email": "emailname@domain.com",
+        "imageSrc": "/images/advisor1.jpg",
+        "bio": "Distinguished professor of Leadership Studies at UAE University."
+      },
+      {
+        "name": "Walter White",
+        "position": "Industry Advisor",
+        "email": "emailname@domain.com",
+        "imageSrc": "/images/advisor2.jpg",
+        "bio": "CEO of Leadership Development International."
+      },
+      {
+        "name": "Jesse Pinkman",
+        "position": "Industry Advisor",
+        "email": "emailname@domain.com",
+        "imageSrc": "/images/advisor3.jpg",
+        "bio": "Leading researcher in coaching effectiveness and organizational development."
+      }
+    ]
+  },
+  "sidebar": {
+    "aboutEMCC": {
+      "title": "About EMCC ME",
+      "accordion": {
+        "title": "Key Information",
+        "listItems": [
+          "Vision & Mission",
+          "Strategic Objectives",
+          "Our Organisational Structure"
+        ]
+      },
+      "links": [
+        { "text": "Board & Governance", "href": "/board-and-governance" },
+        {
+          "text": "Leadership & Organisation",
+          "href": "/leadership-and-organisation"
+        }
+      ]
+    },
+    "moreAboutUs": {
+      "title": "More About Us",
+      "cards": [
+        {
+          "icon": "esg-icon",
+          "title": "ESG",
+          "description": "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi."
+        },
+        {
+          "icon": "research-icon",
+          "title": "Research",
+          "description": "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi."
+        }
+      ]
+    },
+    "applyToJoin": {
+      "title": "Apply to Join Our Board",
+      "description": "Lorem ipsum dolor sit amet consectetur. Lorem senectus amet nullam mollis. Velit risus felis a a. Adipiscing platea a tincidunt tellus. Libero ac vivamus sit lacus velit et ac tempor mattis. Morbi dictum dictumst ac sed diam morbi. Ut proin pharetra nam vitae. Egestas tellus ultrices dolor risus donec commodo.",
+      "buttonText": "Register Your Interest"
+    }
+  }
+}

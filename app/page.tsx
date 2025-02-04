@@ -17,7 +17,7 @@ import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
 import { SearchInput } from "@/src/components/ui/elements/form/Search";
 import CountryItem from "@/src/components/common/CountryItem";
 import flag from "@/public/flag.png";
-const page = () => {
+const Page = () => {
   const heroData = {
     badge: {
       icon: "https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/2fd91ae3f0fe28382611b3cf3f1c36e74470cb3310ef6ad104d2e36ec8139a46?apiKey=7d86919144c846178294e9d8a4321223&",
@@ -70,6 +70,60 @@ const page = () => {
   const switchLocation = () => {
     setModalName("select_location");
   };
+
+  const countryList = [
+    { name: "United States", flag: "https://flagcdn.com/w40/us.png" },
+    { name: "Canada", flag: "https://flagcdn.com/w40/ca.png" },
+    { name: "United Kingdom", flag: "https://flagcdn.com/w40/gb.png" },
+    { name: "Germany", flag: "https://flagcdn.com/w40/de.png" },
+    { name: "France", flag: "https://flagcdn.com/w40/fr.png" },
+    { name: "Italy", flag: "https://flagcdn.com/w40/it.png" },
+    { name: "Spain", flag: "https://flagcdn.com/w40/es.png" },
+    { name: "Netherlands", flag: "https://flagcdn.com/w40/nl.png" },
+    { name: "Sweden", flag: "https://flagcdn.com/w40/se.png" },
+    { name: "Norway", flag: "https://flagcdn.com/w40/no.png" },
+    { name: "Denmark", flag: "https://flagcdn.com/w40/dk.png" },
+    { name: "Finland", flag: "https://flagcdn.com/w40/fi.png" },
+    { name: "Russia", flag: "https://flagcdn.com/w40/ru.png" },
+    { name: "China", flag: "https://flagcdn.com/w40/cn.png" },
+    { name: "Japan", flag: "https://flagcdn.com/w40/jp.png" },
+    { name: "South Korea", flag: "https://flagcdn.com/w40/kr.png" },
+    { name: "India", flag: "https://flagcdn.com/w40/in.png" },
+    { name: "Australia", flag: "https://flagcdn.com/w40/au.png" },
+    { name: "New Zealand", flag: "https://flagcdn.com/w40/nz.png" },
+    { name: "Brazil", flag: "https://flagcdn.com/w40/br.png" },
+    { name: "Argentina", flag: "https://flagcdn.com/w40/ar.png" },
+    { name: "Mexico", flag: "https://flagcdn.com/w40/mx.png" },
+    { name: "South Africa", flag: "https://flagcdn.com/w40/za.png" },
+    { name: "Egypt", flag: "https://flagcdn.com/w40/eg.png" },
+    { name: "Turkey", flag: "https://flagcdn.com/w40/tr.png" },
+    { name: "Saudi Arabia", flag: "https://flagcdn.com/w40/sa.png" },
+    { name: "Indonesia", flag: "https://flagcdn.com/w40/id.png" },
+  ];
+
+  const region = [
+    { name: "Asia Pacific", flag: "" },
+    { name: "Middle East", flag: "" },
+    { name: "Europe", flag: "" },
+    { name: "North America & Canada", flag: "" },
+    { name: "Latin America & Caribbean", flag: "" },
+    { name: "Baltic Region", flag: "" },
+    { name: "Africa", flag: "" },
+    { name: "Indian Sub-continent", flag: "" },
+  ];
+
+  const globalEmcc = [
+    {
+      name: "EMCC Global",
+      flag: "",
+    },
+  ];
+
+  const [selectedCountry, setSelectedCountry] = useState(false);
+  const onSelectCountry = (value: any) => {
+    setSelectedCountry(!selectedCountry);
+  };
+
   return (
     <>
       <ModalWrapper
@@ -125,39 +179,60 @@ const page = () => {
                 // checkbox
                 // isMulti
                 placeholder="Select a country"
-                onChange={(value) => console.log(value)}
+                onChange={(value) => onSelectCountry(value)}
               />
             </div>
           </div>
-          <div className="flex flex-col gap-5">
-            <Text variant={"card_title_small"}>EMCC Global</Text>
-            <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
-              <CountryItem name="Asia" />
+          {selectedCountry ? (
+            <div className="flex w-auto md:min-w-[662px] flex-col gap-8">
+              <div className="flex flex-col gap-5">
+                <Text variant={"card_title_small"}>EMCC Global</Text>
+                <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
+                  <CountryItem name="EMCC Global" />
+                  {/* <CountryItem name="Asia" image={flag.src} /> */}
+                </div>
+              </div>
+              <div className="flex flex-col gap-5">
+                <Text variant={"card_title_small"}>Regions</Text>
+                <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
+                  {/* <CountryItem name="Asia"  /> */}
+                  {region.map((region, index) => (
+                    <CountryItem name={region.name} key={index} />
+                  ))}
+                </div>
+              </div>
+              <div className="flex flex-col gap-5">
+                <Text variant={"card_title_small"}>EMCC Global</Text>
+                <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
+                  {countryList.map((country, index) => (
+                    <CountryItem
+                      name={country.name}
+                      image={country.flag}
+                      key={index}
+                    />
+                  ))}
+                  {/* <CountryItem name="Asia" image={flag.src} />
               <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} />
+              <CountryItem name="Asia" image={flag.src} /> */}
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col gap-5">
-            <Text variant={"card_title_small"}>EMCC Global</Text>
-            <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
-              {/* <CountryItem name="Asia"  /> */}
-              <CountryItem name="Asia" image={flag.src} />
-              <CountryItem name="Asia" image={flag.src} />
-              <CountryItem name="Asia" image={flag.src} />
-              <CountryItem name="Asia" image={flag.src} />
-              <CountryItem name="Asia" image={flag.src} />
+          ) : (
+            <div className="flex flex-col gap-8">
+              <Text variant={"card_title_small"}>
+                Based on your selection, you are recommended to the following
+                EMCC council
+              </Text>
+              <div className="grid grid-cols-2 items-center gap-5 p-2.5 border-border border-t border-b">
+                <CountryItem name="United State" />
+                <Text variant={"placeholder"} className="text-neutralLight">
+                  English
+                </Text>
+              </div>
             </div>
-          </div>
-          <div className="flex flex-col gap-5">
-            <Text variant={"card_title_small"}>EMCC Global</Text>
-            <div className="grid grid-cols-3 gap-y-[14px] gap-x-5">
-              {/* <CountryItem name="Asia"  /> */}
-              <CountryItem name="Asia" image={flag.src} />
-              <CountryItem name="Asia" image={flag.src} />
-              <CountryItem name="Asia" image={flag.src} />
-              <CountryItem name="Asia" image={flag.src} />
-              <CountryItem name="Asia" image={flag.src} />
-            </div>
-          </div>
+          )}
         </div>
       </ModalWrapper>
       <HeroSection {...heroData} />
@@ -167,7 +242,7 @@ const page = () => {
       <StrengthsSection strengths={strengths} />
       <div
         // bgColor=""
-        className="!flex flex-wrap md:gap-10 self-stretch pr-14 bg-[#D9F2ED] max-md:pr-0"
+        className="!flex flex-wrap sm:flex-nowrap md:gap-10 self-stretch pr-14 bg-[#D9F2ED] max-md:pr-0"
       >
         <TextSection />
         <FormSection />
@@ -177,4 +252,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

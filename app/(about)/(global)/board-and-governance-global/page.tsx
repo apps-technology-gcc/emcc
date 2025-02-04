@@ -20,13 +20,14 @@ import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
 import RightSide from "../../components/RightSide";
-import TextContentSection from "../../components/TextContentSection";
+import TextContentSection from "@/components/common/TextContentSection";
 import AccordionGroup from "../../components/AccordionGroup";
 import BoardText from "../../components/BoardText";
 import BoardMember from "../../components/BoardMember";
 import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
 import Link from "@/src/components/ui/elements/Link";
 import FilingsTable from "./comopnents/FilingsTable";
+import SidebarSection from "../../components/SidebarSection";
 
 const page = () => {
   const bredList = [
@@ -46,25 +47,13 @@ const page = () => {
 
   const textContentData = {
     "EMCC Global Board & Executive Team": [
-      {
-        id: 1,
-        content:
-          "The EMCC Middle East Board & Executive team exists to provide advice, support and resource to Subscription Members. The Executive team looks over the operations by bringing over the global standard of coaching and mentorship to the Middle East.",
-      },
+      "The EMCC Middle East Board & Executive team exists to provide advice, support and resource to Subscription Members. The Executive team looks over the operations by bringing over the global standard of coaching and mentorship to the Middle East.",
     ],
     "Download filing history": [
-      {
-        id: 1,
-        content:
-          "Lorem ipsum dolor sit amet consectetur. Vel mattis at eleifend nibh nisi scelerisque sed laoreet. Tempus neque mi massa odio at at. At rhoncus adipiscing turpis malesuada integer ac pulvinar. Mi neque nunc ornare vitae eget.",
-      },
+      "Lorem ipsum dolor sit amet consectetur. Vel mattis at eleifend nibh nisi scelerisque sed laoreet. Tempus neque mi massa odio at at. At rhoncus adipiscing turpis malesuada integer ac pulvinar. Mi neque nunc ornare vitae eget.",
     ],
     "Governance Documents": [
-      {
-        id: 1,
-        content:
-          "Lorem ipsum dolor sit amet consectetur. Vel mattis at eleifend nibh nisi scelerisque sed laoreet. Tempus neque mi massa odio at at.",
-      },
+      "Lorem ipsum dolor sit amet consectetur. Vel mattis at eleifend nibh nisi scelerisque sed laoreet. Tempus neque mi massa odio at at.",
     ],
   };
   const accItems = [
@@ -99,7 +88,84 @@ const page = () => {
     "Bylaws",
     "GDPR Compliance & Data Security",
   ];
-
+  const sideBarData = {
+    aboutEMCC: {
+      title: "About EMCC Global",
+      accordion: {
+        title: "About EMCC Global",
+        listItems: [
+          "Our History, Our Culture",
+          "Our Strategy",
+          "Our Locations",
+        ],
+      },
+      links: [
+        {
+          text: "Our Organisation",
+          href: "/organisation",
+        },
+        {
+          text: "Board & Governance",
+          href: "/board-and-governance-global",
+        },
+        {
+          text: "ESG",
+          href: "/ESG",
+        },
+      ],
+    },
+    // moreAboutUs: {
+    //   title: "More About Us",
+    //   cards: [
+    //     {
+    //       icon: "sqricon",
+    //       title: "Research",
+    //       description:
+    //         "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
+    //     },
+    //     {
+    //       icon: "sqricon",
+    //       title: "CPD",
+    //       description:
+    //         "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
+    //     },
+    //   ],
+    // },
+    moreDetails: {
+      title: "For more details about the Board see the links below.",
+      items: [
+        {
+          title: "Terms of Reference (PDF - 151KB)",
+        },
+        {
+          title: "AGM Minutes of Meeting",
+        },
+        {
+          title: "EMCC Global Byelaws (2024-2025)",
+        },
+      ],
+    },
+    downloadHistory: {
+      title: "Download Filing History",
+      items: [
+        {
+          title: "Terms of Reference (PDF - 151KB)",
+        },
+        {
+          title: "AGM Minutes of Meeting",
+        },
+        {
+          title: "EMCC Global Byelaws (2024-2025)",
+        },
+      ],
+    },
+    applyToJoin: {
+      title: "Apply to Join Our Board",
+      description:
+        "Lorem ipsum dolor sit amet consectetur. Leo leo risus varius gravida tellus. Aliquet mi sit tristique mauris egestas molestie volutpat.",
+      buttonText: "Register Your Interest",
+    },
+  };
   return (
     <>
       <Banner bgImage={bgImage.src}>
@@ -123,8 +189,8 @@ const page = () => {
         <Breadcrumbs list={bredList} />
       </Breadcrumb>
       <Section bgColor="white">
-        <div className="grid grid-cols-11 gap-16">
-          <div className="col-span-7 flex flex-col gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-11 gap-16">
+          <div className="md:col-span-7 flex flex-col gap-20">
             <div className="flex flex-col gap-12">
               <TextContentSection
                 title="EMCC Global Board & Executive Team"
@@ -263,28 +329,9 @@ const page = () => {
               </div>
             </div>
           </div>
-          <RightSide
-            isGlobal={true}
-            aboutTitle="About Us"
-            aboutContent="Learn more about our mission and values."
-            accordionList={[
-              {
-                title: "Basic Accordion",
-                listItems: ["Item 1", "Item 2", "Item 3"],
-              },
-              { title: "Advanced Accordion", listItems: ["Item 4", "Item 5"] },
-            ]}
-            boardLink="/board"
-            leadershipLink="/leadership"
-            moreAboutItems={[
-              { title: "ESG", description: "Details about ESG..." },
-              { title: "Research", description: "Details about Research..." },
-            ]}
-            applyTitle="Join Us"
-            applyContent="Apply to become part of our team."
-            applyButtonLabel="Register Now"
-            applyButtonUrl="/apply"
-          />
+          <div className="md:col-span-4">
+            <SidebarSection {...sideBarData} />
+          </div>
         </div>
       </Section>
     </>

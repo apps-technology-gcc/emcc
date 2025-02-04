@@ -6,11 +6,31 @@ import { Cookies } from "./Cookies";
 import NavLink2 from "../ui/elements/NavLink2";
 
 const companyLinks = [
-  "About EMCC ME",
-  "Member Benefits",
-  "Data & Insights",
-  "Accreditation",
-  "Articles & Research",
+  // "About EMCC ME",
+  // "Member Benefits",
+  // "Data & Insights",
+  // "Accreditation",
+  // "Articles & Research",
+  {
+    label: "About EMCC ME",
+    href: "/about",
+  },
+  {
+    label: "Member Benefits",
+    href: "/member-benefits",
+  },
+  {
+    label: "Data & Insights",
+    href: "/data-and-insights",
+  },
+  {
+    label: "Accreditation",
+    href: "/accreditation",
+  },
+  {
+    label: "Articles & Research",
+    href: "/articles-and-research",
+  },
 ];
 const communityLinks = [
   "EMCC Global",
@@ -47,11 +67,11 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <div className="flex relative flex-col bg-neutral-100">
+    <div className="flex bg-background relative flex-col bg-neutral-100">
       <div className="flex z-0 flex-col px-14 py-12 w-full max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col w-full max-md:max-w-full">
-          <div className="flex flex-wrap gap-10 items-start w-full max-md:max-w-full">
-            <div className="flex flex-col text-xs font-light min-w-[240px] text-zinc-800 w-[330px]">
+          <div className="flex flex-wrap gap-12 items-start w-full max-md:max-w-full">
+            <div className="flex w-full flex-col text-xs font-light min-w-[240px] text-zinc-800 md:w-[330px]">
               <div className="flex gap-5 flex-col w-full">
                 <img
                   loading="lazy"
@@ -76,11 +96,11 @@ export const Footer: React.FC = () => {
                 </Text>
               </div>
             </div>
-            <div className="flex flex-wrap flex-1 shrink gap-10 items-start pt-16 basis-0 min-w-[240px] max-md:max-w-full">
+            <div className="flex flex-wrap flex-1 shrink gap-12 items-start md:pt-16 basis-0 min-w-[240px] max-md:max-w-full">
               <FooterColumn title="Company" links={companyLinks} />
-              <FooterColumn title="Community" links={communityLinks} />
+              {/* <FooterColumn title="Community" links={communityLinks} />
               <FooterColumn title="Services & Support" links={servicesLinks} />
-              <FooterColumn title="Legal" links={legalLinks} />
+              <FooterColumn title="Legal" links={legalLinks} /> */}
             </div>
           </div>
         </div>

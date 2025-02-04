@@ -21,6 +21,7 @@ import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
 import Timeline from "./components/TimeLine";
+import SidebarSection from "../../components/SidebarSection";
 const page = () => {
   const bredList = [
     {
@@ -33,6 +34,55 @@ const page = () => {
     //   href: "/contact",
     // },
   ];
+  const sideBarData = {
+    aboutEMCC: {
+      title: "About EMCC Global",
+      accordion: {
+        title: "About EMCC Global",
+        listItems: [
+          "Our History, Our Culture",
+          "Our Strategy",
+          "Our Locations",
+        ],
+      },
+      links: [
+        {
+          text: "Our Organisation",
+          href: "/organisation",
+        },
+        {
+          text: "Board & Governance",
+          href: "/board-and-governance-global",
+        },
+        {
+          text: "ESG",
+          href: "/ESG",
+        },
+      ],
+    },
+    moreAboutUs: {
+      title: "More About Us",
+      cards: [
+        {
+          icon: "sqricon",
+          title: "Research",
+          description:
+            "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
+        },
+        {
+          icon: "sqricon",
+          title: "CPD",
+          description:
+            "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
+        },
+      ],
+    },
+    applyToJoin: {
+      title: "Apply to Join Our Board",
+      description: "3rd December 2024 | 4:30pm to 6:30pm",
+      buttonText: "Register Your Interest",
+    },
+  };
   return (
     <>
       <Banner bgImage={bgImage.src}>
@@ -56,8 +106,8 @@ const page = () => {
         <Breadcrumbs list={bredList} />
       </Breadcrumb>
       <Section bgColor="white">
-        <div className="grid grid-cols-11 gap-16">
-          <div className="col-span-7 flex flex-col gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-11 gap-16">
+          <div className="md:col-span-7 flex flex-col gap-12">
             <div className="flex flex-col gap-12">
               <SectionTitle title="EMCC Timeline 2006-2016" />
               <div className="flex flex-col gap-8">
@@ -75,105 +125,8 @@ const page = () => {
               <Timeline />
             </div>
           </div>
-          <div className="col-span-4">
-            <div className="flex flex-col gap-12">
-              <div className="">
-                <div className="p-5 mb-[17px] bg-pink-400">
-                  <Text
-                    variant={"side_nav_header"}
-                    className="text-neutralDark"
-                  >
-                    About EMCC ME
-                  </Text>
-                </div>
-                <div className="flex flex-col gap-5">
-                  <div className="border-b border-border">
-                    <AccordionList
-                      title="Basic Accordion"
-                      listItems={["Item 1", "Item 2", "Item 3"]}
-                    />
-                  </div>
-                  <NavLink2
-                    className="flex items-center justify-between w-full"
-                    href="#"
-                    variant={"eight"}
-                  >
-                    Board & Governance
-                    <Icon name="chevron_right" className="text-[16px]" />
-                  </NavLink2>
-                  <NavLink2
-                    className="flex items-center justify-between w-full"
-                    href="#"
-                    variant={"eight"}
-                  >
-                    Leadership & Organisation
-                    <Icon name="chevron_right" className="text-[16px]" />
-                  </NavLink2>
-                </div>
-              </div>
-              <div className="flex bg-background flex-col px-5 py-8 rounded-md gap-8">
-                <Text variant={"card_title_large"}>More About Us</Text>
-                <div className="flex items-center gap-5">
-                  <Image src={sqricon} width={50} height={40} alt="icon" />
-                  <div className="flex flex-col items-start gap-5">
-                    <Text variant={"card_title_small"}>ESG</Text>
-                    <Text variant={"body"}>
-                      {`Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`.length > 63
-                        ? `Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`.slice(0, 62) + "..."
-                        : `Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`}
-                    </Text>
-                  </div>
-                </div>
-                <div className="flex items-center gap-5">
-                  <Image src={sqricon} width={50} height={40} alt="icon" />
-                  <div className="flex flex-col items-start gap-5">
-                    <Text variant={"card_title_small"}>Research</Text>
-                    <Text variant={"body"}>
-                      {`Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`.length > 63
-                        ? `Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`.slice(0, 62) + "..."
-                        : `Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`}
-                    </Text>
-                  </div>
-                </div>
-              </div>
-              <div className="flex bg-background flex-col px-5 py-8 rounded-md gap-8">
-                <Text variant={"card_title_large"}>
-                  Apply to Join Our Board
-                </Text>
-                <Text variant={"body"}>
-                  Lorem ipsum dolor sit amet consectetur. Leo leo risus varius
-                  gravida tellus. Aliquet mi sit tristique mauris egestas
-                  molestie volutpat.
-                </Text>
-                <Button variant={"default"} btnType={"primary"} outline>
-                  Register Your Interest
-                </Button>
-              </div>
-            </div>
+          <div className="md:col-span-4">
+            <SidebarSection {...sideBarData} />
           </div>
         </div>
       </Section>

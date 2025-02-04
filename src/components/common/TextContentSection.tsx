@@ -1,6 +1,7 @@
 import SectionTitle from "@/src/components/common/SectionTitle";
 import { Text } from "@/src/components/ui/elements/Text";
 import React from "react";
+import ContentSection from "./ContentSection";
 
 // Define types for the text content
 interface TextContent {
@@ -11,20 +12,19 @@ interface TextContent {
 // Define the props interface
 interface TextSectionProps {
   title: string;
-  texts: TextContent[];
+  texts: string[];
+  color?: string;
 }
 
-const TextContentSection: React.FC<TextSectionProps> = ({ title, texts }) => {
+const TextContentSection: React.FC<TextSectionProps> = ({
+  title,
+  texts,
+  color,
+}) => {
   return (
     <div className="flex flex-col gap-12">
       <SectionTitle title={title} />
-      <div className="flex flex-col gap-8">
-        {texts.map((textItem) => (
-          <Text key={textItem.id} variant="body" className="text-neutral">
-            {textItem.content}
-          </Text>
-        ))}
-      </div>
+      <ContentSection texts={texts} color={color} />
     </div>
   );
 };

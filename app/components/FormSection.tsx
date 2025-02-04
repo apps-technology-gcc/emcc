@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/src/components/ui/elements/Button";
+import { Input } from "@/src/components/ui/elements/form/Input";
 import Radio from "@/src/components/ui/elements/form/Radio";
 import Link from "@/src/components/ui/elements/Link";
 import { Text, textVariants } from "@/src/components/ui/elements/Text";
@@ -67,27 +68,12 @@ function FormSection() {
         className="flex mt-8 flex-wrap gap-5 items-start w-full"
       >
         <div className="flex flex-col flex-1 shrink text-xs font-light basis-[60px] min-w-[240px] text-zinc-400 max-md:max-w-full">
-          <div className="flex  min-h-10 flex-wrap gap-2.5 items-center px-2.5 py-2 w-full bg-white border border-solid border-neutral-300 max-md:max-w-full">
-            <label htmlFor="searchInput" className="sr-only">
-              Placeholder
-            </label>
-            <input
-              id="searchInput"
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Placeholder"
-              className="flex-1 shrink self-stretch my-auto basis-0 max-md:max-w-full bg-transparent border-none outline-none"
-              aria-label="Placeholder"
-            />
-            {/* <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/0882933954394bcb479ef236dec571ec77bf36a4c92af47d3e29a1a21a76c69c?apiKey=7d86919144c846178294e9d8a4321223&"
-            alt=""
-            className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
-          /> */}
-            {/* <Icon name="search" className="shrink-0 self-stretch my-auto w-6" /> */}
-          </div>
+          <Input
+            name="search"
+            placeholder="What are you searching for?"
+            className="max-w-full"
+            tabIndex={0}
+          />
         </div>
         <Button
           variant="default"

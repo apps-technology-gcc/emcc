@@ -10,11 +10,12 @@ module.exports = {
   theme: {
     screens: {
       xs: "640px",
-      sm: "768px",
+      sm: "834px",
       md: "1044px",
       lg: "1190px",
-      xl: "1210px",
-      "2xl": "1210px",
+      xl: "1280px",
+      "2xl": "1390px",
+      // "3xl": "1210px",
     },
     container: {
       padding: "20px",
@@ -54,7 +55,19 @@ module.exports = {
           "resources-2": colors.resources_bg_two.primary,
           "resources-3": colors.resources_bg_three.primary,
         },
-
+        green: {
+          50: "#EEFFFC",
+          100: "#C6FFF8",
+          200: "#8EFFF4",
+          300: "#4DFBED",
+          400: "#19E8DE",
+          500: "#00CCC6",
+          600: "#00A4A2",
+          700: "#028383",
+          800: "#086667",
+          900: "#0C5455",
+          950: "#003134",
+        },
         primary: {
           50: "#F2F6FC",
           100: "#DBE2FF",

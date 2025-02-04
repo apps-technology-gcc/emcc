@@ -3,6 +3,10 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = BuilderDevTools()({
   /* config options here */
+  // https://flagcdn.com/
+  images: {
+    domains: ["flagcdn.com"],
+  },
 });
 
 export default nextConfig;

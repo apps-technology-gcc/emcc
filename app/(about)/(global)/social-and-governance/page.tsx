@@ -20,7 +20,7 @@ import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
 import RightSide from "../../components/RightSide";
-import TextContentSection from "../../components/TextContentSection";
+import TextContentSection from "@/components/common/TextContentSection";
 import AccordionGroup from "../../components/AccordionGroup";
 import BoardText from "../../components/BoardText";
 const page = () => {
@@ -41,23 +41,11 @@ const page = () => {
 
   const textContentData = {
     "Coaching & Climate Change": [
-      {
-        id: 1,
-        content:
-          "We currently have xx membership categories so that you can select the membership which is right for you and that best matches your experience, expertise and extent of your practice. See below for a brief description of each category. Further down the page is a guide to help you to map your coaching and mentoring capability to decide the category for you. Once you have made your selection click on the appropriate membership category listed in the box on the right of this page.",
-      },
+      "We currently have xx membership categories so that you can select the membership which is right for you and that best matches your experience, expertise and extent of your practice. See below for a brief description of each category. Further down the page is a guide to help you to map your coaching and mentoring capability to decide the category for you. Once you have made your selection click on the appropriate membership category listed in the box on the right of this page.",
     ],
     "Comittment to Change": [
-      {
-        id: 1,
-        content:
-          "Lorem ipsum dolor sit amet consectetur. Egestas arcu vestibulum ridiculus nec at facilisis. Mattis lorem porttitor ullamcorper rutrum condimentum at congue. Quam lacus eu scelerisque aliquam. Cras sed elementum scelerisque ut vitae dolor ipsum nisl viverra. Vel tristique platea adipiscing elementum commodo. Neque pretium molestie quis cursus cras vestibulum amet. Lacus mus eu mus tortor tristique urna lacinia nec ultricies.",
-      },
-      {
-        id: 1,
-        content:
-          "Sed pellentesque nunc quam praesent porttitor velit ultrices. Malesuada orci nullam risus odio elementum. Malesuada vitae laoreet neque viverra tellus fringilla mattis faucibus. Eget quam id a quisque vel tempor montes enim. Tempor vulputate mauris nec morbi porta auctor nibh auctor. Vestibulum nisi ipsum a amet maecenas. Tempor cum eget in aliquam.",
-      },
+      "Lorem ipsum dolor sit amet consectetur. Egestas arcu vestibulum ridiculus nec at facilisis. Mattis lorem porttitor ullamcorper rutrum condimentum at congue. Quam lacus eu scelerisque aliquam. Cras sed elementum scelerisque ut vitae dolor ipsum nisl viverra. Vel tristique platea adipiscing elementum commodo. Neque pretium molestie quis cursus cras vestibulum amet. Lacus mus eu mus tortor tristique urna lacinia nec ultricies.",
+      "Sed pellentesque nunc quam praesent porttitor velit ultrices. Malesuada orci nullam risus odio elementum. Malesuada vitae laoreet neque viverra tellus fringilla mattis faucibus. Eget quam id a quisque vel tempor montes enim. Tempor vulputate mauris nec morbi porta auctor nibh auctor. Vestibulum nisi ipsum a amet maecenas. Tempor cum eget in aliquam.",
     ],
   };
   const accItems1 = [
@@ -99,6 +87,55 @@ const page = () => {
       content: "Culture, Talent and Inclusion (CTI)",
     },
   ];
+  const sideBarData = {
+    aboutEMCC: {
+      title: "About EMCC Global",
+      accordion: {
+        title: "About EMCC Global",
+        listItems: [
+          "Our History, Our Culture",
+          "Our Strategy",
+          "Our Locations",
+        ],
+      },
+      links: [
+        {
+          text: "Our Organisation",
+          href: "/organisation",
+        },
+        {
+          text: "Board & Governance",
+          href: "/board-and-governance-global",
+        },
+        {
+          text: "ESG",
+          href: "/ESG",
+        },
+      ],
+    },
+    moreAboutUs: {
+      title: "More About Us",
+      cards: [
+        {
+          icon: "sqricon",
+          title: "Research",
+          description:
+            "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
+        },
+        {
+          icon: "sqricon",
+          title: "CPD",
+          description:
+            "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
+        },
+      ],
+    },
+    applyToJoin: {
+      title: "Apply to Join Our Board",
+      description: "3rd December 2024 | 4:30pm to 6:30pm",
+      buttonText: "Register Your Interest",
+    },
+  };
   return (
     <>
       <Banner bgImage={bgImage.src}>

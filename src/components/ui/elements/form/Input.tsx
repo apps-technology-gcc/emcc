@@ -95,6 +95,7 @@ export interface InputProps
   spacing?: "default" | "tight" | "loose";
   className?: string;
   useForm?: boolean;
+  warningText?: string;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
@@ -115,6 +116,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       useForm = false,
       cols,
       rows,
+      warningText,
       ...props
     },
     ref
@@ -148,7 +150,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       />
     );
 
-    const renterTextArea = (field = {}) => (
+    const renderTextArea = (field = {}) => (
       <textarea
         {...field}
         {...props}
@@ -156,7 +158,6 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         cols={cols ? cols : 50}
         rows={rows ? rows : 8}
         name={name}
-        type="textarea"
         placeholder={placeholder}
         className={cn(
           "min-h-[90px]",
@@ -184,44 +185,49 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           />
         )}
 
-        <div className="relative w-auto">
-          {isFormContext ? (
-            <Controller
-              control={formContext.control}
-              name={name}
-              rules={validation}
-              render={({ field }) =>
-                type === "textarea" ? renterTextArea(field) : renderInput(field)
-              }
-            />
-          ) : type === "textarea" ? (
-            renterTextArea()
-          ) : (
-            renderInput()
-          )}
+        {isFormContext ? (
+          <Controller
+            control={formContext.control}
+            name={name}
+            rules={validation}
+            render={({ field }) =>
+              type === "textarea" ? renderTextArea(field) : renderInput(field)
+            }
+          />
+        ) : type === "textarea" ? (
+          renderTextArea()
+        ) : (
+          renderInput()
+        )}
 
-          {type === "password" && (
-            <div
-              onClick={() => setShow(!show)}
-              className="text-border flex items-center absolute right-2.5 top-1/2 -translate-y-1/2 cursor-pointer"
-            >
-              {show ? (
-                <Icon className="text-xl text-neutralDark" name="visibility" />
-              ) : (
-                <Icon
-                  className="text-xl text-neutralDark"
-                  name="visibility_off"
-                />
-              )}
-            </div>
-          )}
+        {type === "password" && (
+          <div
+            onClick={() => setShow(!show)}
+            className="text-border flex items-center absolute right-2.5 top-1/2 -translate-y-1/2 cursor-pointer"
+          >
+            {show ? (
+              <Icon className="text-xl text-neutralDark" name="visibility" />
+            ) : (
+              <Icon
+                className="text-xl text-neutralDark"
+                name="visibility_off"
+              />
+            )}
+          </div>
+        )}
 
-          {isError && errorMessage && (
-            <Text variant="small" className="text-danger-600 mt-1">
-              {errorMessage}
+        {isError && errorMessage && (
+          <Text variant="small" className="text-danger-600 mt-1">
+            {errorMessage}
+          </Text>
+        )}
+        {warningText && (
+          <div className="flex justify-end">
+            <Text variant="small" className="text-neutral">
+              {warningText}
             </Text>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     );
   }

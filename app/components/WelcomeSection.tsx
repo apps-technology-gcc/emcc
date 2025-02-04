@@ -10,7 +10,7 @@ export const WelcomeSection: React.FC = () => {
   };
 
   return (
-    <Section bgColor="white">
+    <Section bgColor="white" className="!pb-0">
       <div className="flex flex-col max-w-full w-[960px]">
         <WelcomeHeader
           title="Welcome"

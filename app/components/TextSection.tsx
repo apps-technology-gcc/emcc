@@ -5,7 +5,7 @@ function TextSection() {
   return (
     <Text
       variant={"section_title"}
-      className="flex-1 flex items-center justify-center shrink py-12 pr-8 pl-14 text-2xl font-semibold text-white bg-neutralDark min-w-[240px] max-md:px-5 max-md:max-w-full"
+      className="flex-1 flex items-center justify-center shrink w-1/2 pt-20 pb-5 px-5 md:py-12 md:pr-8 md:pl-14 text-2xl font-semibold text-white bg-neutralDark min-w-[240px] "
     >
       Find coaches, mentors, training, courses & more
     </Text>

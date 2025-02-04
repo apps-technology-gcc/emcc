@@ -21,11 +21,15 @@ import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
 import AboutGlobalImg from "@/public/about-global.png";
 import Guiding from "../../components/Guiding";
-import TextContentSection from "../../components/TextContentSection";
+import TextContentSection from "@/components/common/TextContentSection";
 import AccordionGroup from "../../components/AccordionGroup";
 import EmccFlag from "@/public/emcc-flag.svg";
 import flag from "@/public/flag.png";
-
+import SidebarSection from "../../components/SidebarSection";
+import BannerSection from "../../components/BannerSection";
+import pageContentJson from "@/src/data/aboutGlobal.json";
+import { PageContent } from "./type";
+import OurRegionSection from "../../components/OurRegionSection";
 const page = () => {
   const bredList = [
     {
@@ -55,73 +59,19 @@ const page = () => {
   ];
   const textContentData = {
     "The Work We Do": [
-      {
-        id: 1,
-        content:
-          "EMCCs vision is to be the ‘go to body’ for setting the highest quality standards in Mentoring and Coaching. In this section, we set out the standards that we believe you should use as a guide, whether you are a coach, mentor, coach or mentor supervisor, or trainer or programme provider. It comprises competences, CPD guidance, supervision competences and guidance, the Global Code of Ethics, diversity and regulation. It aims to answer some important questions:",
-      },
-      {
-        id: 2,
-        content:
-          "We currently have two individual membership categories so that you can select the membership which is right for you and that best matches your experience, expertise and extent of your practice.",
-      },
-      {
-        id: 3,
-        content:
-          "See below for a brief description of each category. Further down the page is a guide to help you to map your coaching and mentoring capability to decide the category for you. Once you have made your selection click on the appropriate membership category listed in the box on the right of this page.",
-      },
-      {
-        id: 4,
-        content:
-          "This will tell you more about the membership benefits, the price and take you to the joining application form",
-      },
+      "EMCCs vision is to be the ‘go to body’ for setting the highest quality standards in Mentoring and Coaching. In this section, we set out the standards that we believe you should use as a guide, whether you are a coach, mentor, coach or mentor supervisor, or trainer or programme provider. It comprises competences, CPD guidance, supervision competences and guidance, the Global Code of Ethics, diversity and regulation. It aims to answer some important questions:",
+      "We currently have two individual membership categories so that you can select the membership which is right for you and that best matches your experience, expertise and extent of your practice.",
+      "See below for a brief description of each category. Further down the page is a guide to help you to map your coaching and mentoring capability to decide the category for you. Once you have made your selection click on the appropriate membership category listed in the box on the right of this page.",
+      "This will tell you more about the membership benefits, the price and take you to the joining application form",
     ],
     "Our Strategy": [
-      {
-        id: 1,
-        content:
-          "EMCCs vision is to be the ‘go to body’ for setting the highest quality standards in Mentoring and Coaching. In this section, we set out the standards that we believe you should use as a guide, whether you are a coach, mentor, coach or mentor supervisor, or trainer or programme provider. It comprises competences, CPD guidance, supervision competences and guidance, the Global Code of Ethics, diversity and regulation. It aims to answer some important questions:",
-      },
-      {
-        id: 2,
-        content:
-          "We currently have two individual membership categories so that you can select the membership which is right for you and that best matches your experience, expertise and extent of your practice.",
-      },
-      {
-        id: 3,
-        content:
-          "See below for a brief description of each category. Further down the page is a guide to help you to map your coaching and mentoring capability to decide the category for you. Once you have made your selection click on the appropriate membership category listed in the box on the right of this page.",
-      },
-      {
-        id: 4,
-        content:
-          "This will tell you more about the membership benefits, the price and take you to the joining application form.",
-      },
+      "EMCCs vision is to be the ‘go to body’ for setting the highest quality standards in Mentoring and Coaching. In this section, we set out the standards that we believe you should use as a guide, whether you are a coach, mentor, coach or mentor supervisor, or trainer or programme provider. It comprises competences, CPD guidance, supervision competences and guidance, the Global Code of Ethics, diversity and regulation. It aims to answer some important questions:",
+      "We currently have two individual membership categories so that you can select the membership which is right for you and that best matches your experience, expertise and extent of your practice.",
+      "See below for a brief description of each category. Further down the page is a guide to help you to map your coaching and mentoring capability to decide the category for you. Once you have made your selection click on the appropriate membership category listed in the box on the right of this page.",
+      "This will tell you more about the membership benefits, the price and take you to the joining application form",
     ],
   };
 
-  const accordionData1 = [
-    {
-      id: 1,
-      title: "Our Founders",
-      content: "This is the content<br/>This is another paragraph",
-    },
-    {
-      id: 2,
-      title: "Our History",
-      content: "This is the content<br/>This is another paragraph",
-    },
-    {
-      id: 3,
-      title: "What We Do",
-      content: "This is the content<br/>This is another paragraph",
-    },
-    {
-      id: 4,
-      title: "Our Mission",
-      content: "This is the content<br/>This is another paragraph",
-    },
-  ];
   const accordionData2 = [
     {
       id: 1,
@@ -139,6 +89,56 @@ const page = () => {
       content: "This is the content<br/>This is another paragraph",
     },
   ];
+  const [pageContent, setPageContent] = useState<PageContent>(pageContentJson);
+  const sideBarData = {
+    aboutEMCC: {
+      title: "About EMCC Global",
+      accordion: {
+        title: "About EMCC Global",
+        listItems: [
+          "Our History, Our Culture",
+          "Our Strategy",
+          "Our Locations",
+        ],
+      },
+      links: [
+        {
+          text: "Our Organisation",
+          href: "/organisation",
+        },
+        {
+          text: "Board & Governance",
+          href: "/board-and-governance-global",
+        },
+        {
+          text: "ESG",
+          href: "/ESG",
+        },
+      ],
+    },
+    moreAboutUs: {
+      title: "More About Us",
+      cards: [
+        {
+          icon: "sqricon",
+          title: "Research",
+          description:
+            "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
+        },
+        {
+          icon: "sqricon",
+          title: "CPD",
+          description:
+            "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
+        },
+      ],
+    },
+    applyToJoin: {
+      title: "Apply to Join Our Board",
+      description: "3rd December 2024 | 4:30pm to 6:30pm",
+      buttonText: "Register Your Interest",
+    },
+  };
 
   return (
     <>
@@ -163,16 +163,13 @@ const page = () => {
         <Breadcrumbs list={bredList} />
       </Breadcrumb>
       <Section bgColor="white">
-        <div className="grid grid-cols-11 gap-16">
-          <div className="col-span-7 flex flex-col gap-20">
+        <div className="grid grid-cols-1 md:grid-cols-11 gap-16">
+          <div className="md:col-span-7 flex flex-col gap-20">
             <div className="flex flex-col gap-12">
               <TextContentSection
                 title="The Work We Do"
                 texts={textContentData["The Work We Do"]}
               />
-
-              <AccordionGroup items={accordionData1} />
-              <Image src={AboutGlobalImg} width={450} height={500} alt="path" />
             </div>
             <Guiding
               sectionTitle=" Our Guiding Values"
@@ -195,154 +192,28 @@ const page = () => {
                 Download Strategic Priorities
               </Button>
             </div>
-            <div className="flex flex-col gap-12">
-              <SectionTitle title="Our Region" />
-              <div className="flex flex-col gap-8">
-                <Text variant={"body"} className="text-neutral">
-                  Lorem ipsum dolor sit amet consectetur. Pharetra est nisi nunc
-                  condimentum. Risus pharetra nunc suspendisse fermentum leo
-                  faucibus. Quis faucibus sed placerat suscipit facilisis
-                  eleifend.
-                </Text>
-              </div>
-              <Image
-                alt="world_map"
-                width={736}
-                height={314}
-                className=""
-                src={world_map}
-              />
-              <div className="flex flex-col gap-5">
-                <Text variant={"card_title_large"}>Councils</Text>
-                <div className="flex items-center gap-5 gap-y-[14px] flex-wrap">
-                  <div className="min-w-[220px] flex items-center gap-2.5">
-                    <Image
-                      width={24}
-                      height={16}
-                      alt="flag"
-                      className=""
-                      src={EmccFlag}
-                    />
-                    <Text variant={"placeholder"}>United Arab Emirates</Text>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col gap-5">
-                <Text variant={"card_title_large"}>Councils</Text>
-                <div className="flex items-center gap-5 gap-y-[14px] flex-wrap">
-                  <div className="min-w-[220px] flex items-center gap-2.5">
-                    <Image
-                      width={24}
-                      height={16}
-                      alt="flag"
-                      className=""
-                      src={flag}
-                    />
-                    <Text variant={"placeholder"}>United Arab Emirates</Text>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <OurRegionSection
+              title="Our Locations"
+              description="Lorem ipsum dolor sit amet consectetur. Pharetra est nisi nunc condimentum. Risus pharetra nunc suspendisse fermentum leo faucibus. Quis faucibus sed placerat suscipit facilisis eleifend."
+              countries={[
+                "United Arab Emirates",
+                "Qatar",
+                "Saudi Arabia",
+                "Kuwait",
+                "Jordan",
+                "Oman",
+                "Bahrain",
+                "Egypt",
+              ]}
+              countryChapters="Individual Country Chapters"
+              councils={{
+                title: "Councils",
+                regions: ["Asia Pacific"],
+              }}
+            />
           </div>
-          <div className="col-span-4">
-            <div className="flex flex-col gap-12">
-              <div className="">
-                <div className="p-5 mb-[17px] bg-pink-400">
-                  <Text
-                    variant={"side_nav_header"}
-                    className="text-neutralDark"
-                  >
-                    About EMCC ME
-                  </Text>
-                </div>
-                <div className="flex flex-col gap-5">
-                  <div className="border-b border-border">
-                    <AccordionList
-                      title="Basic Accordion"
-                      listItems={["Item 1", "Item 2", "Item 3"]}
-                    />
-                  </div>
-                  <NavLink2
-                    className="flex items-center justify-between w-full"
-                    href="#"
-                    variant={"eight"}
-                  >
-                    Board & Governance
-                    <Icon name="chevron_right" className="text-[16px]" />
-                  </NavLink2>
-                  <NavLink2
-                    className="flex items-center justify-between w-full"
-                    href="#"
-                    variant={"eight"}
-                  >
-                    Leadership & Organisation
-                    <Icon name="chevron_right" className="text-[16px]" />
-                  </NavLink2>
-                </div>
-              </div>
-              <div className="flex bg-background flex-col px-5 py-8 rounded-md gap-8">
-                <Text variant={"card_title_large"}>More About Us</Text>
-                <div className="flex items-center gap-5">
-                  <Image src={sqricon} width={50} height={40} alt="icon" />
-                  <div className="flex flex-col items-start gap-5">
-                    <Text variant={"card_title_small"}>ESG</Text>
-                    <Text variant={"body"}>
-                      {`Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`.length > 63
-                        ? `Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`.slice(0, 62) + "..."
-                        : `Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`}
-                    </Text>
-                  </div>
-                </div>
-                <div className="flex items-center gap-5">
-                  <Image src={sqricon} width={50} height={40} alt="icon" />
-                  <div className="flex flex-col items-start gap-5">
-                    <Text variant={"card_title_small"}>Research</Text>
-                    <Text variant={"body"}>
-                      {`Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`.length > 63
-                        ? `Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`.slice(0, 62) + "..."
-                        : `Lorem ipsum dolor sit amet consectetur. Mattis amet elit
-                      vulputate convallis massa accumsan purus sit. Proin porta
-                      sit amet nam egestas ac. Sit fermentum amet ut consequat
-                      nec. Non faucibus lectus quis tortor aliquam suscipit
-                      fermentum sem mi.`}
-                    </Text>
-                  </div>
-                </div>
-              </div>
-              <div className="flex bg-background flex-col px-5 py-8 rounded-md gap-8">
-                <Text variant={"card_title_large"}>
-                  Apply to Join Our Board
-                </Text>
-                <Text variant={"body"}>
-                  Lorem ipsum dolor sit amet consectetur. Leo leo risus varius
-                  gravida tellus. Aliquet mi sit tristique mauris egestas
-                  molestie volutpat.
-                </Text>
-                <Button variant={"default"} btnType={"primary"} outline>
-                  Register Your Interest
-                </Button>
-              </div>
-            </div>
+          <div className="md:col-span-4">
+            <SidebarSection {...sideBarData} />
           </div>
         </div>
       </Section>

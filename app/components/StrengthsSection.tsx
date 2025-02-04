@@ -10,7 +10,7 @@ export const StrengthsSection: React.FC<StrengthsSectionProps> = ({
   return (
     <Section
       bgColor="white"
-      className="flex flex-col justify-center self-stretch py-20 bg-white max-md:px-5"
+      className="flex flex-col justify-center self-stretch py-20 bg-white"
       aria-labelledby="strengths-title"
     >
       <div className="flex flex-col w-full max-md:max-w-full">

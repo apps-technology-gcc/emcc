@@ -13,7 +13,10 @@ export interface FooterLinkProps {
 
 export interface FooterColumnProps {
   title: string;
-  links: string[];
+  links: {
+    label: string;
+    href: string;
+  }[];
 }
 
 export interface SocialLinkProps {
@@ -123,4 +126,17 @@ export interface FilingRowData {
   description: string;
   date: string;
   previewUrl: string;
+}
+
+export interface LogbookRowProps {
+  date?: string;
+  hours?: string;
+  event?: string;
+  reflection?: string;
+}
+
+export interface LogbookHeaderProps {
+  title: string;
+  width: string;
+  minWidth?: string;
 }

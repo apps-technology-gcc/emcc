@@ -3,6 +3,8 @@ import React from "react";
 import EmccFlag from "@/public/emcc-flag.svg";
 import { Text } from "../ui/elements/Text";
 const CountryItem = ({ image, name }: { image?: string; name: string }) => {
+  console.log(image);
+  console.log(name);
   return (
     <div className="min-w-[220px] flex items-center gap-2.5">
       <Image

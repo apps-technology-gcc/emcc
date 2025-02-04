@@ -15,7 +15,7 @@ const navLinkVariants = cva(
         ],
         "navlink-2": [
           "text-neutralDark border-b border-b-2 pb-[6px] border-transparent",
-          "hover:border-primary-600",
+          "hover:border-primary-600 hover:text-primary-600",
         ],
         "tab-1": [
           "text-neutralDark bg-primary-200 px-5 py-[9px] border-x-[0.5px] border-primary-300",
