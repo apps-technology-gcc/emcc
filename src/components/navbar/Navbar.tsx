@@ -10,6 +10,7 @@ import { MoreMegaMenu } from "./MoreMegaMenu";
 import Section from "../layout/Section";
 import { Text } from "../ui/elements/Text";
 import { cn } from "@/src/lib/utils";
+import Link from "next/link";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState<
@@ -47,12 +48,14 @@ const Navbar = () => {
     <div className="bg-white py-5 relative border-b-2 border-solid  border-green-300">
       <div className="hidden sm:flex  container z-10 flex-wrap sm:flex-nowrap gap-10 justify-between items-center  w-full  max-md:px-5 max-md:max-w-full">
         <div className="flex gap-2.5 items-center self-stretch my-auto w-[89px]">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/a30706981d059982fc024f3de458f6477f15c721a5d911f138e4fe56d831445d?apiKey=06aa3e4feb1a44b58f93292c617c0ab1&"
-            alt="EMCC Logo"
-            className="object-contain self-stretch my-auto aspect-[2.23] w-[89px]"
-          />
+          <Link href={"/"}>
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/a30706981d059982fc024f3de458f6477f15c721a5d911f138e4fe56d831445d?apiKey=06aa3e4feb1a44b58f93292c617c0ab1&"
+              alt="EMCC Logo"
+              className="object-contain self-stretch my-auto aspect-[2.23] w-[89px]"
+            />
+          </Link>
         </div>
         <div className="flex gap-8 items-center self-stretch my-auto h-full relative">
           {navLinks.map((link, index) => (

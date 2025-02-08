@@ -22,9 +22,9 @@ import SectionLink from "@/src/components/common/SectionLink";
 import RightSide from "../../components/RightSide";
 import TextContentSection from "@/components/common/TextContentSection";
 import AccordionGroup from "../../components/AccordionGroup";
-import BoardText from "../../components/BoardText";
 import FilingsTable from "../board-and-governance-global/comopnents/FilingsTable";
 import SidebarSection from "../../components/SidebarSection";
+import BoardText from "@/src/components/common/BoardText";
 const page = () => {
   const bredList = [
     {

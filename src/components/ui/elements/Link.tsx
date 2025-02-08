@@ -6,7 +6,7 @@ import { Icon } from "./Icon";
 
 // Common styles matching Button component
 const baseStyles =
-  "inline-flex flex items-center text-button gap-2.5 items-center transition-colors";
+  "inline-flex max-w-fit flex items-center text-button gap-2.5 items-center transition-colors";
 const primaryStyle = "text-primary-600 hover:text-primary-700";
 const secondaryStyle =
   "text-neutralDark hover:text-gray-900 underline hover:no-underline underline-offset-4";

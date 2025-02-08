@@ -20,7 +20,6 @@ import PresidentImg from "@/public/president.png";
 import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
-import BoardText from "../components/BoardText";
 import BoardMember from "../components/BoardMember";
 import BannerSection from "../components/BannerSection";
 import pageContentJson from "@/src/data/boardAndGovt.json";
@@ -28,6 +27,7 @@ import { BoardPageContent } from "./type";
 import ExecutiveBoardSection from "./components/ExecutiveBoardSection";
 import BoardMembersGridSection from "./../components/BoardMembersGridSection";
 import SidebarSection from "../components/SidebarSection";
+import BoardText from "@/src/components/common/BoardText";
 const page = () => {
   const bredList = [
     {

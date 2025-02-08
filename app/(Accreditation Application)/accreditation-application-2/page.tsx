@@ -22,7 +22,7 @@ const page = () => {
             message="The EMCC accreditation award recognises your validated prior learning and relevant experience"
           />
 
-          <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+          <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
             <SearchSelect
               label="Select Accreditation"
               // control={control}

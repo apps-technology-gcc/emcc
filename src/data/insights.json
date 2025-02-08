@@ -1,0 +1,85 @@
+{
+  "banner": {
+    "title": "Insights",
+    "description": "Posuere diam massa in morbi posuere nullam. Accumsan dictum lacus nibh aliquam tincidunt faucibus quis vehicula ac. Tempor fringilla odio id tortor felis suspendisse porta placerat rhoncus. Vestibulum semper vitae pellentesque fames quam purus nec faucibus porttitor."
+  },
+  "breadcrumb": [
+    {
+      "name": "Insights"
+    },
+    {
+      "name": "All Insights",
+      "url": "/blog"
+    }
+  ],
+  "journals": [
+    {
+      "locked": false,
+      "imageSrc": "/path/to/journal.png",
+      "imageAlt": "journal",
+      "tag": "Journal",
+      "date": "03 Sep, 2024",
+      "title": "EMCC International Journal",
+      "description": "Lorem ipsum dolor sit amet consectetur. Vitae hendrerit molestie neque dictum amet donec non. Feugiat libero ut turpis tortor. Nunc commodo mauris enim sem ullamcorper amet ullamcorper. Sit odio integer malesuada turpis enim sapien tincidunt lorem lacus. Imperdiet felis vel proin parturient porta nibh purus. Tellus amet vel neque mollis lorem in interdum arcu. Auctor adipiscing maecenas pharetra ultricies arcu commodo. Blandit sit euismod sed morbi id. Sed neque molestie neque ultrices commodo enim metus hac dictum."
+    },
+    {
+      "locked": true,
+      "imageSrc": "/path/to/journal.png",
+      "imageAlt": "journal",
+      "tag": "Journal",
+      "date": "03 Sep, 2024",
+      "title": "EMCC International Journal",
+      "description": "Lorem ipsum dolor sit amet consectetur. Vitae hendrerit molestie neque dictum amet donec non. Feugiat libero ut turpis tortor. Nunc commodo mauris enim sem ullamcorper amet ullamcorper. Sit odio integer malesuada turpis enim sapien tincidunt lorem lacus. Imperdiet felis vel proin parturient porta nibh purus. Tellus amet vel neque mollis lorem in interdum arcu. Auctor adipiscing maecenas pharetra ultricies arcu commodo. Blandit sit euismod sed morbi id. Sed neque molestie neque ultrices commodo enim metus hac dictum."
+    }
+  ],
+  "resources": [
+    {
+      "title": "Case Studies & Reports",
+      "resources": [
+        {
+          "date": "Friday 30 July, 2024",
+          "tag": "Case Studies",
+          "title": "Lectus ac rhoncus volutpat hac. Pulvinar enim dictumst aliquam pretium imperdiet molestie placerat risus. Mi risus accumsan orci vel. Pulvinar ac sed tristique amet. Pretium imperdiet molestie placerat risus."
+        },
+        {
+          "date": "Friday 30 July, 2024",
+          "tag": "Report",
+          "title": "Lectus ac rhoncus volutpat hac. Pulvinar enim dictumst aliquam pretium imperdiet molestie placerat risus. Mi risus accumsan orci vel. Pulvinar ac sed tristique amet. Pretium imperdiet molestie placerat risus."
+        }
+      ],
+      "cta": "All Case Studies & Reports"
+    },
+    {
+      "title": "Podcasts",
+      "resources": [
+        {
+          "date": "Friday 30 July, 2024",
+          "tag": "Podcasts",
+          "title": "Lectus ac rhoncus volutpat hac. Pulvinar enim dictumst aliquam pretium imperdiet molestie placerat risus. Mi risus accumsan orci vel. Pulvinar ac sed tristique amet. Pretium imperdiet molestie placerat risus."
+        },
+        {
+          "date": "Friday 30 July, 2024",
+          "tag": "Podcasts",
+          "title": "Pulvinar enim dictumst aliquam pretium imperdiet molestie. Lectus ac rhoncus volutpat hac. Pulvinar enim dictumst aliquam pretium imperdiet molestie placerat risus. Mi risus accumsan orci vel. Pulvinar ac sed tristique amet."
+        }
+      ],
+      "cta": "All Podcast"
+    },
+    {
+      "title": "BookshoP",
+      "resources": [
+        {
+          "date": "Friday 30 July, 2024",
+          "tag": "Book",
+          "title": "Lectus ac rhoncus volutpat hac. Pulvinar enim dictumst aliquam pretium imperdiet molestie placerat risus. Mi risus accumsan orci vel. Pulvinar ac sed tristique amet. Pretium imperdiet molestie placerat risus."
+        },
+        {
+          "date": "Friday 30 July, 2024",
+          "tag": "Book",
+          "title": "Pretium imperdiet molestie placerat risus. Pulvinar enim dictumst aliquam pretium imperdiet molestie."
+        }
+      ],
+      "cta": "All Books"
+    }
+  ]
+}

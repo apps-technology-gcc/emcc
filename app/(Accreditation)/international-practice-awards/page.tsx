@@ -35,6 +35,8 @@ import { TextLink } from "@/src/components/ui/elements/Additional";
 import ArticleImg from "@/public/article.png";
 import TextContentSection from "@/src/components/common/TextContentSection";
 import Divider from "@/src/components/ui/elements/Divider";
+import AwardImg from "@/public/awards.png";
+
 const page = () => {
   const bredList = [
     {
@@ -182,16 +184,8 @@ const page = () => {
               <TextContentSection
                 title="Awards"
                 texts={[
-                  {
-                    id: 1,
-                    content:
-                      "Lorem ipsum dolor sit amet consectetur. Nec porta scelerisque id consectetur lectus aliquet et ullamcorper. Pulvinar lorem at condimentum auctor bibendum tristique vestibulum sagittis fermentum. Augue eget pretium viverra molestie sem risus justo luctus. At eu interdum feugiat sem tellus adipiscing. Nibh quis lectus ullamcorper dictumst iaculis id pellentesque donec.",
-                  },
-                  {
-                    id: 2,
-                    content:
-                      "Mauris tristique fringilla netus et sit enim blandit sit. Condimentum at posuere felis donec et viverra ut. Ultricies tempor porttitor pretium interdum dolor. Quisque nunc imperdiet in vulputate vulputate blandit amet nibh facilisis.",
-                  },
+                  "Lorem ipsum dolor sit amet consectetur. Nec porta scelerisque id consectetur lectus aliquet et ullamcorper. Pulvinar lorem at condimentum auctor bibendum tristique vestibulum sagittis fermentum. Augue eget pretium viverra molestie sem risus justo luctus. At eu interdum feugiat sem tellus adipiscing. Nibh quis lectus ullamcorper dictumst iaculis id pellentesque donec.",
+                  "Mauris tristique fringilla netus et sit enim blandit sit. Condimentum at posuere felis donec et viverra ut. Ultricies tempor porttitor pretium interdum dolor. Quisque nunc imperdiet in vulputate vulputate blandit amet nibh facilisis.",
                 ]}
               />
               <div className=" flex flex-col p-5 bg-green-50 border-l-2 border-green-500">
@@ -500,46 +494,24 @@ const page = () => {
                 </div>
               </div>
               <div className="flex bg-background flex-col px-5 py-8 rounded-md gap-8">
-                <Text variant={"card_title_large"}>Suggested Articles</Text>
-                <div className="flex items-center gap-5">
-                  <div className="min-w-20 h-20">
-                    <Image
-                      className="rounded-md w-full h-auto"
-                      src={ArticleImg}
-                      width={80}
-                      height={80}
-                      alt="icon"
-                    />
-                  </div>
-
-                  <div className="flex flex-col items-start gap-5">
-                    <Text variant={"card_title_small"}>
-                      Accreditation V's Certification: What's the difference?
-                    </Text>
-                    <Tag style="style1" className="max-w-fit" variant="tag2">
-                      Article
-                    </Tag>
-                  </div>
-                </div>
-                <div className="flex items-center gap-5">
-                  <div className="min-w-20 h-20">
-                    <Image
-                      className="rounded-md w-full h-auto"
-                      src={ArticleImg}
-                      width={80}
-                      height={80}
-                      alt="icon"
-                    />
-                  </div>
-                  <div className="flex flex-col items-start gap-5">
-                    <Text variant={"card_title_small"}>
-                      Becoming an Approved Body for EMCC Accreditation
-                    </Text>
-                    <Tag style="style1" className="max-w-fit" variant="tag2">
-                      Article
-                    </Tag>
-                  </div>
-                </div>
+                <Text variant={"card_title_large"}>
+                  Submit Your Nomination for the Award
+                </Text>
+                <Text variant={"body"}>
+                  Celebrate excellence in practice with your nomination.
+                </Text>
+                <Button variant={"default"} btnType={"primary"} outline>
+                  Submit Nomination
+                </Button>
+              </div>
+              <div className="w-full h-auto">
+                <Image
+                  src={AwardImg}
+                  width={294}
+                  height={180}
+                  alt="award"
+                  className="w-full"
+                />
               </div>
             </div>
           </div>

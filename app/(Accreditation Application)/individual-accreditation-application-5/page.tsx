@@ -84,75 +84,77 @@ const page = () => {
             <Text variant={"card_title_large"} className="text-neutral">
               Supervisor feedback (one or more if applicable)
             </Text>
-            <div className="flex flex-col gap-5">
-              <div className="flex flex-col gap-2.5">
-                <div className="flex w-full border-border  border flex-col rounded-tl-md rounded-tr-md overflow-hidden">
-                  <div className="grid grid-cols-10 bg-primary-100">
-                    <div className="flex items-center col-span-4 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Supervisor Name
-                      </Text>
+            <div className="overflow-auto">
+              <div className="flex  min-w-[650px] flex-col gap-5">
+                <div className="flex flex-col gap-2.5">
+                  <div className="flex w-full border-border  border flex-col rounded-tl-md rounded-tr-md overflow-hidden">
+                    <div className="grid grid-cols-10 bg-primary-100">
+                      <div className="flex items-center col-span-4 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Supervisor Name
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Supervisor Signature
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Supervisor Comment
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Date
+                        </Text>
+                      </div>
                     </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Supervisor Signature
-                      </Text>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Supervisor Comment
-                      </Text>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Date
-                      </Text>
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-10 border border-b min-h-[50px]">
-                    <div className="flex items-center col-span-4 border-border border-r px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                    <div className="grid grid-cols-10 border border-b min-h-[50px]">
+                      <div className="flex items-center col-span-4 border-border border-r px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Date
       </Text> */}
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Link variant={"primary"} href="#">
-                        Upload
-                      </Link>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Link variant={"primary"} href="#">
-                        Add Comment
-                      </Link>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Link variant={"primary"} href="#">
+                          Upload
+                        </Link>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Link variant={"primary"} href="#">
+                          Add Comment
+                        </Link>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Reflections on EMCC Competence & Assessment Frameworks
       </Text> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex justify-end">
-                  <Link
-                    href="#"
-                    variant={"primary"}
-                    icon={<Icon name="add" className="text-[20px]" />}
-                    iconPosition="right"
-                  >
-                    Add More
-                  </Link>
+                  <div className="flex justify-end">
+                    <Link
+                      href="#"
+                      variant={"primary"}
+                      icon={<Icon name="add" className="text-[20px]" />}
+                      iconPosition="right"
+                    >
+                      Add More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

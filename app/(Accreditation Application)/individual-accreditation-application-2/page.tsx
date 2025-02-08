@@ -27,7 +27,7 @@ const page = () => {
               Personal Details
             </Text>
             <div className="flex flex-col gap-5">
-              <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+              <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
                 <Input
                   label="First Name"
                   type="text"
@@ -59,7 +59,7 @@ const page = () => {
                   placeholder="Enter your post code"
                 />
               </div>
-              <div className="grid w-full grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5">
+              <div className="grid w-full grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
                 <div>
                   <SearchSelect
                     label="Country"

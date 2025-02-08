@@ -19,7 +19,9 @@ export const StrengthCard: React.FC<StrengthCardProps> = ({
           className="object-contain flex-1 shrink w-full bg-blend-normal aspect-[0.9] basis-0 min-w-[240px]"
         />
       </div>
-      <div className="bg-gradient-to-b from-transparent to-black flex absolute bottom-0 z-0 flex-col px-5 pb-8 w-full text-base font-medium text-white max-md:pt-24">
+
+      <div className=" bg-gradient-to-t from-black to-transparent flex absolute bottom-0 top-10 w-full h-auto z-0 flex-col "></div>
+      <div className=" flex absolute bottom-0 z-0 flex-col px-5 pb-8 w-full text-base font-medium text-white max-md:pt-24">
         <div className="flex gap-2.5 items-center w-full">
           <div className="flex flex-col gap-5 w-full">
             <div className="flex items-center gap-2.5">

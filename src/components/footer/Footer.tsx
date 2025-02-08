@@ -4,6 +4,7 @@ import { SocialLink } from "./SocialLink";
 import { Text } from "../ui/elements/Text";
 import { Cookies } from "./Cookies";
 import NavLink2 from "../ui/elements/NavLink2";
+import { Icon } from "../ui/elements/Icon";
 
 const companyLinks = [
   // "About EMCC ME",
@@ -33,25 +34,72 @@ const companyLinks = [
   },
 ];
 const communityLinks = [
-  "EMCC Global",
-  "Corporate Membership",
-  "Communities of Practice",
-  "Partnership & Sponsorship",
-  "Become a Volunteer",
+  {
+    label: "EMCC Global",
+    href: "/emcc-global",
+  },
+  {
+    label: "Corporate Membership",
+    href: "/corporate-membership",
+  },
+  {
+    label: "Communities of Practice",
+    href: "/communities-of-practice",
+  },
+  {
+    label: "Partnership & Sponsorship",
+    href: "/partnership-and-sponsorship",
+  },
+  {
+    label: "Become a Volunteer",
+    href: "/become-a-volunteer",
+  },
 ];
+
 const servicesLinks = [
-  "EMCC Registrar",
-  "Regulation",
-  "Competency Frameworks",
-  "Training & Events",
-  "Newsletter Signup",
+  {
+    label: "EMCC Registrar",
+    href: "/emcc-registrar",
+  },
+  {
+    label: "Regulation",
+    href: "/regulation",
+  },
+  {
+    label: "Competency Frameworks",
+    href: "/competency-frameworks",
+  },
+  {
+    label: "Training & Events",
+    href: "/training-and-events",
+  },
+  {
+    label: "Newsletter Signup",
+    href: "/newsletter-signup",
+  },
 ];
+
 const legalLinks = [
-  "Site Map",
-  "How to make a Complaint",
-  "Terms of Business",
-  "Privacy Policy",
-  "Corporate Governance",
+  {
+    label: "Site Map",
+    href: "/site-map",
+  },
+  {
+    label: "How to make a Complaint",
+    href: "/make-a-complaint",
+  },
+  {
+    label: "Terms of Business",
+    href: "/terms-of-business",
+  },
+  {
+    label: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+  {
+    label: "Corporate Governance",
+    href: "/corporate-governance",
+  },
 ];
 const socialLinks = ["Facebook", "Instagram", "LinkedIn", "YouTube"];
 
@@ -72,7 +120,7 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col w-full max-md:max-w-full">
           <div className="flex flex-wrap gap-12 items-start w-full max-md:max-w-full">
             <div className="flex w-full flex-col text-xs font-light min-w-[240px] text-zinc-800 md:w-[330px]">
-              <div className="flex gap-5 flex-col w-full">
+              <div className="flex gap-5 flex-col w-full max-w-[694px]">
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/0c97f9c7045a66cb38af7dd2719d899ab8a4b65d3bcd8dc208a121f1f13d244c?apiKey=7d86919144c846178294e9d8a4321223&"
@@ -98,22 +146,22 @@ export const Footer: React.FC = () => {
             </div>
             <div className="flex flex-wrap flex-1 shrink gap-12 items-start md:pt-16 basis-0 min-w-[240px] max-md:max-w-full">
               <FooterColumn title="Company" links={companyLinks} />
-              {/* <FooterColumn title="Community" links={communityLinks} />
+              <FooterColumn title="Community" links={communityLinks} />
               <FooterColumn title="Services & Support" links={servicesLinks} />
-              <FooterColumn title="Legal" links={legalLinks} /> */}
+              <FooterColumn title="Legal" links={legalLinks} />
             </div>
           </div>
         </div>
         <div className="flex border-b  border-border mt-12 w-full bg-neutral-300 min-h-[1px] max-md:mt-10 max-md:max-w-full" />
         <div className="flex flex-wrap gap-10 justify-between items-end mt-12 w-full max-md:mt-10 max-md:max-w-full">
-          <div className="flex gap-8 justify-center items-center text-xs font-light whitespace-nowrap min-w-[240px] text-zinc-800">
+          <div className="flex gap-8 w-full xs:w-auto justify-between xs:justify-center items-center text-xs font-light whitespace-nowrap min-w-[240px] text-zinc-800">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/c8804fc458ae21245d80a94160bc00ec4a9c28277fe7871ab68163c5587d65c0?apiKey=7d86919144c846178294e9d8a4321223&"
               alt="Social Media Icon"
-              className="object-contain shrink-0 self-stretch my-auto aspect-square w-[30px]"
+              className="object-contain hidden xs:block shrink-0 self-stretch my-auto aspect-square w-[30px]"
             />
-            <div className="flex gap-5 items-start self-stretch my-auto min-w-[240px]">
+            <div className="flex w-full xs:w-auto justify-between xs:justify-center gap-5 items-start self-stretch my-auto min-w-[240px]">
               {socialLinks.map((link, index) => (
                 <NavLink2 variant="link" href={link} key={index}>
                   <span className="group-hover:underline">{link}</span>
@@ -121,7 +169,13 @@ export const Footer: React.FC = () => {
               ))}
             </div>
           </div>
-          <div className="flex gap-8 items-end min-w-[240px]">
+          <div className="flex gap-8 items-center xs:items-end justify-between xs:justify-normal w-full xs:w-auto xs:min-w-[240px]">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/c8804fc458ae21245d80a94160bc00ec4a9c28277fe7871ab68163c5587d65c0?apiKey=7d86919144c846178294e9d8a4321223&"
+              alt="Social Media Icon"
+              className="object-contain block xs:hidden shrink-0 self-stretch my-auto aspect-square w-[30px]"
+            />
             <Text
               variant="small"
               className="text-xs font-light text-right text-zinc-800"
@@ -139,25 +193,28 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex absolute z-0 gap-2.5 items-start p-2.5 w-11 h-11 rounded-sm bg-zinc-900 bg-opacity-90 right-[55px] top-[108px]">
-        <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/97566be1f2dc49557107ce79ca7e3d575c310f425bf9e1468e7ede7974e29110?apiKey=7d86919144c846178294e9d8a4321223&"
-          alt=""
-          className="object-contain w-6 aspect-square"
-        />
+      <div className="flex items-center justify-center absolute z-0 gap-2.5 p-2.5 w-11 h-11 rounded-sm bg-[#1C1C1CE5] bg-opacity-90 top-[18px] right-5 xs:right-[55px] xs:top-[108px]">
+        <Icon name="north" className="text-[24px] text-white" />
       </div>
       <Cookies
-        onAccept={handleCookieAccept}
-        onReject={handleCookieReject}
-        onManage={handleCookieManage}
+      // onAccept={() => handleCookieAccept}
+      // onReject={() => handleCookieReject}
+      // onManage={() => handleCookieManage}
       />
-      <div className="flex absolute z-0 flex-col items-end bottom-[225px] right-[55px] w-[50px]">
+      {/* Scroll to top button that shows when scrolling down */}
+      <div
+        className={`flex fixed z-0 flex-col items-end bottom-10 right-5 sm:bottom-[270px]  md:bottom-[225px] sm:right-[55px] w-[50px] transition-opacity duration-300 opacity-100 ${
+          typeof window !== "undefined" && window.scrollY > 100
+            ? ""
+            : "opacity-0"
+        }`}
+      >
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/06aa3e4feb1a44b58f93292c617c0ab1/3349c65cac403813cbf31e6bb08bd0fcc24b780f093e286118ea0f73bdb1871d?apiKey=7d86919144c846178294e9d8a4321223&"
-          alt=""
-          className="object-contain w-full mb-[4.5px] shadow-sm aspect-square"
+          alt="Scroll to top"
+          className="object-contain w-full mb-[4.5px] shadow-sm aspect-square cursor-pointer"
+          // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         />
       </div>
     </div>

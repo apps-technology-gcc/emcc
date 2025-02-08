@@ -4,6 +4,7 @@ import { FooterColumnProps } from "@/src/types";
 import { Text } from "../ui/elements/Text";
 import NavLink2 from "../ui/elements/NavLink2";
 import { Icon } from "../ui/elements/Icon";
+import { cn } from "@/src/lib/utils";
 
 export const FooterColumn: React.FC<FooterColumnProps> = ({ title, links }) => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -22,7 +23,12 @@ export const FooterColumn: React.FC<FooterColumnProps> = ({ title, links }) => {
           ))}
         </div>
       </div>
-      <div className="flex gap-5 w-full xs:hidden flex-auto flex-col justify-center">
+      <div
+        className={cn(
+          "flex w-full xs:hidden flex-auto flex-col justify-center",
+          isOpen ? "gap-5" : "gap-0"
+        )}
+      >
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="w-full flex items-center gap-5 justify-between cursor-pointer"

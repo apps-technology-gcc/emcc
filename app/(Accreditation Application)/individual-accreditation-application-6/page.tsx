@@ -50,75 +50,79 @@ const page = () => {
               and/or work based learning equivalent to formal education and
               training
             </Text>
+
             <div className="flex flex-col gap-5">
               <div className="flex flex-col gap-2.5">
-                <div className="flex w-full border-border  border flex-col rounded-tl-md rounded-tr-md overflow-hidden">
-                  <div className="grid grid-cols-12 bg-primary-100">
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Date
-                      </Text>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        EQA or equivalent education and training provider
-                      </Text>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Level
-                      </Text>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Place of Delivery
-                      </Text>
-                    </div>
+                <div className="overflow-auto w-auto ">
+                  <div className="flex  w-full border-border  border flex-col rounded-tl-md rounded-tr-md overflow-hidden">
+                    <div className="grid grid-cols-12 bg-primary-100">
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Date
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          EQA or equivalent education and training provider
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Level
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Place of Delivery
+                        </Text>
+                      </div>
 
-                    <div className="flex items-center col-span-4 border-border px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Title of the Education and Training Programme/s
-                      </Text>
+                      <div className="flex items-center col-span-4 border-border px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Title of the Education and Training Programme/s
+                        </Text>
+                      </div>
                     </div>
-                  </div>
-                  <div className="grid grid-cols-12 border border-b min-h-[50px]">
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                    <div className="grid grid-cols-12 border border-b min-h-[50px]">
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Date
       </Text> */}
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Hours
       </Text> */}
-                    </div>
-                    <div className="flex items-center col-span-4 border-border border-r px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                      </div>
+                      <div className="flex items-center col-span-4 border-border border-r px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Event/Activity/Learning
       </Text> */}
-                    </div>
-                    <div className="flex items-center col-span-4 border-border px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                      </div>
+                      <div className="flex items-center col-span-4 border-border px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Reflections on EMCC Competence & Assessment Frameworks
       </Text> */}
+                      </div>
                     </div>
                   </div>
                 </div>
+
                 <div className="flex justify-end">
                   <Link
                     href="#"
@@ -139,83 +143,85 @@ const page = () => {
               Training
             </Text>
             <div className="flex flex-col gap-5">
-              <div className="flex flex-col gap-2.5">
-                <div className="flex w-full border-border  border flex-col rounded-tl-md rounded-tr-md overflow-hidden">
-                  <div className="grid grid-cols-12 bg-primary-100">
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Date
-                      </Text>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Organisation Name
-                      </Text>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Role
-                      </Text>
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Country Location
-                      </Text>
-                    </div>
+              <div className="overflow-auto">
+                <div className="flex flex-col gap-2.5">
+                  <div className="flex w-full border-border  border flex-col rounded-tl-md rounded-tr-md overflow-hidden">
+                    <div className="grid grid-cols-12 bg-primary-100">
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Date
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Organisation Name
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Role
+                        </Text>
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Country Location
+                        </Text>
+                      </div>
 
-                    <div className="flex items-center col-span-4 border-border px-2.5 py-5">
-                      <Text
-                        variant={"card_title_small"}
-                        className="text-[#222222]"
-                      >
-                        Coach and/or Mentor experience in work based position
-                      </Text>
+                      <div className="flex items-center col-span-4 border-border px-2.5 py-5">
+                        <Text
+                          variant={"card_title_small"}
+                          className="text-[#222222]"
+                        >
+                          Coach and/or Mentor experience in work based position
+                        </Text>
+                      </div>
                     </div>
-                  </div>
-                  <div className="grid grid-cols-12 border border-b min-h-[50px]">
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                    <div className="grid grid-cols-12 border border-b min-h-[50px]">
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Date
       </Text> */}
-                    </div>
-                    <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                      </div>
+                      <div className="flex items-center col-span-2 border-border border-r px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Hours
       </Text> */}
-                    </div>
-                    <div className="flex items-center col-span-4 border-border border-r px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                      </div>
+                      <div className="flex items-center col-span-4 border-border border-r px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Event/Activity/Learning
       </Text> */}
-                    </div>
-                    <div className="flex items-center col-span-4 border-border px-2.5 py-5">
-                      {/* <Text variant={"card_title_small"} className="text-[#222222]">
+                      </div>
+                      <div className="flex items-center col-span-4 border-border px-2.5 py-5">
+                        {/* <Text variant={"card_title_small"} className="text-[#222222]">
         Reflections on EMCC Competence & Assessment Frameworks
       </Text> */}
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex justify-end">
-                  <Link
-                    href="#"
-                    variant={"primary"}
-                    icon={<Icon name="add" className="text-[20px]" />}
-                    iconPosition="right"
-                  >
-                    Add More
-                  </Link>
+                  <div className="flex justify-end">
+                    <Link
+                      href="#"
+                      variant={"primary"}
+                      icon={<Icon name="add" className="text-[20px]" />}
+                      iconPosition="right"
+                    >
+                      Add More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

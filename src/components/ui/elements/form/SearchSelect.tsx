@@ -143,7 +143,7 @@ const SearchSelect: React.FC<SearchSelectProps> = ({
         <Text
           variant="placeholder"
           className="mb-2.5 flex items-center gap-2.5"
-          color={dark ? "white" : "neutralDark"}
+          color={dark ? "white" : "neutralLight"}
         >
           {label}
           {required && <span className="text-danger-600">*</span>}
@@ -167,7 +167,7 @@ const SearchSelect: React.FC<SearchSelectProps> = ({
           <Text
             variant="placeholder"
             className={cn(
-              selectedOptions.length === 0 && "text-placeholder",
+              selectedOptions.length === 0 && "text-neutralLight",
               isInputFocused && "opacity-0"
             )}
           >

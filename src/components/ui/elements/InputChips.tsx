@@ -31,7 +31,7 @@ const inputChipsVariants = cva(
   }
 );
 
-export interface TagProps
+export interface InputChipsProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof inputChipsVariants> {
   children: React.ReactNode;

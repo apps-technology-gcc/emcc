@@ -11,7 +11,7 @@ interface TextContent {
 
 // Define the props interface
 interface TextSectionProps {
-  title: string;
+  title?: string;
   texts: string[];
   color?: string;
 }
@@ -23,7 +23,8 @@ const TextContentSection: React.FC<TextSectionProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-12">
-      <SectionTitle title={title} />
+      {title && <SectionTitle title={title} />}
+      {/* <SectionTitle title={title} /> */}
       <ContentSection texts={texts} color={color} />
     </div>
   );
