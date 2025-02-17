@@ -5,7 +5,7 @@ import Link from "next/link";
 import { textVariants } from "./Text";
 
 const navLinkVariants = cva(
-  "inline-flex items-center transition-colors duration-200 font-medium",
+  "inline-flex items-center transition-colors duration-200",
   {
     variants: {
       variant: {
@@ -64,10 +64,10 @@ const NavLink = React.forwardRef<HTMLAnchorElement, NavLinkProps>(
         ref={ref}
         href={href}
         className={cn(
-          navLinkVariants({ variant, size, className }),
           textVariants({
             variant: "button",
-          })
+          }),
+          navLinkVariants({ variant, size, className })
         )}
         data-active={active}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}

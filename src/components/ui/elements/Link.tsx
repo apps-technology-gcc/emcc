@@ -3,7 +3,7 @@ import { cn } from "../../../lib/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import { Text } from "./Text";
 import { Icon } from "./Icon";
-
+import NextLink from "next/link";
 // Common styles matching Button component
 const baseStyles =
   "inline-flex max-w-fit flex items-center text-button gap-2.5 items-center transition-colors";
@@ -43,8 +43,8 @@ const Link = ({
   ...props
 }: LinkProps) => {
   return (
-    <a
-      href={disabled ? undefined : href}
+    <NextLink
+      href={disabled ? "/" : href}
       className={cn(
         "flex items-center gap-2.5",
         linkVariants({ variant, className })
@@ -60,7 +60,7 @@ const Link = ({
       {icon && iconPosition === "right" && (
         <Icon name={icon} className="text-[20px]" />
       )}
-    </a>
+    </NextLink>
   );
 };
 

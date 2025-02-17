@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { cn } from "@/src/lib/utils";
 import { textVariants } from "./Text";

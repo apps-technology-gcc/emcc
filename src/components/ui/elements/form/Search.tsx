@@ -16,6 +16,7 @@ interface SearchProps extends React.InputHTMLAttributes<HTMLInputElement> {
   setValue?: (value: string) => void;
   props?: any;
   options?: [];
+  icon?: any;
 }
 
 export const SearchInput = ({
@@ -25,6 +26,7 @@ export const SearchInput = ({
   placeholder,
   setValue,
   options,
+  icon,
   ...props
 }: SearchProps) => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -67,7 +69,7 @@ export const SearchInput = ({
       />
 
       <div className="flex items-center absolute  right-2.5  top-1/2 transform -translate-y-1/2  cursor-pointer">
-        <Icon className="text-lg text-neutralDark " name="search" />
+        <Icon className="text-lg text-neutralDark " name={icon || "search"} />
       </div>
       {isOpenMenu && (
         <ul

@@ -15,7 +15,7 @@ export const textVariants = cva("", {
       label: "text-xs leading-[18px] font-normal font-poppins",
       resource_header: "text-base leading-6 font-medium font-poppins",
       placeholder: "text-xs leading-[18px] font-light font-poppins",
-      button: "text-sm leading-[21px] font-normal font-poppins",
+      button: "text-sm leading-[21px] !font-normal font-poppins",
       small: "text-xs leading-[18px] font-light font-poppins",
       tag: "text-sm leading-[21px] font-normal font-poppins",
       extra_small: "text-[10px] leading-[15px] font-light font-poppins",

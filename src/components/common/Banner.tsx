@@ -21,7 +21,7 @@ const Banner: React.FC<BannerProps> = ({
   return (
     <section
       className={cn(
-        "md:py-[168px] py-20 flex items-center justify-start md:min-h-[500px]",
+        "md:py-[75px] py-[75px] flex items-center justify-start md:min-h-[500px]",
         className
       )}
       style={{
