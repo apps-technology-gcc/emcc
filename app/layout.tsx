@@ -4,6 +4,7 @@ import Navbar from "@/src/components/navbar/Navbar";
 import "./global.css";
 import { Footer } from "@/src/components/footer/Footer";
 import { RegionProvider } from "@/src/context/RegionContext";
+import ClientLayout from "./AuthLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,8 +33,7 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <Navbar />
-          {children}
-          <Footer />
+          <ClientLayout>{children}</ClientLayout>
         </body>
       </RegionProvider>
     </html>

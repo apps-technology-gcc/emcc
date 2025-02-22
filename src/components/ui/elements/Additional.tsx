@@ -19,12 +19,16 @@ const Primary = ({ children, className, ...props }: ButtonProps) => {
 const NavigationMegaMenuBtn = ({
   title,
   icon,
+  ...props
 }: {
   title: string;
   icon: string;
-}) => {
+} & ButtonProps) => {
   return (
-    <button className="flex max-w-fit items-center gap-2.5 bg-[#F6F6F6] hover:bg-green-100 py-[5px] px-2.5 rounded-[2px] ">
+    <button
+      {...props}
+      className="flex max-w-fit items-center gap-2.5 bg-[#F6F6F6] hover:bg-green-100 py-[5px] px-2.5 rounded-[2px] "
+    >
       <Text variants="nav_text_2" as="span">
         {title}
       </Text>

@@ -16,7 +16,7 @@ const BannerSection: React.FC<BannerSectionProps> = ({
         variant={"h1_page_title"}
         className="uppercase text-white"
       >
-        {title}
+        <div dangerouslySetInnerHTML={{ __html: title }} />
       </Text>
       <Text variant={"body"} className="text-white">
         {description}
