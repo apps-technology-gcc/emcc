@@ -16,7 +16,7 @@ export const MenuSection: React.FC<NavigationSectionProps> = ({
         </Text>
       )}
 
-      <div className="flex flex-col justify-center  w-full text-xs">
+      <div className="flex flex-col gap-2.5 justify-center  w-full text-xs">
         {items.map((item, index) => (
           <NavLink2 href={"/"} variant="three" key={index}>
             {item}

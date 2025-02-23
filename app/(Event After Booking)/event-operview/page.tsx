@@ -17,12 +17,14 @@ import Banner from "@/src/components/common/Banner";
 import bgImage from "@/public/event-bg.jpeg";
 import NavLink from "@/src/components/ui/elements/NavLink";
 import SectionTitle from "@/src/components/common/SectionTitle";
-import EventCard from "../components/EventCard";
+
 import Link from "@/src/components/ui/elements/Link";
 import BulletText from "@/src/components/ui/elements/BulletText";
+
 import IconWithText from "@/components/common/IconWithText";
 import { Button } from "@/src/components/ui/elements/Button";
 import TrainingSection from "@/src/components/common/TrainingSection";
+import Speakers from "@/src/components/common/Speaker";
 const events = [
   {
     id: 1,
@@ -57,7 +59,7 @@ const events = [
   },
 ];
 const Page = () => {
-  const [activeTab, setActiveTab] = useState("Suspended Coaches");
+  const [activeTab, setActiveTab] = useState("Overview");
   return (
     <>
       <Banner bgImage={bgImage.src}>
@@ -68,23 +70,18 @@ const Page = () => {
               variant={"h1_page_title"}
               className="uppercase text-white"
             >
-              Training & Events
+              Config 2024: Designing a Better Conference For People Who Build
+              Product
             </Text>
             <Text variant={"body"} className="text-white">
-              Training with EMCC will develop your practical knowledge and
-              skills in Coaching, Mentoring & Supervision. Our best in class
-              programmes are led by recognised industry experts and mapped
-              against the our global standard competency frameworks.
+              Lorem ipsum dolor sit amet consectetur. Faucibus eu enim sed arcu
+              ornare. Mauris vitae volutpat arcu aliquam varius. Sapien urna
+              pharetra rhoncus augue eros tempus a. Commodo habitasse vel eget
+              quis. Erat amet pharetra quisque nam quam. Interdum tristique eget
+              augue lacus egestas nisi egestas.
             </Text>
           </div>
           <div className="flex flex-col gap-2.5">
-            <Tag
-              variant={"tag2"}
-              style={"style1"}
-              className="!bg-pink-200 max-w-fit"
-            >
-              Members Only
-            </Tag>
             <div className="flex items-center gap-2.5">
               <Icon name="event_note" className="text-[24px]  text-white" />
               <Text variant={"card_title_small"} className="text-white">
@@ -110,10 +107,6 @@ const Page = () => {
         <Breadcrumbs
           list={[
             {
-              name: "Training & Events",
-              href: "/",
-            },
-            {
               name: "Config 2024: Designing a Better Conference For People Who Build Product",
               href: "/config",
             },
@@ -130,53 +123,66 @@ const Page = () => {
                   <NavLink
                     href=""
                     variant={"tab-1"}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setActiveTab("Overview");
+                    }}
                     className="bg-primary-600 text-white"
                   >
                     Overview
                   </NavLink>
-                  <NavLink href="" variant={"tab-1"}>
+                  <NavLink
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setActiveTab("Speakers");
+                    }}
+                    href=""
+                    variant={"tab-1"}
+                  >
                     Speakers
                   </NavLink>
-                  <NavLink href="" variant={"tab-1"}>
-                    Booking
-                  </NavLink>
                 </div>
-                <div className="flex flex-col gap-8">
-                  <TextContentSection
-                    title="About The Event"
-                    texts={[
-                      "Lorem ipsum dolor sit amet consectetur. Libero gravida rhoncus amet lorem lacus metus. Iaculis lacus leo quisque id adipiscing lorem leo quis nibh. Euismod ullamcorper semper mauris euismod justo quis odio neque. Facilisis pretium placerat rhoncus dignissim placerat in mauris tristique et. Justo semper aliquet fringilla neque euismod. Id urna nibh elit cras sed turpis. Diam duis lacus sed faucibus neque quam. In augue ut auctor platea iaculis in.",
-                      "Massa cursus aliquet morbi nunc tincidunt. Velit tristique pellentesque magnis quam scelerisque suspendisse ornare varius. Fringilla leo magnis libero aenean sit augue elit odio elementum. Quam amet fringilla magna eu viverra sit volutpat porttitor. Curabitur purus aliquet est tortor arcu sed. Sem aliquam aliquet mattis ac porttitor scelerisque bibendum hendrerit. Faucibus enim pharetra non faucibus.",
-                    ]}
-                  />
-                  <BulletText
-                    texts={[
-                      "Setting high standards in assessment criteria",
-                      "Measuring ability against our evidence-based competence framework",
-                      "Using reliable and rigorous assessment processess",
-                      "Demanding a professional, reflective approach",
-                      "Ensuring a commitment to continuous development",
-                    ]}
-                  />
-                </div>
-                <video
-                  width="100%"
-                  height="auto"
-                  controls
-                  src="https://youtu.be/K4TOrB7at0Y"
-                ></video>
+                {activeTab == "Speakers" && (
+                  <>
+                    <SectionTitle title="Meet Our Hosts and Speakers" />
+
+                    <Speakers />
+                  </>
+                )}
+                {activeTab == "Overview" && (
+                  <>
+                    <div className="flex flex-col gap-8">
+                      <TextContentSection
+                        title="About The Event"
+                        texts={[
+                          "Lorem ipsum dolor sit amet consectetur. Libero gravida rhoncus amet lorem lacus metus. Iaculis lacus leo quisque id adipiscing lorem leo quis nibh. Euismod ullamcorper semper mauris euismod justo quis odio neque. Facilisis pretium placerat rhoncus dignissim placerat in mauris tristique et. Justo semper aliquet fringilla neque euismod. Id urna nibh elit cras sed turpis. Diam duis lacus sed faucibus neque quam. In augue ut auctor platea iaculis in.",
+                          "Massa cursus aliquet morbi nunc tincidunt. Velit tristique pellentesque magnis quam scelerisque suspendisse ornare varius. Fringilla leo magnis libero aenean sit augue elit odio elementum. Quam amet fringilla magna eu viverra sit volutpat porttitor. Curabitur purus aliquet est tortor arcu sed. Sem aliquam aliquet mattis ac porttitor scelerisque bibendum hendrerit. Faucibus enim pharetra non faucibus.",
+                        ]}
+                      />
+                      <BulletText
+                        texts={[
+                          "Setting high standards in assessment criteria",
+                          "Measuring ability against our evidence-based competence framework",
+                          "Using reliable and rigorous assessment processess",
+                          "Demanding a professional, reflective approach",
+                          "Ensuring a commitment to continuous development",
+                        ]}
+                      />
+                    </div>
+                    <video
+                      width="100%"
+                      height="auto"
+                      controls
+                      src="https://youtu.be/K4TOrB7at0Y"
+                    ></video>
+                  </>
+                )}
               </div>
             </div>
             <div className="md:col-span-4 flex flex-col gap-8">
               {/* <SidebarMenu /> */}
 
               <div className="flex flex-col gap-5">
-                <div className="border-warning-500 border bg-warning-50 rounded-[4px] overflow-hidden flex items-center p-5 gap-2.5">
-                  <Icon name="info" className="text-[20px] text-warning-500" />
-                  <Text variant={"body"} className="text-[#222222]">
-                    This Event is only accessible to the EMCC Members
-                  </Text>
-                </div>
                 <IconWithText
                   iconName="event_note"
                   text="Friday, 9th November, 2024"
@@ -190,12 +196,15 @@ const Page = () => {
                   text="Virtual & In Person - San Francisco, CA
 Moscone Center"
                 />
-                <IconWithText iconName="confirmation_number" text="$ 100" />
                 <IconWithText iconName="call" text="+88 0123 456 789" />
               </div>
               <Button variant={"default"} btnType={"primary"} outline>
-                Register Now
+                Join Webineer
               </Button>
+              <Text variant={"body"} className="text-[#333]">
+                Please email at <u>event@emcc.global</u> if you wish to cancel
+                the event.
+              </Text>
             </div>
           </div>
           <TrainingSection

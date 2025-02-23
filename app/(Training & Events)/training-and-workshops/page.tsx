@@ -17,9 +17,9 @@ import Banner from "@/src/components/common/Banner";
 import bgImage from "@/public/event-bg.jpeg";
 import NavLink from "@/src/components/ui/elements/NavLink";
 import SectionTitle from "@/src/components/common/SectionTitle";
-import EventCard from "../components/EventCard";
 import Link from "@/src/components/ui/elements/Link";
-import TrainingSection from "./components/TrainingSection";
+import TrainingSection from "@/src/components/common/TrainingSection";
+
 const events = [
   {
     id: 1,

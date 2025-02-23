@@ -18,7 +18,7 @@ import bgImage from "@/public/event-bg.jpeg";
 import NavLink from "@/src/components/ui/elements/NavLink";
 import SectionTitle from "@/src/components/common/SectionTitle";
 import Link from "@/src/components/ui/elements/Link";
-import TrainingSection from "../components/TrainingSection";
+
 import { useParams } from "next/navigation";
 import TrainingDetailsSection from "../components/EventDetailsSection";
 

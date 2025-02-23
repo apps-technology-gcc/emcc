@@ -1,4 +1,10 @@
-export type IconType = "add" | "remove" | "edit" | "delete" | "search";
+export type IconType =
+  | "add"
+  | "remove"
+  | "edit"
+  | "delete"
+  | "search"
+  | "description";
 export interface NavigationItemProps {
   text: string;
 }

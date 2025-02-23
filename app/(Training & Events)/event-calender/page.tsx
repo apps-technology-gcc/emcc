@@ -17,10 +17,10 @@ import Banner from "@/src/components/common/Banner";
 import bgImage from "@/public/event-bg.jpeg";
 import NavLink from "@/src/components/ui/elements/NavLink";
 import SectionTitle from "@/src/components/common/SectionTitle";
-import EventCard from "../components/EventCard";
+
 import Link from "@/src/components/ui/elements/Link";
 import BulletText from "@/src/components/ui/elements/BulletText";
-import TrainingSection from "../training-and-workshops/components/TrainingSection";
+
 import IconWithText from "@/components/common/IconWithText";
 import { Button } from "@/src/components/ui/elements/Button";
 import Speakers from "@/app/components/Speaker";
