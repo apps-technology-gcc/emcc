@@ -34,6 +34,8 @@ import Tag from "@/src/components/ui/elements/Tags";
 import { TextLink } from "@/src/components/ui/elements/Additional";
 import ArticleImg from "@/public/article.png";
 import TextContentSection from "@/src/components/common/TextContentSection";
+import ModalWrapper from "@/src/components/modal/ModalWrapper";
+import { Input } from "@/src/components/ui/elements/form/Input";
 const page = () => {
   const bredList = [
     {
@@ -151,9 +153,45 @@ const page = () => {
       content: "This is the content<br/>This is another paragraph",
     },
   ];
-
+  const [isOpen, setIsOpen] = useState(false);
+  const closeModal = () => {
+    setIsOpen(false);
+  };
   return (
     <>
+      <ModalWrapper isOpen={isOpen} closeModal={closeModal}>
+        <div className="flex w-auto max-w-[540px] flex-col  gap-8">
+          <Text variant={"section_title"} className="text-[#191919]">
+            Sign In to Apply for Accreditation
+          </Text>
+          <Text variant={"body"} className="text-[#191919]">
+            To complete your Accreditation Application, please sign in. If
+            you’re not signed in, you'll need to do so to proceed to the
+            application form
+          </Text>
+          <div className="flex flex-col gap-5">
+            <Input name="first_name" placeholder="Email Address" />
+            <Input name="first_name" placeholder="Password" />
+            <Link href="/forgot-password" variant={"primary"}>
+              Forgot Password?
+            </Link>
+          </div>
+          <div className="flex items-center gap-5 justify-between">
+            <div className="flex items-center gap-2.5">
+              {/*   */}
+              <Text variant={"body"} className="text-[#191919]">
+                Don’t have an account?
+              </Text>
+              <Link href="/signin" variant={"primary"}>
+                Sign in
+              </Link>
+            </div>
+            <Button variant={"default"} btnType={"primary"}>
+              Sign In
+            </Button>
+          </div>
+        </div>
+      </ModalWrapper>
       <Banner bgImage={bgImage.src}>
         <div className="max-w-[763px] flex flex-col gap-12">
           <Text
@@ -342,21 +380,9 @@ const page = () => {
               <TextContentSection
                 title="5-Day Fast Track"
                 texts={[
-                  {
-                    id: 1,
-                    content:
-                      "If you find paperwork a challenge, or just need a helping hand to get you to where you want to be, then you could also consider registering for one of our Five Day Challenge.",
-                  },
-                  {
-                    id: 2,
-                    content:
-                      "The Five Day Challenge is an intense week of dialogue with a cohort of your peers and led by a facilitator. You work through the application as a group, supporting each other and together overcoming whatever it is that has been holding you back from applying; we find that for many people the barrier is usually difficulty finding the time, or finding logs, or getting distracted – the Five Day Challenge is a dedicated time for you to work through it in a supportive way.",
-                  },
-                  {
-                    id: 1,
-                    content:
-                      "You can read more about the Five Day Challenge by clicking this link.",
-                  },
+                  "If you find paperwork a challenge, or just need a helping hand to get you to where you want to be, then you could also consider registering for one of our Five Day Challenge.",
+                  "The Five Day Challenge is an intense week of dialogue with a cohort of your peers and led by a facilitator. You work through the application as a group, supporting each other and together overcoming whatever it is that has been holding you back from applying; we find that for many people the barrier is usually difficulty finding the time, or finding logs, or getting distracted – the Five Day Challenge is a dedicated time for you to work through it in a supportive way.",
+                  "You can read more about the Five Day Challenge by clicking this link.",
                 ]}
               />
 
@@ -499,6 +525,7 @@ const page = () => {
             <Button
               variant={"default"}
               btnType={"primary"}
+              onClick={() => setIsOpen(true)}
               // Icon={<Icon name="download" className="text-[20px]" />}
               outline
               className="max-w-fit"

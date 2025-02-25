@@ -31,18 +31,32 @@ const SidebarMenu = ({ menuData }: any) => {
               </div>
             )}
             {section.links?.map((link: any, index: any) => (
-              <NavLink2
-                key={index}
-                className={cn(
-                  "flex items-center justify-between w-full",
-                  pathname === link.href && "!text-primary-800"
+              <>
+                {link.type === "accordion" ? (
+                  <div className="border-b border-border" key={index}>
+                    <AccordionMenuList
+                      className="pt-0"
+                      activeItem={link.activeItem}
+                      itemColor={link.itemColor}
+                      title={link.title}
+                      listItems={link.listItems}
+                    />
+                  </div>
+                ) : (
+                  <NavLink2
+                    key={index}
+                    className={cn(
+                      "flex items-center justify-between w-full",
+                      pathname === link.href && "!text-primary-800"
+                    )}
+                    href={link.href || "#"}
+                    variant={"eight"}
+                  >
+                    {link.text}
+                    <Icon name="chevron_right" className="text-[16px]" />
+                  </NavLink2>
                 )}
-                href={link.href || "#"}
-                variant={"eight"}
-              >
-                {link.text}
-                <Icon name="chevron_right" className="text-[16px]" />
-              </NavLink2>
+              </>
             ))}
           </div>
         </div>

@@ -55,7 +55,7 @@ const page = () => {
           href: "/board-and-governance-global",
         },
         {
-          text: "ESG",
+          text: "esg",
           href: "/ESG",
         },
       ],

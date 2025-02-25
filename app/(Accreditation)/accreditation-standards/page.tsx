@@ -177,7 +177,7 @@ const page = () => {
           <div className="col-span-7 flex flex-col gap-20">
             <div className="flex flex-col gap-12">
               <SectionTitle title="Accreditation for Individuals" />
-              <div className="">
+              <div className="flex flex-col gap-8">
                 <div className="flex items-center">
                   <NavLink
                     variant={"tab-2"}
@@ -226,7 +226,7 @@ const page = () => {
                             iconPosition="right"
                             icon={<Icon name="east" className="text-[20px]" />}
                             variant={"primary"}
-                            href="#"
+                            href="/accreditation-inner"
                           >
                             Learn More
                           </Link>
@@ -258,7 +258,7 @@ const page = () => {
                             iconPosition="right"
                             icon={<Icon name="east" className="text-[20px]" />}
                             variant={"primary"}
-                            href="#"
+                            href="/accreditation-inner"
                           >
                             Learn More
                           </Link>
@@ -290,7 +290,7 @@ const page = () => {
                             iconPosition="right"
                             icon={<Icon name="east" className="text-[20px]" />}
                             variant={"primary"}
-                            href="#"
+                            href="/accreditation-inner"
                           >
                             Learn More
                           </Link>

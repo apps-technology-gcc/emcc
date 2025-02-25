@@ -39,7 +39,8 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
               }}
               className="z-50 w-full sm:w-auto"
             >
-              <div className="max-w-[800px] min-w-[320px] xl:min-w-[450px] p-12 bg-white relative">
+              {/* max-w-[800px] min-w-[320px] xl:min-w-[450px] */}
+              <div className=" p-12 bg-white relative">
                 <Icon
                   onClick={handleCloseModal}
                   className="absolute text-[24px] text-neutralDark cursor-pointer right-5 top-5"

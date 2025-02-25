@@ -24,7 +24,7 @@ const page = () => {
             title="Professional development"
             subtitle="Lorem ipsum dolor sit amet consectetur. Curabitur risus tristique sed orci ultricies."
             image={{ image1: Logo.src, image2: Logo.src }}
-            message="The EMCC accreditation award recognises your validated prior learning and relevant experience"
+            // message="The EMCC accreditation award recognises your validated prior learning and relevant experience"
           />
 
           <div className="flex flex-col gap-12 w-full">

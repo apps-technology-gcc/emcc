@@ -19,10 +19,11 @@ import PresidentImg from "@/public/president.png";
 import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
-import RightSide from "../../components/RightSide";
+
 import TextContentSection from "@/components/common/TextContentSection";
 import AccordionGroup from "../../components/AccordionGroup";
-import BoardText from "../../components/BoardText";
+import SidebarSection from "../../components/SidebarSection";
+
 const page = () => {
   const bredList = [
     {
@@ -108,7 +109,7 @@ const page = () => {
           href: "/board-and-governance-global",
         },
         {
-          text: "ESG",
+          text: "esg",
           href: "/ESG",
         },
       ],
@@ -187,7 +188,10 @@ const page = () => {
               </Button>
             </div>
           </div>
-          <RightSide
+          <div className="md:col-span-4">
+            <SidebarSection {...sideBarData} />
+          </div>
+          {/* <RightSide
             isGlobal={true}
             aboutTitle="About Us"
             aboutContent="Learn more about our mission and values."
@@ -201,14 +205,14 @@ const page = () => {
             boardLink="/board"
             leadershipLink="/leadership"
             moreAboutItems={[
-              { title: "ESG", description: "Details about ESG..." },
+              { title: "esg", description: "Details about ESG..." },
               { title: "Research", description: "Details about Research..." },
             ]}
             applyTitle="Join Us"
             applyContent="Apply to become part of our team."
             applyButtonLabel="Register Now"
             applyButtonUrl="/apply"
-          />
+          /> */}
         </div>
       </Section>
     </>

@@ -5,13 +5,15 @@ import MemberCard from "@/src/components/card/MemberCard";
 interface BoardMembersGridSectionProps {
   title: string;
   members: any[]; // Replace `any` with the actual type for MemberCard data
-  linkTitle: string;
+  linkTitle?: string;
+  onClick?: () => void;
 }
 
 const BoardMembersGridSection: React.FC<BoardMembersGridSectionProps> = ({
   title,
   members,
   linkTitle,
+  onClick,
 }) => {
   return (
     <div className="flex flex-col rounded-md">
@@ -23,7 +25,7 @@ const BoardMembersGridSection: React.FC<BoardMembersGridSectionProps> = ({
           <MemberCard key={index} {...member} />
         ))}
       </div>
-      <SectionLink title={linkTitle} />
+      {linkTitle && <SectionLink onClick={() => onClick()} title={linkTitle} />}
     </div>
   );
 };

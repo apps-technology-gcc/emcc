@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 // import { Body, CardTitle } from "./Text";
 import { Icon } from "./Icon";
 import { cn } from "../../../lib/utils";
-import { Text } from "./Text";
+import { Text, textVariants } from "./Text";
 
 // Accordion wrapper variants
 const accordionVariants = cva(
@@ -88,18 +88,23 @@ const AccordionList = React.forwardRef<
 
       <div className={cn(contentVariants({ variant, isOpen }))}>
         {"listItems" in props ? (
-          <div className="flex w-full items-start px-5 flex-col gap-5">
+          <ul className="flex w-full items-start px-5 flex-col gap-5">
             {props.listItems.map((item, index) => (
-              <Text
-                className="pl-5"
-                variant="navbar"
+              <li
+                className={cn(
+                  textVariants({
+                    variant: "navbar",
+                  }),
+                  "ml-4 list-item ",
+                  index === 0 && "text-primary-600 list-disc"
+                )}
                 key={index}
                 color="neutralDark"
               >
                 {item}
-              </Text>
+              </li>
             ))}
-          </div>
+          </ul>
         ) : (
           props.children
         )}

@@ -19,7 +19,7 @@ import PresidentImg from "@/public/president.png";
 import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
-import RightSide from "../../components/RightSide";
+
 import TextContentSection from "@/components/common/TextContentSection";
 import AccordionGroup from "../../components/AccordionGroup";
 import FilingsTable from "../board-and-governance-global/comopnents/FilingsTable";
@@ -90,7 +90,7 @@ const page = () => {
           href: "/board-and-governance-global",
         },
         {
-          text: "ESG",
+          text: "esg",
           href: "/ESG",
         },
       ],

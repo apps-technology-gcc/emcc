@@ -20,7 +20,6 @@ import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
 import TextContentSection from "@/components/common/TextContentSection";
-import RightSide from "@/app/(about)/components/RightSide";
 import LearningItem from "./components/LearningItem";
 import CpdImg from "@/public/cpd_main.png";
 import BulletText from "@/src/components/ui/elements/BulletText";
@@ -104,11 +103,7 @@ const page = () => {
               <TextContentSection
                 title="Types of CPD"
                 texts={[
-                  {
-                    id: 1,
-                    content:
-                      "Continuing Professional Development is a powerful learning tool that professionals from across all industries can apply to improving skills and developing their knowledge. The types of CPD vary depending on a range of different learning methods.",
-                  },
+                  "Continuing Professional Development is a powerful learning tool that professionals from across all industries can apply to improving skills and developing their knowledge. The types of CPD vary depending on a range of different learning methods.",
                 ]}
               />
               <div className="flex flex-col gap-8">
@@ -133,16 +128,8 @@ const page = () => {
               <TextContentSection
                 title="Continuing Professional Development"
                 texts={[
-                  {
-                    id: 1,
-                    content:
-                      "Continuous Professional Development (CPD) is defined as the learning process required for coaches, mentors, team coaches, programme managers and supervisors to maintain standards and enhance their practice over time. It involves ongoing commitment to developing knowledge and technical expertise, keeping up to date with evolving best practices, and supporting professional and personal growth.",
-                  },
-                  {
-                    id: 2,
-                    content:
-                      "Learning is transformative, unlocking potential, increasing capacity and capability, and fostering maturity. EMCC Global recognizes both formal learning (e.g. participation in events and courses) and informal learning (e.g. reading, participation in projects etc..).",
-                  },
+                  "Continuous Professional Development (CPD) is defined as the learning process required for coaches, mentors, team coaches, programme managers and supervisors to maintain standards and enhance their practice over time. It involves ongoing commitment to developing knowledge and technical expertise, keeping up to date with evolving best practices, and supporting professional and personal growth.",
+                  "Learning is transformative, unlocking potential, increasing capacity and capability, and fostering maturity. EMCC Global recognizes both formal learning (e.g. participation in events and courses) and informal learning (e.g. reading, participation in projects etc..).",
                 ]}
               />
               <div className=" flex flex-col p-5 bg-green-50 border-l-2 border-green-500">
@@ -272,7 +259,7 @@ const page = () => {
 
             {/* <div className="flex flex-col gap-12"></div> */}
           </div>
-          <RightSide
+          {/* <RightSide
             isGlobal={true}
             aboutTitle="About Us"
             aboutContent="Learn more about our mission and values."
@@ -286,14 +273,14 @@ const page = () => {
             boardLink="/board"
             leadershipLink="/leadership"
             moreAboutItems={[
-              { title: "ESG", description: "Details about ESG..." },
+              { title: "esg", description: "Details about ESG..." },
               { title: "Research", description: "Details about Research..." },
             ]}
             applyTitle="Join Us"
             applyContent="Apply to become part of our team."
             applyButtonLabel="Register Now"
             applyButtonUrl="/apply"
-          />
+          /> */}
         </div>
       </Section>
     </>

@@ -326,7 +326,7 @@ const page = () => {
                   className="text-neutral"
                 >
                   You can read more about the Five Day Challenge by clicking
-                  this link.
+                  <span className="underline">this link.</span>
                 </Text>
 
                 <video
@@ -402,7 +402,7 @@ const page = () => {
                         iconPosition="right"
                         icon={<Icon name="east" className="text-[20px]" />}
                         variant={"primary"}
-                        href="#"
+                        href="/accreditation-standards"
                       >
                         Learn More
                       </Link>
@@ -453,7 +453,7 @@ const page = () => {
                         iconPosition="right"
                         icon={<Icon name="east" className="text-[20px]" />}
                         variant={"primary"}
-                        href="#"
+                        href="/accreditation-standards"
                       >
                         Learn More
                       </Link>
@@ -498,7 +498,7 @@ const page = () => {
                         iconPosition="right"
                         icon={<Icon name="east" className="text-[20px]" />}
                         variant={"primary"}
-                        href="#"
+                        href="/accreditation-standards"
                       >
                         Learn More
                       </Link>
@@ -569,7 +569,7 @@ const page = () => {
                   </Text>
                   <Text variant={"body"} className="text-neutral">
                     You can read more about the Five Day Challenge by clicking
-                    this link
+                    <span className="underline">this link</span>
                   </Text>
                 </div>
               </div>
@@ -706,7 +706,7 @@ const page = () => {
                   Read <span className="underline">CVTrusts</span> FAQ for more
                   information
                 </Text>
-                <Text variant={"body"} className="text-neutral">
+                <Text variant={"body"} className="text-neutral underline">
                   User Guide to Activate and Share your Smart Certificates on
                   Linked In
                 </Text>
@@ -893,7 +893,7 @@ const page = () => {
                   orci vel.
                 </Text>
               </div>
-              <TextLink title="Read More" />
+              <TextLink title="Listen" />
             </div>
             <div className="h-full min-h-[250px] w-[1px] bg-background"></div>
             <div className="flex flex-col gap-10">

@@ -20,8 +20,7 @@ import FreelancerImg from "@/public/freelancer.png";
 import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
 import TextContentSection from "@/components/common/TextContentSection";
-import RightSide from "@/app/(about)/components/RightSide";
-import LearningItem from "./components/LearningItem";
+
 import CpdImg from "@/public/cpd_main.png";
 import BulletText from "@/src/components/ui/elements/BulletText";
 import DirectorMember from "@/public/director_member.png";

@@ -11,7 +11,7 @@ const aboutItems = [
   "Our Strategy",
   "Our Organisation",
   "Board & Governance",
-  "ESG",
+  "esg",
 ];
 
 const communitiesItems = [

@@ -62,7 +62,7 @@ const page = () => {
             <BoardMembersGridSection
               title={pageContent.countryDirectors.title}
               members={pageContent.countryDirectors.members}
-              linkTitle="Advisory Board Structure"
+              // linkTitle="Advisory Board Structure"
             />
           </div>
           <div className="col-span-4">

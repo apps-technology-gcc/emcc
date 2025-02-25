@@ -44,7 +44,7 @@ function FilingsTable() {
 
   return (
     <div
-      className="flex overflow-hidden flex-col max-w-[736px]"
+      className="flex overflow-hidden rounded-tr-md flex-col max-w-[835px]"
       role="table"
       aria-label="Filings Table"
     >

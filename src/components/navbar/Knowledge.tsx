@@ -11,7 +11,7 @@ const aboutItems = [
   "Our Strategy",
   "Our Organisation",
   "Board & Governance",
-  "ESG",
+  "esg",
 ];
 
 const communitiesItems = [
@@ -23,7 +23,7 @@ const communitiesItems = [
 
 export const KnowledgeMegaMenu: React.FC = () => {
   const items2 = ["Our History, Our Culture", "Our Strategy"];
-  const items1 = ["Our Organisation", "Board & Governance", "ESG"];
+  const items1 = ["Our Organisation", "Board & Governance", "esg"];
   return (
     <div className="grid grid-cols-3 gap-5 p-12 bg-white rounded-none text-zinc-900 max-md:px-5">
       <div className="flex flex-col self-start">

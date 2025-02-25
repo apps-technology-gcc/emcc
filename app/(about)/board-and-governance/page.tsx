@@ -28,6 +28,9 @@ import ExecutiveBoardSection from "./components/ExecutiveBoardSection";
 import BoardMembersGridSection from "./../components/BoardMembersGridSection";
 import SidebarSection from "../components/SidebarSection";
 import BoardText from "@/src/components/common/BoardText";
+import ModalWrapper from "@/src/components/modal/ModalWrapper";
+import { Tree, TreeNode } from "react-organizational-chart";
+
 const page = () => {
   const bredList = [
     {
@@ -46,8 +49,39 @@ const page = () => {
 
   const [pageContent, setPageContent] =
     useState<BoardPageContent>(pageContentJson);
+
+  const [modalName, setModalName] = useState("initial");
+
+  const [isOpenMainModal, setIsOpenMainModal] = useState(false);
+  const closeModel = () => {
+    setIsOpenMainModal(false);
+    setModalName("initial");
+  };
   return (
     <>
+      <ModalWrapper
+        isOpen={isOpenMainModal && modalName === "initial"}
+        closeModal={closeModel}
+      >
+        <div className="flex w-[1170px] flex-col gap-12">
+          <div className="flex flex-col gap-5">
+            <Text variant={"section_title"} className="text-neutralDark">
+              Executive Board (Middle East)
+            </Text>
+            <Text variant={"body"} className="text-neutral">
+              Lorem ipsum dolor sit amet consectetur. Facilisis tincidunt varius
+              massa congue aliquam maecenas placerat libero. Mauris a est
+              commodo quam nulla at massa at. Scelerisque mauris faucibus et a
+              dictumst pellentesque id sagittis viverra.
+            </Text>
+          </div>
+          <div className="w-full">
+            {/* OrgChart
+             */}
+            <OrgChart />
+          </div>
+        </div>
+      </ModalWrapper>
       <Banner bgImage={bgImage.src}>
         <BannerSection {...pageContent.banner} />
       </Banner>
@@ -81,6 +115,7 @@ const page = () => {
             <BoardMembersGridSection
               title={pageContent.boardAdvisors.title}
               members={pageContent.boardAdvisors.members}
+              onClick={() => setIsOpenMainModal(true)}
               linkTitle="Advisory Board Structure"
             />
           </div>
@@ -168,5 +203,119 @@ const AccordionList: React.FC<AccordionProps> = ({
     </div>
   );
 };
+const StyledNode = ({ children, className = "" }: any) => (
+  <div className={`p-2 rounded-md text-center text-sm ${className}`}>
+    {children}
+  </div>
+);
 
+const OrgChart = () => {
+  return (
+    <div className="w-full overflow-auto p-8 bg-white">
+      <Tree
+        lineWidth="2px"
+        lineColor="#ccc"
+        // lineStyle="doted"
+        lineBorderRadius="10px"
+        label={
+          <StyledNode className="bg-primary-600 text-center text-white w-24">
+            President
+          </StyledNode>
+        }
+      >
+        <TreeNode
+          label={
+            <StyledNode className="bg-primary-600 text-white w-32">
+              Board Secretary
+            </StyledNode>
+          }
+        />
+        <TreeNode
+          label={
+            <StyledNode className="bg-primary-600 text-white w-48">
+              Executive Director
+              <div>Strategy & Compliance</div>
+            </StyledNode>
+          }
+        >
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Regional Strategy
+              </StyledNode>
+            }
+          />
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Regional Standard
+                <div>Operation Procedure</div>
+              </StyledNode>
+            }
+          />
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Accreditation &<div>Standards</div>
+              </StyledNode>
+            }
+          />
+        </TreeNode>
+        <TreeNode
+          label={
+            <StyledNode className="bg-primary-600 text-white w-48">
+              Executive Director
+              <div>Community & Development</div>
+            </StyledNode>
+          }
+        >
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Membership & Benefits
+              </StyledNode>
+            }
+          />
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Events
+              </StyledNode>
+            }
+          />
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Marketing, Brand &<div>Communication</div>
+              </StyledNode>
+            }
+          />
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Professional Ethics &<div>Compliance</div>
+              </StyledNode>
+            }
+          />
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Culture, D&I &<div>Inclusion</div>
+              </StyledNode>
+            }
+          />
+          <TreeNode
+            label={
+              <StyledNode className="bg-primary-600 text-white">
+                Community Outreach
+              </StyledNode>
+            }
+          />
+        </TreeNode>
+      </Tree>
+    </div>
+  );
+};
+
+// export default OrgChart;
 export default page;
