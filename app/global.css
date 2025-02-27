@@ -41,3 +41,6 @@ span,
 a {
   leading-trim: both;
 }
+.scrollbar-hide::-webkit-scrollbar {
+  width: 0px;
+}

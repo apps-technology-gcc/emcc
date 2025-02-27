@@ -137,6 +137,7 @@ const page = () => {
       buttonText: "Register Your Interest",
     },
   };
+
   return (
     <>
       <Banner bgImage={bgImage.src}>

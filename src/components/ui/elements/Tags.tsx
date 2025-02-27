@@ -4,7 +4,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { Text } from "./Text";
 import { cn } from "@/src/lib/utils";
 
-const tagVariants = cva("inline-flex items-center ", {
+const tagVariants = cva("inline-flex leading-1 items-center ", {
   variants: {
     variant: {
       tag1: "text-primary-600",
@@ -68,7 +68,7 @@ const Tag: FC<TagProps> = ({
   if (!icon) {
     return (
       <span className={tagVariants({ variant, style, className })}>
-        <Text as="span" variant={getTextVariant()}>
+        <Text as="span" className="!leading-none" variant={getTextVariant()}>
           {children}
         </Text>
       </span>
@@ -83,7 +83,7 @@ const Tag: FC<TagProps> = ({
       )}
     >
       {iconPosition === "left" ? icon : null}
-      <Text as="span" variant={getTextVariant()}>
+      <Text as="span" className="!leading-none" variant={getTextVariant()}>
         {children}
       </Text>
       {iconPosition === "right" ? icon : null}

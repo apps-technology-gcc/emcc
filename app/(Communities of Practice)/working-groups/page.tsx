@@ -21,16 +21,12 @@ import AccordionGroup from "@/app/(About)/components/AccordionGroup";
 import ResourceCard from "@/components/common/ResourceCard";
 import MoreAboutUs from "@/src/components/common/MoreAboutUs";
 import sqricon from "@/public/sqricon.svg";
+import SkillItem from "./components/SkillItem";
 import CommunityImg from "@/public/community.svg";
 import MindImg from "@/public/mind.svg";
 import EduImg from "@/public/edu.svg";
 import StateImg from "@/public/state.svg";
 import { Text } from "@/src/components/ui/elements/Text";
-import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
-import BulletText from "@/src/components/ui/elements/BulletText";
-import { Button } from "@/src/components/ui/elements/Button";
-import Link from "@/src/components/ui/elements/Link";
-import { Icon } from "@/src/components/ui/elements/Icon";
 
 const page = () => {
   const [pageContent, setPageContent] = useState<any>(pageContentJson);
@@ -244,7 +240,7 @@ const page = () => {
               name: "Communities of Practice",
             },
             {
-              name: "Volunteering & Pro-Bono Coaching",
+              name: "Working Groups",
               href: "/gcma",
             },
           ]}
@@ -254,49 +250,57 @@ const page = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_370px] gap-16 min-h-screen">
           <div className=" flex flex-col gap-20">
             {/* Main content */}
-
+            <TextContentSection title="Global Coaching Mentoring Alliance (GCMA)" />
             <div className="flex flex-col gap-12">
-              <TextContentSection title="Volunteering & Pro-Bono Coaching" />
-
+              {skillsData.map((skill, index) => (
+                <SkillItem
+                  key={index}
+                  icon={skill.icon}
+                  iconAlt={skill.iconAlt}
+                  backgroundColor={skill.backgroundColor}
+                  borderColor={skill.borderColor}
+                  content={skill.content}
+                  link={skill.link}
+                />
+              ))}
+            </div>
+            <div className="flex flex-col gap-12">
+              <TextContentSection title="EMCC Global Social Responsibility" />
+              <div className="flex flex-col gap-8 p-8 border-l-4 border-green-500 bg-green-50">
+                <Text variant={"card_title_large"}>
+                  There are currently programmes in the following countries:
+                </Text>
+                <div className="flex items-start gap-12">
+                  {countries.map((country, index) => (
+                    <div key={index} className="flex flex-col gap-5">
+                      <Text
+                        variant={"button"}
+                        className="border-neutralDark border-b max-w-fit underline"
+                      >
+                        {country[0]}
+                      </Text>
+                      <Text
+                        variant={"button"}
+                        className="border-neutralDark border-b max-w-fit  underline"
+                      >
+                        {country[1]}
+                      </Text>
+                      <Text
+                        variant={"button"}
+                        className="border-neutralDark border-b max-w-fit  underline"
+                      >
+                        {country[2]}
+                      </Text>
+                    </div>
+                  ))}
+                </div>
+              </div>
               <TextContentSection
                 texts={[
-                  "Lorem ipsum dolor sit amet consectetur. Donec tortor ornare ipsum vitae eget. At massa quam mauris cras malesuada luctus suspendisse ornare ipsum. Amet tincidunt non vitae lorem lacus metus erat imperdiet. Tortor ullamcorper semper faucibus risus maecenas non. Eget tincidunt lectus aliquam eget nibh pretium tincidunt. Facilisi egestas tortor quam pharetra eget fermentum faucibus cursus phasellus. Sapien risus quis egestas id faucibus. Elit euismod felis mauris neque urna id interdum imperdiet. Accumsan vitae et egestas id habitant felis arcu diam. In libero vel cras libero iaculis pulvinar eu integer egestas. Sollicitudin lacus amet dui id ornare sit. Mi vulputate mi massa nec tempor.",
-                  "Hac in ipsum ultrices elementum magna facilisi. Faucibus amet nec elementum lacinia sodales vel in at. Imperdiet tellus laoreet habitasse quis imperdiet enim. Habitasse sed egestas diam mi leo eget. Tristique malesuada amet pellentesque neque accumsan feugiat. Sapien odio consequat tortor turpis mauris. Semper amet sit mauris aliquet vitae lectus aliquet vitae pellentesque. Tincidunt iaculis facilisis vestibulum imperdiet. Donec ut et dui nunc at tincidunt donec bibendum tellus.",
-                  "Amet cursus volutpat mattis laoreet sed. Bibendum nisl dolor diam parturient ut pharetra. Cursus amet sed in cursus dictum urna tristique tellus est. Tortor ut mauris ante suspendisse arcu ornare. Donec eu lacus sit tellus vulputate semper senectus. Libero aenean nunc erat tempor. Tellus vitae in commodo fringilla ac commodo libero pharetra. In sed commodo est nibh.",
+                  "Details about each programme (in English and local language if available) can be viewed by clicking on the links above.",
+                  "If other projects already exist in your country, please contact us, we will be pleased to create a new page to share your experience.",
                 ]}
               />
-            </div>
-            <div className="grid grid-cols-2 gap-8">
-              <div className="flex flex-col bg-primary-50 gap-5 p-5 rounded-md">
-                <Text variant={"card_title_small"}>Jobs with EMCC ME</Text>
-                <Text variant={"body"} className="text-neutral">
-                  Lorem ipsum dolor sit amet consectetur. Adipiscing orci mauris
-                  amet suspendisse cras placerat et id.
-                </Text>
-                <Link
-                  href="/"
-                  variant={"primary"}
-                  icon={<Icon name={"east"} className="text-[20px]" />}
-                  iconPosition="right"
-                >
-                  Explore Vacancies
-                </Link>
-              </div>
-              <div className="flex flex-col bg-pink-100 gap-5 p-5 rounded-md">
-                <Text variant={"card_title_small"}>Jobs with EMCC ME</Text>
-                <Text variant={"body"} className="text-neutral">
-                  Lorem ipsum dolor sit amet consectetur. Adipiscing orci mauris
-                  amet suspendisse cras placerat et id.
-                </Text>
-                <Link
-                  href="/"
-                  variant={"primary"}
-                  icon={<Icon name={"east"} className="text-[20px]" />}
-                  iconPosition="right"
-                >
-                  Explore Vacancies
-                </Link>
-              </div>
             </div>
           </div>
           <div className="">

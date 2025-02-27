@@ -18,9 +18,14 @@ import Logo from "@/public/logo.svg";
 import Image from "next/image";
 import SectionTitle from "@/src/components/common/SectionTitle";
 import AccordionGroup from "@/app/(About)/components/AccordionGroup";
-import ResourceCard from "@/components/common/ResourceCard";
+
 import MoreAboutUs from "@/src/components/common/MoreAboutUs";
 import sqricon from "@/public/sqricon.svg";
+import Tag from "@/src/components/ui/elements/Tags";
+import { Text } from "@/src/components/ui/elements/Text";
+import BulletText from "@/src/components/ui/elements/BulletText";
+import ResourceCard from "@/components/common/ResourceCard";
+import ResourceImg from "@/public/resource-img.png";
 
 const page = () => {
   const [pageContent, setPageContent] = useState<any>(pageContentJson);
@@ -180,47 +185,61 @@ const page = () => {
   return pageContent ? (
     <>
       <Banner bgImage={bgImage.src}>
-        <BannerSection {...pageContent.banner} />
+        <BannerSection
+          title="EMCC Competency Frameworks"
+          description="Posuere diam massa in morbi posuere nullam. Accumsan dictum lacus nibh aliquam tincidunt faucibus quis vehicula ac. Tempor fringilla odio id tortor felis suspendisse porta placerat rhoncus. Vestibulum semper vitae pellentesque fames quam purus nec faucibus porttitor."
+        />
       </Banner>
       <Breadcrumb>
-        <Breadcrumbs list={pageContent.breadcrumb} />
+        <Breadcrumbs
+          list={[
+            {
+              name: "EMCC Competency Frameworks",
+              // href:"/competency-frameworks"
+            },
+          ]}
+        />
       </Breadcrumb>
       <Section bgColor="white">
         <div className="grid grid-cols-1 md:grid-cols-[auto_370px] gap-16 min-h-screen">
-          <div className=" flex flex-col gap-20">
+          <div className=" flex flex-col gap-8">
             {/* Main content */}
-            <div className="flex flex-col gap-8">
-              <TextContentSection
-                title="Global Coaching Mentoring Alliance (GCMA)"
-                texts={[
-                  "EMCC is delighted to be part of the GCMA (Global Coaching and Mentoring Alliance), formed in November, 2012, to work alongside other global coaching & mentoring bodies, to provide a shared view of the practice of professional coaching.",
-                ]}
-              />
-              <div className="flex items-center gap-12">
-                <Image
-                  src={Logo}
-                  className="w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  height={57}
-                  alt="logo"
-                />
-                <Image
-                  src={ICFLogo}
-                  className="w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  height={57}
-                  alt="logo"
-                />
-                <Image
-                  src={ALogo}
-                  className="w-auto grayscale hover:grayscale-0 transition-all duration-300"
-                  height={57}
-                  alt="logo"
-                />
-              </div>
+            <TextContentSection
+              title="EMCC Competencies"
+              texts={[
+                "EMCCs vision is to be the ‘go to’ body in mentoring, coaching and supervision. In support of this vision, you can view a summary presentation, outlining the role of Thought Leadership & Development.",
+                "In this section, we also set out the standards that we believe you should use as a guide, whether you are a coach, mentor, coach or mentor supervisor, or trainer or programme provider. It comprises competences, CPD guidance, supervision competences and guidance, mentoring definition, the Global Code of Ethics, diversity and regulation.",
+              ]}
+            />
+            <div className="flex items-center gap-5">
+              <Tag className="bg-[#AEFFE8]" style={"style3"} variant={"tag2"}>
+                Coaching
+              </Tag>
+              <Tag className="bg-[#AEFFE8]" style={"style3"} variant={"tag2"}>
+                Mentoring
+              </Tag>
+              <Tag className="bg-[#AEFFE8]" style={"style3"} variant={"tag2"}>
+                Supervision
+              </Tag>
             </div>
-            <div className="flex flex-col gap-12">
-              <SectionTitle title="Frequently Asked Questions" />
-              <AccordionGroup items={accordionData2} />
-            </div>
+            <Text variant={"body"} className="text-neutral">
+              It aims to answer some important questions:
+            </Text>
+            <BulletText
+              texts={[
+                "What knowledge and skills does EMCC believe coaches and mentors should aspire to? Where is there a list of them,  so I can benchmark myself?",
+                "How do I ensure that my practice is developing, that I am learning from my experience and up to date with developments in coaching and mentoring knowledge and research?",
+                "What is supervision? What should I look for in a supervisor?",
+                "What ethical standards should inform my practice?",
+                "How does good coaching and mentoring practice promote diversity and work in a way that takes into account the range of characteristics and needs of clients?",
+                "How is the EMCC working with other bodies to address concerns about professional standards, and the possibility of governmental control of the profession?",
+              ]}
+            />
+            <Text variant={"body"} className="text-neutral">
+              More information about coaching supervision, continuous
+              professional development, and diversity in coaching can be found
+              in the links.
+            </Text>
           </div>
           <div className="">
             <div className="sticky flex flex-col gap-12 top-4 max-h-[calc(100vh)] overflow-y-scroll scrollbar-hide">
@@ -239,6 +258,7 @@ const page = () => {
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-8">
             {resourcesData.map((resource, index) => (
               <ResourceCard
+                resourceImg={ResourceImg.src}
                 key={index}
                 title={resource.title}
                 description={resource.description}
