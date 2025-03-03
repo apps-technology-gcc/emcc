@@ -3,12 +3,19 @@ import React, { useEffect, useState } from "react";
 import { cn } from "@/src/lib/utils";
 import { textVariants } from "./Text";
 
-const BulletText = ({ texts }: { texts: string[] }) => {
+const BulletText = ({
+  texts,
+  style,
+}: {
+  texts: string[];
+  style?: "disc" | "decimal";
+}) => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true); // Set to true once the component mounts (client-side)
   }, []);
+  const classes = ["list-decimal"];
 
   if (!isClient) {
     // Render a fallback during SSR
@@ -18,9 +25,9 @@ const BulletText = ({ texts }: { texts: string[] }) => {
           <li
             key={index}
             className={cn(
-              "list-disc",
               textVariants({ variant: "body" }),
-              "text-neutral"
+              "text-neutral",
+              style === "decimal" ? "list-decimal" : "list-decimal"
             )}
           >
             {item} {/* Render plain text during SSR */}
@@ -39,9 +46,9 @@ const BulletText = ({ texts }: { texts: string[] }) => {
         <li
           key={index}
           className={cn(
-            "list-disc",
             textVariants({ variant: "body" }),
-            "text-neutral"
+            "text-neutral",
+            style === "decimal" ? "list-decimal" : "list-disc"
           )}
           dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(item) }} // Sanitize and render HTML
         />

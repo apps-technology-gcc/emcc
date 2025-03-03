@@ -116,19 +116,58 @@ const page = () => {
   ];
 
   const accordionData = [
+    //     What is supervision?
+    // Why is supervision important?
+    // What kinds of supervision are there?
+    // What kinds of supervision are there?
+    // How much supervision do I need?
+    // How may I find a supervisor?
+    // How should I select a supervisor?
+    // How may I train as a supervisor?
+    // How may I gain accreditation as a supervisor?
     {
       id: 1,
-      title: "Lorem ipsum dolor sit amet consectetur.",
+      title: " What is supervision?",
       content: "This is the content<br/>This is another paragraph",
     },
     {
       id: 2,
-      title: "Lorem ipsum dolor sit amet consectetur.",
+      title: " Why is supervision important?",
       content: "This is the content<br/>This is another paragraph",
     },
     {
       id: 3,
-      title: "Lorem ipsum dolor sit amet consectetur.",
+      title: " What kinds of supervision are there?",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 4,
+      title: "What kinds of supervision are there?",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 5,
+      title: "How much supervision do I need?",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 6,
+      title: "How may I find a supervisor?",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 7,
+      title: "How should I select a supervisor?",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 8,
+      title: "How may I train as a supervisor?",
+      content: "This is the content<br/>This is another paragraph",
+    },
+    {
+      id: 9,
+      title: "How may I gain accreditation as a supervisor?",
       content: "This is the content<br/>This is another paragraph",
     },
   ];
@@ -163,65 +202,73 @@ const page = () => {
 
             <div className="flex flex-col gap-12">
               <TextContentSection
-                title="Coaching"
+                title="Supervision"
                 texts={[
-                  "The purpose of the competence framework is to provide a description of a mentor/coach at four distinct levels of development in order to help mentors/coaches understand their level of development and Training Providers evaluate the effectiveness of their programmes through the mentor/coaching performance of their students. The competence indicators are examples of behaviours or principles of the coaching profession that meet the eight competence categories. The competence framework also provides an assessment tool that allows an experienced assessor to:",
-                ]}
-              />
-
-              <BulletText
-                style="decimal"
-                texts={[
-                  "Evaluate the behaviours of a mentor/coach",
-                  "Categorise the level that the mentor/coach is operating at (EIA Level Descriptors)",
-                  "Categorise the level of mentor/coach training (EQA Level Descriptors).",
-                ]}
-              />
-              <TextContentSection
-                texts={[
-                  "This framework details the eight competences identified by the EMCC for good practice in mentoring and coaching. These competences are supported by capability indicators (CIs). It should be noted that CIs are only intended as guidance. It is not to be considered absolutely necessary to address every CI in an accreditation application.",
-                  "The progression principles used are: at each ‘higher’ level, the CIs should describe greater breadth and depth of knowledge; greater synthesis of ideas; ability to evoke more significant insights; working effectively with increasingly complex issues and contexts, and, at the higher levels, the creation of a coherent personal approach to mentoring/coaching.",
+                  "The field of supervision is evolving. New forms of coaching, mentoring and supervision are emerging. As this occurs, via its ‘Supervision Centre for Excellence’, EMCC Global aims to follow suit by updating its systems and processes to remain relevant and continue supporting practitioners in all fields.",
+                  "There are a range of membership networks and groups supporting continuing professional development and research in the field of supervision. Active supervisors are encouraged to participate in these in order to remain current and connected to the latest developments in theory and practice.",
                 ]}
               />
             </div>
 
-            <TextContentSection
-              title="Definition"
-              texts={[
-                "Lorem ipsum dolor sit amet consectetur. Non tincidunt augue commodo aliquet. Nulla vitae elementum eget sociis adipiscing vehicula pellentesque. Aenean purus lacus nibh suspendisse tellus felis morbi purus felis. Velit lobortis aenean sem nunc cras. Purus accumsan eu massa nunc scelerisque enim sagittis. Magnis odio massa ultricies eget egestas orci aliquam. Adipiscing ullamcorper eu platea morbi arcu. Nullam elementum in massa duis vel. Elementum amet in ultricies nunc tellus facilisi turpis. Ultrices a in egestas est eu. Lorem quis aenean duis diam pulvinar aliquet nulla aenean consequat. Aliquet massa ac commodo nullam velit tincidunt gravida. Velit tristique amet viverra nulla vulputate turpis nibh libero. Gravida nulla molestie varius tortor in arcu.",
-                "Non at lorem vulputate diam pretium. Tristique lectus sed feugiat dictum sit. Blandit massa facilisis vel nulla aliquet interdum purus. Nec urna sit fringilla eu ullamcorper. Ut dictum pulvinar ornare porttitor.",
-              ]}
-            />
             <div className="flex flex-col gap-12">
-              <TextContentSection title="Guidelines" />
+              <TextContentSection title="Definition" />
               <div className="flex flex-col gap-5">
-                <Text variant={"card_title_large"}>Introduction</Text>
+                <Text variant={"card_title_large"}>
+                  EMCC Global’s definition of supervision is{" "}
+                </Text>
                 <Text variant={"body"} className="text-neutral">
-                  Lorem ipsum dolor sit amet consectetur. Vitae pharetra justo
-                  et odio ut accumsan. Velit urna in et orci massa posuere
-                  risus. Sapien at a amet nibh elit suscipit in. Congue mus
-                  lacus leo fringilla. Eget ultrices varius risus commodo
-                  fermentum massa elementum. Vitae quam fringilla morbi risus
-                  volutpat viverra diam sit. Sed lectus amet et at lacus euismod
-                  ullamcorper diam. Tellus et eu eros sit eget. Id suspendisse
-                  urna in at. Turpis diam rhoncus sagittis fames pharetra vel
-                  mauris. Nunc cursus accumsan ullamcorper sit ut dignissim
-                  feugiat rhoncus morbi. Magna viverra mattis elit malesuada.
+                  A safe space for reflective dialogue with a practicing
+                  supervisor, supporting the supervisee’s practice, development
+                  and well-being.
                 </Text>
               </div>
               <div className="flex flex-col gap-5">
-                <Text variant={"card_title_large"}>Terminology</Text>
-                <Text variant={"body"} className="text-neutral">
-                  Lorem ipsum dolor sit amet consectetur. Maecenas sit eget
-                  vitae nisl. Pretium ornare risus mauris aliquam fames eu
-                  molestie tristique. Facilisi at leo diam maecenas. Justo
-                  tempor enim proin semper non enim nulla enim condimentum. Et
-                  sed in at lorem. Nunc nec varius porttitor id ullamcorper
-                  aenean tempor velit. Habitasse ornare integer bibendum commodo
-                  pellentesque id pellentesque risus quisque. Consequat ut vitae
-                  pretium nam mauris nullam. Consequat et sollicitudin praesent
-                  dui elit aliquam pretium praesent tristique.
+                <Text variant={"card_title_large"}>
+                  The purpose of supervision is
                 </Text>
+                <BulletText
+                  texts={[
+                    "To ensure the supervisee maintains appropriate professional standards",
+                    "To facilitate the development of the supervisee’s professional practice",
+                    "To provide support for the supervisee’s well-being",
+                  ]}
+                />
+              </div>
+            </div>
+            <div className="flex flex-col gap-12">
+              <TextContentSection title="Guidelines" />
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-col gap-5">
+                  <Text variant={"card_title_large"}>Introduction</Text>
+                  <Text variant={"body"} className="text-neutral">
+                    This provides information and guidance regarding the EMCC
+                    Global ‘Supervision Centre for Excellence’s’ perspective on
+                    supervision. It is work in progress and open ongoing to
+                    input and discussion. It addresses the following questions:
+                  </Text>
+                </div>
+                <BulletText
+                  texts={[
+                    "What is supervision?",
+                    "Why is supervision important?",
+                    "What kinds of supervision are there?",
+                    "How much supervision do I need?",
+                    "How may I find a supervisor?",
+                    "How should I select a supervisor?",
+                    "How may I train as a supervisor?",
+                    "How may I gain accreditation as a supervisor?",
+                  ]}
+                />
+              </div>
+              <div className="flex flex-col gap-5">
+                <Text variant={"card_title_large"}>Terminology</Text>
+                <TextContentSection
+                  texts={[
+                    "The term ‘practitioners’ refers to internal or external coaches/ mentors/ team coaches/ supervisors/ organisational development specialists, or leaders/ managers/ employees who may be practicing these disciplines as part of their role.",
+                    "‘Practice’ refers to the practice of coaching/ mentoring/ team coaching/ supervising/ organisational development in this context. The term ‘client’ refers to the recipient of these services.",
+                    "A pdf of the guidelines for supervision can be downloaded here",
+                  ]}
+                />
               </div>
               <AccordionGroup items={accordionData} />
             </div>
@@ -229,12 +276,13 @@ const page = () => {
             <div className="flex flex-col gap-12">
               <TextContentSection
                 texts={[
-                  "Lorem ipsum dolor sit amet consectetur. Sed tellus lobortis nullam lobortis purus eget suscipit purus. Ipsum nullam felis eget proin a nulla commodo cursus. Sapien urna dui aliquet adipiscing volutpat molestie. Vitae volutpat porta enim montes consequat id mauris.",
+                  "EMCC Global takes the approach that competence frameworks can be helpful triggers for dialogue and debate; they can provide practitioners, trainers and assessors with valuable reference material; they act as a container for ideas and help answer the question ‘what does good look like?",
+                  "The framework is designed to be flexible and adaptable to the needs of different contexts and disciplines. It is not intended to be a comprehensive list of all possible behaviours, but rather a starting point for dialogue and debate. It is not expected that every supervisor should exhibit each one of these, or treat them as a checklist. Rather, they are intended to stimulate awareness and promote understanding.",
+                  "EMCC Global has a framework for supervision which has evolved based on research and feedback over the years, the full version of which can be downloaded via the link at the bottom of this page. It contains eight core competences, as described below:",
                 ]}
                 title="Framework"
               />
               <Image src={FrameWorkImg} alt="SQR Icon" />
-              <Image src={CtgImg} alt="SQR Icon" />
               <MemberBoard
                 title="Evaluate your behavioral competencies"
                 texts={[

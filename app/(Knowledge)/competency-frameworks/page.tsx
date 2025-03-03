@@ -26,6 +26,7 @@ import { Text } from "@/src/components/ui/elements/Text";
 import BulletText from "@/src/components/ui/elements/BulletText";
 import ResourceCard from "@/components/common/ResourceCard";
 import ResourceImg from "@/public/resource-img.png";
+import ApplyBoard from "@/src/components/common/ApplyBoard";
 
 const page = () => {
   const [pageContent, setPageContent] = useState<any>(pageContentJson);
@@ -35,11 +36,10 @@ const page = () => {
       menuColor: "pink-400",
 
       links: [
-        { text: "Global Coaching Mentoring Alliance", href: "/gcma" },
         {
           type: "accordion",
           activeItem: "Working Groups",
-          title: "Working Groups",
+          title: "Coaching",
           listItems: [
             {
               title: "Coach Register",
@@ -51,92 +51,40 @@ const page = () => {
             },
           ],
         },
-        { text: "Volunteering & Pro-Bono Coaching", href: "/about" },
-        { text: "Working for EMCC", href: "/about" },
+        {
+          type: "accordion",
+          activeItem: "Coach Register",
+          title: "Mentoring",
+          listItems: [
+            {
+              title: "Coach Register",
+              href: "/",
+            },
+            {
+              title: "Disciplinary Action",
+              href: "/about",
+            },
+          ],
+        },
+        {
+          type: "accordion",
+          activeItem: "Coach Register",
+          title: "Supervision",
+          listItems: [
+            {
+              title: "Coach Register",
+              href: "/",
+            },
+            {
+              title: "Disciplinary Action",
+              href: "/about",
+            },
+          ],
+        },
       ],
     },
   ];
 
-  const breadcrumb = [
-    {
-      text: "Communities of Practice",
-      href: "/",
-    },
-    {
-      text: "Global Coaching & Mentoring Alliance (GCMA)",
-      href: "/",
-    },
-  ];
-
-  const accordionData2 = [
-    {
-      id: 1,
-      title: "What is the GCMA?",
-      content:
-        "The GCMA is a global alliance of professional coaching and mentoring organizations working together to advance the coaching profession.",
-    },
-    {
-      id: 2,
-      title: "Why was the GCMA established?",
-      content:
-        "The GCMA was established to provide a unified voice and shared standards for the coaching profession globally.",
-    },
-    {
-      id: 3,
-      title: "How will the GCMA behave, and work together?",
-      content:
-        "The GCMA operates through collaborative partnerships and shared principles among its member organizations.",
-    },
-    {
-      id: 4,
-      title: "How can someone submit a query or comment to the GCMA?",
-      content:
-        "Queries can be submitted through any of the member organizations' channels.",
-    },
-    {
-      id: 5,
-      title: "Is the GCMA reaching out to other bodies as well?",
-      content:
-        "The GCMA actively engages with various professional bodies to expand its global reach and impact.",
-    },
-    {
-      id: 6,
-      title: "How will the GCMA ensure it takes a global perspective?",
-      content:
-        "Through diverse international membership and inclusive decision-making processes.",
-    },
-    {
-      id: 7,
-      title: "What are the HR Buyers' views of GCMA?",
-      content:
-        "HR professionals recognize GCMA as a mark of quality and standards in coaching services.",
-    },
-    {
-      id: 8,
-      title: "How does the GCMA define coaching?",
-      content:
-        "The GCMA provides a comprehensive framework for professional coaching standards and practices.",
-    },
-    {
-      id: 9,
-      title: "What is the value of credentialing/accreditation?",
-      content:
-        "Credentialing ensures quality, professionalism, and adherence to global standards in coaching.",
-    },
-    {
-      id: 10,
-      title: "Could you define credentialed/accredited?",
-      content:
-        "These terms refer to professionals who have met specific standards and requirements set by recognized bodies.",
-    },
-    {
-      id: 11,
-      title:
-        "What's the role of mentoring in this organisation, beyond coaching?",
-      content:
-        "Mentoring complements coaching services by providing guidance based on experience and expertise.",
-    },
-  ];
   const resourcesData = [
     {
       title: "Research",
@@ -244,9 +192,10 @@ const page = () => {
           <div className="">
             <div className="sticky flex flex-col gap-12 top-4 max-h-[calc(100vh)] overflow-y-scroll scrollbar-hide">
               <SidebarMenu menuData={menuData} />
-              <MoreAboutUs
-                title={moreAboutUsData.title}
-                cards={moreAboutUsData.cards}
+              <ApplyBoard
+                buttonText="Download"
+                title="Thought Leadership & Development"
+                description="Lorem ipsum dolor sit amet consectetur. Placerat interdum enim tortor eget."
               />
             </div>
           </div>

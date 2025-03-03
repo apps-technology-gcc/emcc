@@ -68,7 +68,7 @@ const AccordionMenuList = React.forwardRef<
   HTMLDivElement,
   AccordionMenuListProps | AccordionWithMediaProps
 >((props, ref) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const {
     title,
     className,
