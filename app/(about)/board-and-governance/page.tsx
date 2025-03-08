@@ -30,6 +30,7 @@ import SidebarSection from "../components/SidebarSection";
 import BoardText from "@/src/components/common/BoardText";
 import ModalWrapper from "@/src/components/modal/ModalWrapper";
 import { Tree, TreeNode } from "react-organizational-chart";
+import OrgChartComponent from "@/src/components/common/OrgChart";
 
 const page = () => {
   const bredList = [
@@ -52,7 +53,7 @@ const page = () => {
 
   const [modalName, setModalName] = useState("initial");
 
-  const [isOpenMainModal, setIsOpenMainModal] = useState(false);
+  const [isOpenMainModal, setIsOpenMainModal] = useState(true);
   const closeModel = () => {
     setIsOpenMainModal(false);
     setModalName("initial");
@@ -78,7 +79,7 @@ const page = () => {
           <div className="w-full">
             {/* OrgChart
              */}
-            <OrgChart />
+            <OrgChartComponent />
           </div>
         </div>
       </ModalWrapper>
@@ -136,186 +137,6 @@ interface AccordionProps {
   children?: React.ReactNode;
   className?: string;
 }
-const AccordionList: React.FC<AccordionProps> = ({
-  title,
-  content,
-  listItems,
-  withMedia = false,
-  children,
-  className,
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleAccordion = () => setIsOpen(!isOpen);
-
-  return (
-    <div
-      className={cn(
-        "overflow-hidden transition-all duration-300 ease-in-out",
-        withMedia ? "py-5 border-b border-border" : "py-[15px]",
-        className
-      )}
-    >
-      <div
-        className="cursor-pointer px-5 flex items-center justify-between"
-        onClick={toggleAccordion}
-      >
-        <Text variant="card_title_small" className={withMedia ? "!m-0" : ""}>
-          {title}
-        </Text>
-        <Icon
-          className="text-neutralDark text-[20px]"
-          name={isOpen ? "remove" : "add"}
-        />
-      </div>
-      <div
-        className={cn(
-          "overflow-hidden duration-500 ease-in-out transition-height flex flex-col",
-          withMedia ? "items-center" : "gap-6 items-center",
-          isOpen ? "h-auto pt-[20px]" : "h-0 p-0"
-        )}
-      >
-        {listItems ? (
-          <ul className="flex w-full items-start px-5 flex-col gap-5">
-            {listItems.map((item, index) => (
-              <li
-                className={cn(
-                  "hover:list-disc cursor-pointer group hover:text-primary-600 ml-5",
-                  index == 0 ? "text-primary-600 list-disc" : ""
-                )}
-              >
-                <Text
-                  className="group-hover:text-primary-600 list-disc"
-                  variant="navbar"
-                  key={index}
-                  as="span"
-                  color="neutralDark"
-                >
-                  {item}
-                </Text>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          children
-        )}
-      </div>
-    </div>
-  );
-};
-const StyledNode = ({ children, className = "" }: any) => (
-  <div className={`p-2 rounded-md text-center text-sm ${className}`}>
-    {children}
-  </div>
-);
-
-const OrgChart = () => {
-  return (
-    <div className="w-full overflow-auto p-8 bg-white">
-      <Tree
-        lineWidth="2px"
-        lineColor="#ccc"
-        // lineStyle="doted"
-        lineBorderRadius="10px"
-        label={
-          <StyledNode className="bg-primary-600 text-center text-white w-24">
-            President
-          </StyledNode>
-        }
-      >
-        <TreeNode
-          label={
-            <StyledNode className="bg-primary-600 text-white w-32">
-              Board Secretary
-            </StyledNode>
-          }
-        />
-        <TreeNode
-          label={
-            <StyledNode className="bg-primary-600 text-white w-48">
-              Executive Director
-              <div>Strategy & Compliance</div>
-            </StyledNode>
-          }
-        >
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Regional Strategy
-              </StyledNode>
-            }
-          />
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Regional Standard
-                <div>Operation Procedure</div>
-              </StyledNode>
-            }
-          />
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Accreditation &<div>Standards</div>
-              </StyledNode>
-            }
-          />
-        </TreeNode>
-        <TreeNode
-          label={
-            <StyledNode className="bg-primary-600 text-white w-48">
-              Executive Director
-              <div>Community & Development</div>
-            </StyledNode>
-          }
-        >
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Membership & Benefits
-              </StyledNode>
-            }
-          />
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Events
-              </StyledNode>
-            }
-          />
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Marketing, Brand &<div>Communication</div>
-              </StyledNode>
-            }
-          />
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Professional Ethics &<div>Compliance</div>
-              </StyledNode>
-            }
-          />
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Culture, D&I &<div>Inclusion</div>
-              </StyledNode>
-            }
-          />
-          <TreeNode
-            label={
-              <StyledNode className="bg-primary-600 text-white">
-                Community Outreach
-              </StyledNode>
-            }
-          />
-        </TreeNode>
-      </Tree>
-    </div>
-  );
-};
 
 // export default OrgChart;
 export default page;

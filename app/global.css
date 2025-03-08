@@ -44,3 +44,32 @@ a {
 .scrollbar-hide::-webkit-scrollbar {
   width: 0px;
 }
+.orgchart-container {
+  height: 500px !important;
+}
+.orgchart .lines {
+  stroke: black !important; /* Change to any color */
+}
+.orgchart .node {
+  border: 2px solid black !important; /* Change to any color */
+  border-radius: 8px; /* Optional: Round corners */
+}
+.oc-node::before,
+.oc-node::after {
+  background-color: black !important;
+  height: 12px !important;
+}
+.oc-node:hover {
+  background-color: none !important;
+}
+li::before,
+li::after {
+  border-color: black !important;
+}
+.orgchart ul li .oc-node {
+  border: none !important;
+  padding: 0 6px 0 6px !important;
+}
+.orgchart ul li .oc-node:hover {
+  background: none !important;
+}
