@@ -40,26 +40,6 @@ const data = {
               id: "5",
               name: "Membership & Benefits",
               title: "Strategy Lead",
-              children: [
-                {
-                  type: "children_4",
-                  id: "5",
-                  name: "Membership & Benefits",
-                  title: "Strategy Lead",
-                },
-                {
-                  type: "children_4",
-                  id: "6",
-                  name: "Events",
-                  title: "Operations Manager",
-                },
-                {
-                  type: "children_4",
-                  id: "7",
-                  name: "Marketing, Brand & Communication",
-                  title: "Compliance Head",
-                },
-              ],
             },
             {
               type: "children_3",
@@ -128,18 +108,39 @@ export default function OrgChartComponent() {
   }, []);
 
   const handleZoomIn = () => {
-    if (chartRef.current) {
-      const newZoom = zoomLevel + 0.1;
-      chartRef.current.setChartScale(newZoom);
-      setZoomLevel(newZoom);
+    const newZoom = Math.min(2, zoomLevel + 0.1);
+    setZoomLevel(newZoom);
+    const chart = document.getElementsByClassName("my-chart")[0] as HTMLElement;
+    if (chart) {
+      chart.style.transform = `scale(${newZoom})`;
     }
   };
 
   const handleZoomOut = () => {
-    if (chartRef.current) {
-      const newZoom = Math.max(0.1, zoomLevel - 0.1);
-      chartRef.current.setChartScale(newZoom);
-      setZoomLevel(newZoom);
+    const newZoom = Math.max(0.6, zoomLevel - 0.1);
+    setZoomLevel(newZoom);
+    const chart = document.getElementsByClassName("my-chart")[0] as HTMLElement;
+    if (chart) {
+      chart.style.transform = `scale(${newZoom})`;
+    }
+  };
+
+  const handleFitToScreen = () => {
+    const chart = document.getElementsByClassName("my-chart")[0] as HTMLElement;
+    const container = chart.parentElement;
+
+    if (chart && container) {
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+      const chartWidth = chart.scrollWidth;
+      const chartHeight = chart.scrollHeight;
+
+      const scaleX = containerWidth / chartWidth;
+      const scaleY = containerHeight / chartHeight;
+      const scale = Math.min(scaleX, scaleY, 1);
+
+      setZoomLevel(scale);
+      chart.style.transform = `scale(${scale})`;
     }
   };
 
@@ -163,6 +164,26 @@ export default function OrgChartComponent() {
   return mounted ? (
     <div className="relative min-h-[500px] w-full">
       <div className="w-full h-full">
+        <div className="absolute right-5 top-5 h-8 rounded-md overflow-hidden border-border border-[0.5px]  flex z-50 items-center">
+          <Icon
+            onClick={() => handleZoomOut()}
+            name="remove_circle_outline"
+            className="text-[20px] px-2.5 cursor-pointer"
+          />
+          <Text
+            onClick={() => handleFitToScreen()}
+            variant={"button"}
+            className="px-2.5 text-[#191919] cursor-pointer border-l border-r border-border h-full flex items-center"
+          >
+            Fit to Screen
+          </Text>
+
+          <Icon
+            onClick={() => handleZoomIn()}
+            name="add_circle_outline"
+            className="text-[20px] px-2.5 cursor-pointer"
+          />
+        </div>
         <OrgChart
           ref={chartRef}
           datasource={data}
