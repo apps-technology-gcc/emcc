@@ -45,20 +45,37 @@ const Link = ({
   return (
     <NextLink
       href={disabled ? "/" : href}
-      className={cn(
-        "flex items-center gap-2.5",
-        linkVariants({ variant, className })
-      )}
+      className={cn("flex items-center gap-2.5")}
       {...props}
     >
       {icon && iconPosition === "left" && (
-        <Icon name={icon} className="text-[20px]" />
+        <Icon
+          name={icon}
+          className={cn(
+            "text-[20px]",
+            variant === "secondary"
+              ? "text-neutralDark hover:text-gray-900"
+              : "text-primary-600 hover:text-primary-700"
+          )}
+        />
       )}
-      <Text as="span" variant="button">
+      <Text
+        className={cn(linkVariants({ variant, className }))}
+        as="span"
+        variant="button"
+      >
         {children}
       </Text>
       {icon && iconPosition === "right" && (
-        <Icon name={icon} className="text-[20px]" />
+        <Icon
+          name={icon}
+          className={cn(
+            "text-[20px]",
+            variant === "secondary"
+              ? "text-neutralDark hover:text-gray-900"
+              : "text-primary-600 hover:text-primary-700"
+          )}
+        />
       )}
     </NextLink>
   );

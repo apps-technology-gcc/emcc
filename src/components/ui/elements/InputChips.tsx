@@ -41,13 +41,21 @@ export interface InputChipsProps
 
 const InputChips = React.forwardRef<HTMLDivElement, InputChipsProps>(
   (
-    { variant, children, className, icon, iconPosition = "left", ...props },
+    {
+      variant,
+      radius,
+      children,
+      className,
+      icon,
+      iconPosition = "left",
+      ...props
+    },
     ref
   ) => {
     return (
       <div
         ref={ref}
-        className={cn(inputChipsVariants({ variant }), className)}
+        className={cn(inputChipsVariants({ variant, radius }), className)}
         {...props}
       >
         {icon && iconPosition === "left" && icon}
