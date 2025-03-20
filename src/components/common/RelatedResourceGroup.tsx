@@ -51,7 +51,7 @@ const RelatedResourceGroup = ({
   title?: string;
 }) => {
   return (
-    <div className="flex mt-20 flex-col gap-12">
+    <div className="flex flex-col gap-12">
       <SectionTitle title={title} />
 
       <div className="grid grid-cols-[auto_1px_auto_1px_auto] gap-8">

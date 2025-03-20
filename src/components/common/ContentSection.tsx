@@ -15,9 +15,8 @@ const ContentSection = ({
           key={index}
           variant="body"
           className={color ? `${color}` : "text-neutral"}
-        >
-          {textItem}
-        </Text>
+          dangerouslySetInnerHTML={{ __html: textItem }}
+        />
       ))}
     </div>
   );
