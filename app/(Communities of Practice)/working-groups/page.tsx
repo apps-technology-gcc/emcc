@@ -250,8 +250,9 @@ const page = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_370px] gap-16 min-h-screen">
           <div className=" flex flex-col gap-20">
             {/* Main content */}
-            <TextContentSection title="Global Coaching Mentoring Alliance (GCMA)" />
+
             <div className="flex flex-col gap-12">
+              <TextContentSection title="Skills Agenda for Europe" />
               {skillsData.map((skill, index) => (
                 <SkillItem
                   key={index}

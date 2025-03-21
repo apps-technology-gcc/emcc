@@ -84,7 +84,15 @@ export interface InputProps
   name: string;
   label?: string;
   labelPosition?: "left" | "right";
-  type?: "text" | "password" | "email" | "number" | "tel" | "url" | "textarea";
+  type?:
+    | "text"
+    | "password"
+    | "email"
+    | "number"
+    | "tel"
+    | "url"
+    | "textarea"
+    | "date";
   size?: "default" | "sm" | "lg";
   error?: boolean;
   cols?: number;
