@@ -38,7 +38,7 @@ const SearchSelect: React.FC<SearchSelectProps> = ({
   name,
   options,
   label,
-  placeholder = "Select an option",
+  placeholder = "Select",
   error,
   errorMessage,
   disabled,

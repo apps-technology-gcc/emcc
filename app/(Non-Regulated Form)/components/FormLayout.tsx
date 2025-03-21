@@ -5,15 +5,20 @@ import React from "react";
 import { Text } from "@/src/components/ui/elements/Text";
 import TextContentSection from "@/src/components/common/TextContentSection";
 import { Button } from "@/src/components/ui/elements/Button";
+import { cn } from "@/src/lib/utils";
 
 const FormLayout = ({
   children,
   title,
   subTitle,
+  formNumber,
+  btnText,
 }: {
   children: React.ReactNode;
   title?: string;
   subTitle?: string;
+  formNumber?: number;
+  btnText?: string;
 }) => {
   return (
     <Section bgColor="white">
@@ -32,7 +37,14 @@ const FormLayout = ({
               </Text>
             )}
           </div>
-          <div className="w-full flex flex-col gap-20">{children}</div>
+          <div
+            className={cn(
+              "w-full flex flex-col ",
+              formNumber === 1 ? "gap-20" : "gap-12"
+            )}
+          >
+            {children}
+          </div>
         </div>
       </div>
     </Section>
