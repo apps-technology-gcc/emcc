@@ -67,7 +67,7 @@ const Page = () => {
           <div className="max-w-[763px] flex flex-col gap-12">
             <Text
               font={"tinos"}
-              variant={"h1_page_title"}
+              variant={"section_title"}
               className="uppercase text-white"
             >
               Config 2024: Designing a Better Conference For People Who Build

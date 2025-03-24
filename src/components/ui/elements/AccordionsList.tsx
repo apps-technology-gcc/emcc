@@ -46,12 +46,16 @@ const contentVariants = cva(
 interface BaseAccordionProps extends VariantProps<typeof accordionVariants> {
   title: string;
   className?: string;
+  activeSection: string;
 }
 
 interface AccordionListProps extends BaseAccordionProps {
   content?: string;
   variant?: "default";
-  listItems: string[];
+  listItems: {
+    id: string;
+    text: string;
+  }[];
 }
 
 interface AccordionWithMediaProps extends BaseAccordionProps {
@@ -63,8 +67,8 @@ const AccordionList = React.forwardRef<
   HTMLDivElement,
   AccordionListProps | AccordionWithMediaProps
 >((props, ref) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { title, className, variant = "default" } = props;
+  const [isOpen, setIsOpen] = useState(true);
+  const { title, className, activeSection, variant = "default" } = props;
 
   const toggleAccordion = () => setIsOpen(!isOpen);
 
@@ -96,12 +100,12 @@ const AccordionList = React.forwardRef<
                     variant: "navbar",
                   }),
                   "ml-4 list-item ",
-                  index === 0 && "text-primary-600 list-disc"
+                  item.id === activeSection && "text-primary-600 list-disc"
                 )}
                 key={index}
                 color="neutralDark"
               >
-                {item}
+                {item.text}
               </li>
             ))}
           </ul>

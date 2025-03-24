@@ -121,38 +121,41 @@ const Page = () => {
 
       <Section bgColor="white">
         <div className="flex flex-col gap-12">
-          <div className="flex items-center gap-8">
-            <NavLink
-              variant={"navlink-1"}
-              href="/"
-              className={cn(
-                activeTab === "Suspended Coaches" ? " border-primary-600" : ""
-              )}
-            >
-              All Events
-            </NavLink>
-            <NavLink
-              variant={"navlink-1"}
-              href="/"
-              onClick={() => setActiveTab("Disqualified Coaches")}
-              className={cn(
-                activeTab === "Disqualified Coaches"
-                  ? " border-primary-600"
-                  : ""
-              )}
-            >
-              In Person Events
-            </NavLink>
-            <NavLink
-              variant={"navlink-1"}
-              href="/"
-              onClick={() => setActiveTab("Inactive Coaches")}
-              className={cn(
-                activeTab === "Inactive Coaches" ? " border-primary-600" : ""
-              )}
-            >
-              Virtual Events
-            </NavLink>
+          <div className="flex items-center gap5 justify-between">
+            <div className="flex items-center gap-8">
+              <NavLink
+                variant={"navlink-1"}
+                href="/"
+                className={cn(
+                  activeTab === "Suspended Coaches" ? " border-primary-600" : ""
+                )}
+              >
+                All Events
+              </NavLink>
+              <NavLink
+                variant={"navlink-1"}
+                href="/"
+                onClick={() => setActiveTab("Disqualified Coaches")}
+                className={cn(
+                  activeTab === "Disqualified Coaches"
+                    ? " border-primary-600"
+                    : ""
+                )}
+              >
+                In Person Events
+              </NavLink>
+              <NavLink
+                variant={"navlink-1"}
+                href="/"
+                onClick={() => setActiveTab("Inactive Coaches")}
+                className={cn(
+                  activeTab === "Inactive Coaches" ? " border-primary-600" : ""
+                )}
+              >
+                Virtual Events
+              </NavLink>
+            </div>
+            <Icon name="tune" className="text-[24px] " />
           </div>
 
           <TrainingSection

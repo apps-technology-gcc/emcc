@@ -11,7 +11,13 @@ import { usePathname } from "next/navigation";
 interface SidebarSectionProps {
   aboutEMCC: {
     title: string;
-    accordion: { title: string; listItems: string[] };
+    accordion: {
+      title: string;
+      listItems: {
+        id: string;
+        text: string;
+      }[];
+    };
     links: { text: string; href: string }[];
   };
   moreAboutUs: {
@@ -41,6 +47,7 @@ interface SidebarSectionProps {
       }
     ];
   };
+  activeSection: string;
 }
 
 const SidebarSection: React.FC<SidebarSectionProps> = ({
@@ -49,6 +56,7 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({
   applyToJoin,
   moreDetails,
   downloadHistory,
+  activeSection,
 }) => {
   //  Get active rounte path
   const currentPath =
@@ -57,7 +65,7 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({
   const pathname = usePathname();
   console.log("pathname", pathname);
   return (
-    <div className="flex flex-col gap-12">
+    <div className="flex sticky top-4 overflow-y-scroll scrollbar-hide flex-col gap-12">
       <div>
         <div className="p-5 mb-[17px] bg-primary-100">
           <Text variant={"side_nav_header"} className="text-neutralDark">
@@ -67,6 +75,7 @@ const SidebarSection: React.FC<SidebarSectionProps> = ({
         <div className="flex flex-col gap-5">
           <div className="border-b border-border">
             <AccordionList
+              activeSection={activeSection}
               title={aboutEMCC.accordion.title}
               listItems={aboutEMCC.accordion.listItems}
             />

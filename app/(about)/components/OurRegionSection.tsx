@@ -23,7 +23,7 @@ const OurRegionSection: React.FC<OurRegionSectionProps> = ({
   countryChapters,
 }) => {
   return (
-    <div className="flex flex-col gap-12">
+    <div id="region" className="flex flex-col gap-12">
       <SectionTitle title={title} />
       <div className="flex flex-col gap-8">
         <Text variant={"body"} className="text-neutral">

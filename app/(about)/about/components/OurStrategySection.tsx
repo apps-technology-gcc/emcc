@@ -17,7 +17,7 @@ const OurStrategySection: React.FC<OurStrategySectionProps> = ({
   accordions,
 }) => {
   return (
-    <div className="flex flex-col gap-12">
+    <div id="strategy" className="flex flex-col gap-12">
       <TextContentSection title={title} texts={paragraphs} />
       <div className="flex flex-col">
         {accordions.map((accordion, index) => (

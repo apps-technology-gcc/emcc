@@ -59,7 +59,7 @@ const InputChips = React.forwardRef<HTMLDivElement, InputChipsProps>(
         {...props}
       >
         {icon && iconPosition === "left" && icon}
-        <Text variants="placeholder" as="span">
+        <Text variant={"placeholder"} as="span">
           {children}
         </Text>
         {icon && iconPosition === "right" && icon}

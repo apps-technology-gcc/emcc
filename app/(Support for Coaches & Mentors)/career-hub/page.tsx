@@ -107,9 +107,8 @@ const page = () => {
         </div>
         <div className="container">
           <BannerSection
-            title="Accredited Training & Course Providers"
-            description="These are accreditation course providers.  Which meet our ethical and competency standars
-We also"
+            title="Welcome to your professional community"
+            description="Lorem ipsum dolor sit amet consectetur. Scelerisque congue sagittis ac duis tortor sollicitudin facilisi. Nisi feugiat facilisis id ac proin potenti. Ut aenean porttitor dignissim sit purus nunc. Ac quam fermentum velit sed amet. Ipsum magna neque quam adipiscing."
           />
         </div>
       </section>

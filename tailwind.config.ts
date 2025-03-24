@@ -12,14 +12,17 @@ module.exports = {
       xs: "640px",
       sm: "834px",
       md: "1044px",
-      lg: "1190px",
+      lg: "1280px",
       xl: "1280px",
-      "2xl": "1390px",
       // "3xl": "1210px",
     },
     container: {
-      padding: "20px",
       center: true,
+      padding: {
+        DEFAULT: "20px",
+        sm: "20px",
+        lg: "55px",
+      },
     },
     extend: {
       colors: {

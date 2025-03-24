@@ -171,6 +171,10 @@ const page = () => {
             {
               name: "Career Hub",
             },
+            {
+              name: "job-seeking",
+              href: "#",
+            },
           ]}
         />
       </Breadcrumb>
@@ -188,6 +192,7 @@ const page = () => {
               <div className="relative max-w-[360px] ">
                 <input
                   id=""
+                  placeholder="Search Jobs By Keyword"
                   class="w-full rounded-sm outline-none px-2.5 py-2 border transition-colors text-body_3 border-border text-neutralDark focus:border-primary-600 placeholder:text-neutralLight h-[32px] text-xs leading-[18px] font-light font-poppins font-poppins text-left border w-full min-h-[40px] text-neutralDark border-border outline-none px-2.5 py-2 focus:border-primary-600  "
                   type="text"
                 />
@@ -198,6 +203,7 @@ const page = () => {
               <div className="flex items-center gap-5">
                 <div className="relative w-[360px] ">
                   <input
+                    placeholder="Location"
                     id=""
                     class="w-full rounded-sm outline-none px-2.5 py-2 border transition-colors text-body_3 border-border text-neutralDark focus:border-primary-600 placeholder:text-neutralLight h-[32px] text-xs leading-[18px] font-light font-poppins font-poppins text-left border w-full min-h-[40px] text-neutralDark border-border outline-none px-2.5 py-2 focus:border-primary-600  "
                     type="text"
@@ -227,7 +233,12 @@ const page = () => {
                     radius={true}
                     variant={"secondary"}
                     key={item.id}
-                    className="bg-transparent border-neutralDark border"
+                    className={cn(
+                      textVariants({
+                        variant: "placeholder",
+                      }),
+                      "bg-transparent border-neutralDark border"
+                    )}
                   >
                     {item.name}
                   </InputChips>

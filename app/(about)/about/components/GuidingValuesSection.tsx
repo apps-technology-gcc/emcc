@@ -15,8 +15,8 @@ const GuidingValuesSection: React.FC<GuidingValuesSectionProps> = ({
   values,
 }) => {
   return (
-    <div className="flex flex-col gap-12">
-      <SectionTitle title="Our Guiding Values" />
+    <div className="flex bg-[#D9F2ED] p-8 flex-col gap-12 rounded-md">
+      <Text variant={"section_title"}>Our Guiding Values</Text>
       <div className="flex flex-col gap-8">
         {values.map((value) => (
           <div key={value.id}>

@@ -255,7 +255,7 @@ const Form3 = () => {
       </div>
       <Divider />
       <div className="flex flex-col gap-12">
-        <Text variant={"card_title_large"} className="text-neutral">
+        <Text variant={"card_title_large"} className="text-neutral text-center">
           Information regarding the specific allegations
         </Text>
         <Text variant={"body"} className="text-neutral">
@@ -318,8 +318,8 @@ supporting documents."
       </div>
       <Divider />
       <div className="flex flex-col gap-12">
-        <Text variant={"card_title_large"} className="text-neutral">
-          Information regarding the specific allegations
+        <Text variant={"card_title_large"} className="text-neutral text-center">
+          Action taken to resolve the disagreement
         </Text>
         <div className="flex flex-col gap-5">
           <Text variant={"card_title_small"} className="text-neutral">

@@ -203,7 +203,7 @@ export const Footer: React.FC = () => {
       />
       {/* Scroll to top button that shows when scrolling down */}
       <div
-        className={`flex fixed z-0 flex-col items-end bottom-10 right-5 sm:bottom-[270px]  md:bottom-[225px] sm:right-[55px] w-[50px] transition-opacity duration-300 opacity-100 ${
+        className={`flex fixed z-0 flex-col items-end bottom-5 right-5 sm:right-[55px] w-[50px] transition-opacity duration-300 opacity-100 ${
           typeof window !== "undefined" && window.scrollY > 100
             ? ""
             : "opacity-0"
