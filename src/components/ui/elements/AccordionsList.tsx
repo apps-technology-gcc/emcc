@@ -105,7 +105,7 @@ const AccordionList = React.forwardRef<
                 key={index}
                 color="neutralDark"
               >
-                {item.text}
+                {item.text ? item.text : item}
               </li>
             ))}
           </ul>

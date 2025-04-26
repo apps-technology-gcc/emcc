@@ -47,7 +47,7 @@ interface SidebarSectionProps {
       }
     ];
   };
-  activeSection: string;
+  activeSection?: string;
 }
 
 const SidebarSection: React.FC<SidebarSectionProps> = ({

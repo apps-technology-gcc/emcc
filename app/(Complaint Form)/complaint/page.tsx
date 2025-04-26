@@ -10,6 +10,7 @@ import FormLayout from "../components/FormLayout";
 import Form1 from "../components/Form1";
 import Form2 from "../components/Form2";
 import Form3 from "../components/Form3";
+import SuccessModal from "@/src/components/modal/SuccessModal";
 
 // Dynamic import of form components
 const formComponents = [<Form1 />, <Form2 />, <Form3 />];
@@ -31,6 +32,7 @@ const Page = () => {
   ];
   return (
     <FormLayout {...formData[currentFormIndex - 1]}>
+      <SuccessModal />
       {formComponents[currentFormIndex - 1] || <Form1 />}{" "}
       <div className="flex justify-end">
         <Button

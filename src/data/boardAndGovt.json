@@ -95,12 +95,8 @@
     "aboutEMCC": {
       "title": "About EMCC ME",
       "accordion": {
-        "title": "Key Information",
-        "listItems": [
-          "Vision & Mission",
-          "Strategic Objectives",
-          "Our Organisational Structure"
-        ]
+        "title": "About EMCC ME",
+        "listItems": []
       },
       "links": [
         { "text": "Board & Governance", "href": "/board-and-governance" },

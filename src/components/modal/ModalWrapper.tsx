@@ -3,19 +3,15 @@
 import React, { FC } from "react";
 import { createPortal } from "react-dom";
 import { Icon } from "../ui/elements/Icon";
-interface ModalWrapperProps {
+interface ModalProps {
   children: React.ReactNode;
-  closeModal: () => void;
+  closeModel: () => void;
   isOpen: boolean;
 }
 
-const ModalWrapper: FC<ModalWrapperProps> = ({
-  children,
-  isOpen,
-  closeModal,
-}) => {
-  const handleCloseModal = () => {
-    closeModal();
+const Modal: FC<ModalProps> = ({ children, isOpen, closeModel }) => {
+  const handleCloseModel = () => {
+    closeModel();
   };
   const [mounted, setMounted] = React.useState(false);
 
@@ -26,11 +22,11 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
     ? createPortal(
         <div className="fixed  overflow-y-auto items-center justify-center top-0 left-0 z-50 w-full h-full">
           <div
-            onClick={handleCloseModal}
+            onClick={handleCloseModel}
             className="fixed opacity-10 flex items-center justify-center top-0 left-0 -z-10 w-full h-full bg-black"
           ></div>
           <div
-            onClick={handleCloseModal}
+            onClick={handleCloseModel}
             className="my-10 md:my-20  flex justify-center overflow-y-auto"
           >
             <div
@@ -39,12 +35,11 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
               }}
               className="z-50 w-full sm:w-auto"
             >
-              {/* max-w-[800px] min-w-[320px] xl:min-w-[450px] */}
-              <div className=" p-12 bg-white relative">
+              <div className="bg-white max-w-[800px] p-12 relative">
                 <Icon
-                  onClick={handleCloseModal}
-                  className="absolute text-[24px] text-neutralDark cursor-pointer right-5 top-5"
+                  onClick={handleCloseModel}
                   name="close"
+                  className="absolute top-5 right-5 cursor-pointer"
                 />
                 {children}
               </div>
@@ -56,4 +51,4 @@ const ModalWrapper: FC<ModalWrapperProps> = ({
     : null;
 };
 
-export default ModalWrapper;
+export default Modal;

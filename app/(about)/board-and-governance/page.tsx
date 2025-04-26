@@ -53,7 +53,7 @@ const page = () => {
 
   const [modalName, setModalName] = useState("initial");
 
-  const [isOpenMainModal, setIsOpenMainModal] = useState(true);
+  const [isOpenMainModal, setIsOpenMainModal] = useState(false);
   const closeModel = () => {
     setIsOpenMainModal(false);
     setModalName("initial");

@@ -94,7 +94,7 @@ const page = () => {
       links: [
         {
           text: "Board & Governance",
-          href: "#",
+          href: "/board-and-governance",
         },
         {
           text: "Leadership & Organisation",
