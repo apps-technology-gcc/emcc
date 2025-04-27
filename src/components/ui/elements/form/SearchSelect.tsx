@@ -228,6 +228,7 @@ const SearchSelect: React.FC<SearchSelectProps> = ({
                   <div className="flex items-center gap-2">
                     {isMulti && (
                       <CheckboxInput
+                        id=""
                         checked={selectedOptions.includes(option)}
                         readOnly
                       />

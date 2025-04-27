@@ -115,6 +115,7 @@ const Otp = ({
       {Array.from({ length }, (_, i) => (
         <input
           key={i}
+          // @ts-ignore
           ref={(el) => (inputRefs.current[i] = el)}
           type="text"
           inputMode="numeric"

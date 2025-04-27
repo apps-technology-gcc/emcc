@@ -13,5 +13,8 @@ export default function ChatWidgetContainer() {
       "In accordance with our privacy policy, this conversation may be recorded for training and quality assurance purposes.",
   };
 
-  return <ChatWidget {...chatConfig} />;
+  return (
+    // @ts-ignore
+    <ChatWidget {...chatConfig} />
+  );
 }

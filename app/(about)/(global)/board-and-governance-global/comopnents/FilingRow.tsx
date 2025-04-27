@@ -1,7 +1,8 @@
 import * as React from "react";
-import { FilingRowData } from "./types";
+// import { FilingRowData } from "./types";
 import { cn } from "@/src/lib/utils";
 import { Text } from "@/src/components/ui/elements/Text";
+import { FilingRowData } from "@/src/types";
 
 interface FilingRowProps {
   data: FilingRowData;

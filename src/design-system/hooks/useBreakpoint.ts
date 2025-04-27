@@ -1,5 +1,5 @@
+import { grid } from "@/src/components/ui/foundations";
 import { useState, useEffect } from "react";
-import { grid } from "../foundations/grid";
 
 type Breakpoint = keyof typeof grid.breakpoints;
 

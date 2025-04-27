@@ -75,9 +75,13 @@ const page = () => {
       accordion: {
         title: "About EMCC Global",
         listItems: [
-          "Our History, Our Culture",
-          "Our Strategy",
-          "Our Locations",
+          // "Our History, Our Culture",
+          // "Our Strategy",
+          // "Our Locations",
+          {
+            id: "work_we_do",
+            text: "Our History, Our Culture",
+          },
         ],
       },
       links: [
@@ -177,7 +181,10 @@ const page = () => {
             </div>
           </div>
           <div className="md:col-span-4">
-            <SidebarSection {...sideBarData} />
+            <SidebarSection
+              {...sideBarData}
+              activeSection={"Our History, Our Culture"}
+            />
           </div>
         </div>
       </Section>

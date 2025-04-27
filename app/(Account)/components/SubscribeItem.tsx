@@ -8,7 +8,7 @@ const SubscribeItem = ({
   title,
   description,
   isSubscribed,
-  id,
+  // id,
   onChangeStatus,
 }: {
   title: string;
@@ -21,14 +21,14 @@ const SubscribeItem = ({
       <div className="absolute right-2.5 top-2.5 ">
         {isSubscribed ? (
           <Icon
-            onClick={() => onChangeStatus()}
+            onClick={() => onChangeStatus && onChangeStatus()}
             name="check_circle"
             className="text-[20px] text-success-500"
           />
         ) : (
           <Icon
             name="add_circle"
-            onClick={() => onChangeStatus()}
+            onClick={() => onChangeStatus && onChangeStatus()}
             className="text-[24px] cursor-pointer"
           />
         )}

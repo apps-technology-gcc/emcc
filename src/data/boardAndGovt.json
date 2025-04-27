@@ -96,7 +96,10 @@
       "title": "About EMCC ME",
       "accordion": {
         "title": "About EMCC ME",
-        "listItems": []
+        "listItems": [
+          { "text": "About EMCC ME", "id": "about" },
+          { "text": "Our Mission", "id": "our-mission" }
+        ]
       },
       "links": [
         { "text": "Board & Governance", "href": "/board-and-governance" },

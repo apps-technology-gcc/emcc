@@ -73,10 +73,10 @@ const Navbar = () => {
           ))}
         </div>
         <div className="flex gap-8 items-center self-stretch my-auto text-xs font-light whitespace-nowrap text-neutral-800">
-          <Icon name="search" size={20} className="text-[20px]" />
-          <Icon name="person" size={20} className="text-[20px]" />
+          <Icon name="search" className="text-[20px]" />
+          <Icon name="person" className="text-[20px]" />
           <div className="flex gap-2.5 items-center self-stretch my-auto rounded-md flex-auto">
-            <Icon name="language" size={20} className="text-[20px]" />
+            <Icon name="language" className="text-[20px]" />
             <Text
               variant={"placeholder"}
               className="text-[#222222] hidden md:block"
@@ -96,11 +96,11 @@ const Navbar = () => {
           />
         </div>
         <div className="flex gap-8 items-center self-stretch my-auto text-xs font-light whitespace-nowrap text-neutral-800">
-          <Icon name="search" size={20} className="text-[20px]" />
-          {/* <Icon name="person" size={20} /> */}
+          <Icon name="search" className="text-[20px]" />
+          {/* <Icon name="person"  /> */}
 
           <div className="flex gap-2.5 items-center self-stretch my-auto rounded-md flex-auto">
-            <Icon name="language" size={20} className="text-[20px]" />
+            <Icon name="language" className="text-[20px]" />
             <Text
               variant={"placeholder"}
               className="text-[#222222] hidden md:block "
@@ -154,7 +154,7 @@ const Navbar = () => {
                       </Text>
                       <Icon
                         name="arrow_forward"
-                        // size={20}
+                        //
                         className="cursor-pointer text-[20px]"
                         onClick={() => setIsOffcanvasOpen(true)}
                       />

@@ -62,12 +62,12 @@ const MembershipAndAccreditation = (props: Props) => {
               </Text>
             </div>
             <NavigationMegaMenuBtn
-              onClick={() => router.push("/membership-checkout")}
+              // onClick={() => router.push("/membership-checkout")}
               title={"Renew"}
               icon="replay"
-            >
-              Renew
-            </NavigationMegaMenuBtn>
+            />
+            {/* Renew */}
+            {/* </NavigationMegaMenuBtn> */}
           </div>
           <Divider />
           <div className="flex items-start justify-between gap-8">
@@ -91,12 +91,10 @@ const MembershipAndAccreditation = (props: Props) => {
               </Tag>
             ) : (
               <NavigationMegaMenuBtn
-                onClick={() => setIsUnderReview(true)}
+                // onClick={() => setIsUnderReview(true)}
                 title={"Apply"}
                 icon="arrow_forward"
-              >
-                Apply
-              </NavigationMegaMenuBtn>
+              />
             )}
           </div>
         </div>

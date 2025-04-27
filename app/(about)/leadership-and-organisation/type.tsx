@@ -45,13 +45,16 @@ interface Sidebar {
     title: string;
     accordion: {
       title: string;
-      listItems: string[];
+      listItems: {
+        id: string;
+        text: string;
+      }[];
     };
-    links: SidebarLink[];
+    links: { text: string; href: string }[];
   };
   moreAboutUs: {
     title: string;
-    cards: SidebarCard[];
+    cards: { icon: string; title: string; description: string }[];
   };
   applyToJoin: {
     title: string;

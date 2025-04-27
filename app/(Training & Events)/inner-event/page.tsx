@@ -17,7 +17,7 @@ import Banner from "@/src/components/common/Banner";
 import bgImage from "@/public/event-bg.jpeg";
 import NavLink from "@/src/components/ui/elements/NavLink";
 import SectionTitle from "@/src/components/common/SectionTitle";
-import EventCard from "../components/EventCard";
+// import EventCard from "../components/EventCard";
 import Link from "@/src/components/ui/elements/Link";
 import BulletText from "@/src/components/ui/elements/BulletText";
 import IconWithText from "@/components/common/IconWithText";

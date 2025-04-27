@@ -2,6 +2,7 @@ import { colors } from "./src/components/ui/foundations/colors";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: "false",
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -84,13 +85,13 @@ module.exports = {
           900: "#29208F",
           950: "#1A1353",
         },
-        gray: {
-          50: "#f9fafb",
-          100: "#f3f4f6",
-          300: "#d1d5db",
-          400: "#9ca3af",
-          700: "#374151",
-        },
+        // gray: {
+        //   50: "#f9fafb",
+        //   100: "#f3f4f6",
+        //   300: "#d1d5db",
+        //   400: "#9ca3af",
+        //   700: "#374151",
+        // },
       },
       backgroundImage: {
         "gradient-primary":

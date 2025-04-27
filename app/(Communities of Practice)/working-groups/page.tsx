@@ -258,8 +258,8 @@ const page = () => {
                   key={index}
                   icon={skill.icon}
                   iconAlt={skill.iconAlt}
-                  backgroundColor={skill.backgroundColor}
-                  borderColor={skill.borderColor}
+                  // backgroundColor={skill.backgroundColor}
+                  // borderColor={skill.borderColor}
                   content={skill.content}
                   link={skill.link}
                 />

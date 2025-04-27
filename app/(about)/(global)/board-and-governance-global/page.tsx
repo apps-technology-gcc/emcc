@@ -93,9 +93,18 @@ const page = () => {
       accordion: {
         title: "About EMCC Global",
         listItems: [
-          "Our History, Our Culture",
-          "Our Strategy",
-          "Our Locations",
+          {
+            id: "Our History, Our Culture",
+            text: "Our History, Our Culture",
+          },
+          {
+            id: "Our Strategy",
+            text: "Our Strategy",
+          },
+          {
+            id: "Our Locations",
+            text: "Our Locations",
+          },
         ],
       },
       links: [
@@ -113,34 +122,20 @@ const page = () => {
         },
       ],
     },
-    // moreAboutUs: {
-    //   title: "More About Us",
-    //   cards: [
-    //     {
-    //       icon: "sqricon",
-    //       title: "Research",
-    //       description:
-    //         "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
-    //     },
-    //     {
-    //       icon: "sqricon",
-    //       title: "CPD",
-    //       description:
-    //         "Lorem ipsum dolor sit amet consectetur. Mattis amet elit vulputate convallis massa accumsan purus sit. Proin porta sit amet nam egestas ac. Sit fermentum amet ut consequat nec. Non faucibus lectus quis tortor aliquam suscipit fermentum sem mi.",
-    //     },
-    //   ],
-    // },
     moreDetails: {
       title: "For more details about the Board see the links below.",
       items: [
         {
           title: "Terms of Reference (PDF - 151KB)",
+          href: "/",
         },
         {
           title: "AGM Minutes of Meeting",
+          href: "/",
         },
         {
           title: "EMCC Global Byelaws (2024-2025)",
+          href: "/",
         },
       ],
     },
@@ -149,12 +144,15 @@ const page = () => {
       items: [
         {
           title: "Terms of Reference (PDF - 151KB)",
+          href: "/",
         },
         {
           title: "AGM Minutes of Meeting",
+          href: "/",
         },
         {
           title: "EMCC Global Byelaws (2024-2025)",
+          href: "/",
         },
       ],
     },
@@ -329,7 +327,10 @@ const page = () => {
             </div>
           </div>
           <div className="md:col-span-4">
-            <SidebarSection {...sideBarData} />
+            <SidebarSection
+              activeSection="Our History, Our Culture"
+              {...sideBarData}
+            />
           </div>
         </div>
       </Section>

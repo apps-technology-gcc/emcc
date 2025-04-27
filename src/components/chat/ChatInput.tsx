@@ -1,5 +1,5 @@
+import { ChatInputProps } from "@/src/types";
 import * as React from "react";
-import { ChatInputProps } from "./types";
 
 export const ChatInput: React.FC<ChatInputProps> = ({ onSend }) => {
   const [message, setMessage] = React.useState("");

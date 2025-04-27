@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { cva } from "class-variance-authority";
-import { cn } from "@/lib/utils";
 import { InputProps } from "./input.types";
+import { cn } from "@/src/lib/utils";
 
 const inputWrapperStyles = cva("relative flex flex-col gap-1", {
   variants: {

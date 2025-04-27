@@ -1,5 +1,5 @@
+import { cn } from "@/src/lib/utils";
 import { cva, type VariantProps } from "class-variance-authority";
-import { cn } from "@/lib/utils";
 
 const spacerVariants = cva("block", {
   variants: {

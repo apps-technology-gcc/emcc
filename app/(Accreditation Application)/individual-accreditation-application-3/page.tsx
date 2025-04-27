@@ -62,7 +62,7 @@ const page = () => {
               warningText="Approximately 300-500 words"
               label="Your Statement (about 300 - 500 words)"
               type="textarea"
-              mame="statement"
+              name="statement"
             />
           </div>
           <div className="flex w-full items-center justify-end">

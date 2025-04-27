@@ -6,7 +6,7 @@ import {
   AllNewsCard,
   CommonNewsCard,
   EventNewsCard,
-  GpsNewsCard,
+  // GpsNewsCard,
   LeadershipNewsCard,
   PartnersNewsCard,
 } from "@/src/components/card/NewsCard";

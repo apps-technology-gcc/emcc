@@ -1,11 +1,11 @@
 import * as React from "react";
-import { ChatWidgetProps } from "./types";
+// import { ChatWidgetProps } from "./types";
 import { Button } from "../ui/elements/Button";
 import { Text, textVariants } from "../ui/elements/Text";
 import { Input } from "../ui/elements/form/Input";
 import { cn } from "@/src/lib/utils";
 import { ChatInput } from "./ChatInput";
-import { MessageProps } from "@/src/types";
+import { ChatWidgetProps, MessageProps } from "@/src/types";
 import { AgentHeader } from "./AgentHeader";
 import { ChatMessage } from "./ChatMessage";
 

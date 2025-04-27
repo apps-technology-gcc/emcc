@@ -66,7 +66,7 @@ const page = () => {
             />
           </div>
           <div className="col-span-4">
-            <SidebarSection {...pageContent.sidebar} />
+            <SidebarSection activeSection="" {...pageContent.sidebar} />
           </div>
         </div>
       </Section>

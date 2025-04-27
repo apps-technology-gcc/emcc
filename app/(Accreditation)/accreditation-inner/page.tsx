@@ -159,7 +159,7 @@ const page = () => {
   };
   return (
     <>
-      <ModalWrapper isOpen={isOpen} closeModal={closeModal}>
+      <ModalWrapper isOpen={isOpen} closeModel={closeModal}>
         <div className="flex w-auto max-w-[540px] flex-col  gap-8">
           <Text variant={"section_title"} className="text-[#191919]">
             Sign In to Apply for Accreditation

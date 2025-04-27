@@ -29,7 +29,7 @@ const page = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         // Find the entry with the highest intersection ratio
-        const visibleSection = entries.reduce((max, entry) => {
+        const visibleSection = entries.reduce((max: any, entry: any) => {
           return entry.intersectionRatio > (max?.intersectionRatio || 0)
             ? entry
             : max;

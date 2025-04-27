@@ -62,7 +62,7 @@ const page = () => {
     <>
       <ModalWrapper
         isOpen={isOpenMainModal && modalName === "initial"}
-        closeModal={closeModel}
+        closeModel={closeModel}
       >
         <div className="flex w-[1170px] flex-col gap-12">
           <div className="flex flex-col gap-5">
@@ -121,7 +121,7 @@ const page = () => {
             />
           </div>
           <div className="md:col-span-4">
-            <SidebarSection {...pageContent.sidebar} />
+            <SidebarSection activeSection="" {...pageContent.sidebar} />
           </div>
         </div>
       </Section>

@@ -1,6 +1,6 @@
 import * as React from "react";
 import { FooterColumn } from "./FooterColumn";
-import { SocialLink } from "./SocialLink";
+
 import { Text } from "../ui/elements/Text";
 import { Cookies } from "./Cookies";
 import NavLink2 from "../ui/elements/NavLink2";

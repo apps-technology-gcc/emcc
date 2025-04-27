@@ -1,6 +1,8 @@
 import * as React from "react";
-import { Button } from "./Button";
-import { LocationSwitcherProps } from "./types";
+import { Button } from "../ui/elements/Button";
+import { LocationSwitcherProps } from "@/src/types";
+// import { Button } from "./Button";
+// import { LocationSwitcherProps } from "./types";
 
 export const LocationSwitcher: React.FC<LocationSwitcherProps> = ({
   country,
@@ -19,12 +21,10 @@ export const LocationSwitcher: React.FC<LocationSwitcherProps> = ({
         </div>
       </div>
       <div className="flex z-0 flex-wrap gap-8 items-start mt-12 w-full text-sm text-center max-md:mt-10 max-md:max-w-full">
-        <Button variant="outline" onClick={onContinue}>
+        <Button outline onClick={onContinue}>
           CONTINUE TO {country}
         </Button>
-        <Button variant="solid" onClick={onSwitch}>
-          SWITCH LOCATIONS
-        </Button>
+        <Button onClick={onSwitch}>SWITCH LOCATIONS</Button>
       </div>
       <img
         loading="lazy"

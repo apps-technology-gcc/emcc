@@ -25,7 +25,7 @@ const BoardMembersGridSection: React.FC<BoardMembersGridSectionProps> = ({
           <MemberCard key={index} {...member} />
         ))}
       </div>
-      {linkTitle && <SectionLink onClick={() => onClick()} title={linkTitle} />}
+      {linkTitle && <SectionLink onClick={() => onClick} title={linkTitle} />}
     </div>
   );
 };

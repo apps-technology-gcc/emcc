@@ -1,8 +1,9 @@
 import * as React from "react";
-import { StrengthCardProps } from "./types";
+// import { StrengthCardProps } from "./types";
 import { Text } from "@/src/components/ui/elements/Text";
 import Link from "@/src/components/ui/elements/Link";
 import { Icon } from "@/src/components/ui/elements/Icon";
+import { StrengthCardProps } from "@/src/types";
 
 export const StrengthCard: React.FC<StrengthCardProps> = ({
   imageSrc,

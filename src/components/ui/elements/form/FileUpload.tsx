@@ -31,9 +31,9 @@ const AttachFile: React.FC<FileUploadProps> = ({
   return (
     <div className="flex items-center gap-0 ">
       <div className="flex-grow">
-        <Input type="text" placeholder="Attach File" />
+        <Input name="file" type="text" placeholder="Attach File" />
       </div>
-      <Button className="-ml-2 z-10" variant="default" type="secondary">
+      <Button className="-ml-2 z-10" variant="default" btnType="secondary">
         Upload
       </Button>
     </div>
@@ -56,22 +56,23 @@ const Choose: React.FC<FileUploadProps> = ({
     <div className="grid grid-cols-12 gap-2.5">
       <input hidden type="file" name="" id="" />
       <div className="col-span-4">
-        <Input type="text" placeholder="Choose a file" />
+        <Input name="file" type="text" placeholder="Choose a file" />
       </div>
       <div className="col-span-6">
-        <Input type="text" placeholder="File Name" />
+        <Input name="fileName" type="text" placeholder="File Name" />
       </div>
       <div className="col-span-2">
-        <Button variant="default" type="secondary">
+        <Button variant="default" btnType="secondary">
           Reset
         </Button>
       </div>
     </div>
   );
 };
-
+// @ts-ignore
 const FileUpload: React.FC<FileUploadProps> = ({
   type,
+
   ...props
 }: {
   type: "attach" | "choose";

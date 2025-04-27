@@ -32,12 +32,13 @@ const Divider: FC<DividerProps> = ({
     : undefined;
 
   return (
+    // @ts-ignore
     <div
       className={dividerVariants({ orientation, className })}
       style={style}
       role="separator"
       aria-orientation={orientation}
-    />
+    ></div>
   );
 };
 

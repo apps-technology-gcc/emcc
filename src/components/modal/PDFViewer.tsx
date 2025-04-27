@@ -97,16 +97,16 @@ const PDFViewer = ({
               {/* Controls Overlay */}
               <div className="absolute top-4 right-4 flex space-x-2">
                 <button className="bg-black text-white rounded-full p-2 hover:bg-gray-800">
-                  <ChevronUp size={24} />
+                  {/* <ChevronUp size={24} /> */}
                 </button>
                 <button className="bg-black text-white rounded-full p-2 hover:bg-gray-800">
-                  <ChevronDown size={24} />
+                  {/* <ChevronDown size={24} /> */}
                 </button>
                 <button
                   onClick={onClose}
                   className="bg-black text-white rounded-full p-2 hover:bg-gray-800"
                 >
-                  <X size={24} />
+                  {/* <X size={24} /> */}
                 </button>
               </div>
             </div>
@@ -114,7 +114,7 @@ const PDFViewer = ({
             {/* Bottom Toolbar */}
             <div className="bg-gray-800 text-white p-2 flex justify-between items-center">
               <div className="flex items-center space-x-2 bg-gray-900 rounded px-2 py-1 w-64">
-                <Icon name="search" size={16} />
+                <Icon name="search" />
                 <input
                   type="text"
                   placeholder="Search in this book"
@@ -132,7 +132,6 @@ const PDFViewer = ({
                   <span>Contents</span>
                   <Icon
                     name="arrow_Down_ios"
-                    size={16}
                     className={isContentsOpen ? "transform rotate-180" : ""}
                   />
                 </button>
@@ -140,14 +139,10 @@ const PDFViewer = ({
 
               <div className="flex items-center space-x-2">
                 <button className="p-1 hover:bg-gray-700 rounded">
-                  <Icon name="search" size={20} />
+                  <Icon name="search" />
                 </button>
                 <button className="p-1 hover:bg-gray-700 rounded">
-                  <Icon
-                    name="search"
-                    size={20}
-                    className="transform scale-125"
-                  />
+                  <Icon name="search" className="transform scale-125" />
                 </button>
                 <div className="h-6 border-l border-gray-600 mx-1"></div>
                 <button className="p-1 hover:bg-gray-700 rounded">I</button>

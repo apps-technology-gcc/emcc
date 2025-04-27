@@ -21,7 +21,7 @@ const ExecutiveBoardSection: React.FC<ExecutiveBoardSectionProps> = ({
         <Text variant={"body"} className="text-neutral">
           {description}
         </Text>
-        <SectionLink title="Our Organisational Structure" />
+        <SectionLink title="Our Organisational Structure" onClick={() => {}} />
       </div>
       <div className="flex flex-col">
         {accordions.map((accordion, index) => (

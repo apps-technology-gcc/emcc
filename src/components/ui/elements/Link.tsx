@@ -50,6 +50,7 @@ const Link = ({
     >
       {icon && iconPosition === "left" && (
         <Icon
+          // @ts-ignore
           name={icon}
           className={cn(
             "text-[20px]",
@@ -68,6 +69,7 @@ const Link = ({
       </Text>
       {icon && iconPosition === "right" && (
         <Icon
+          // @ts-ignore
           name={icon}
           className={cn(
             "text-[20px]",

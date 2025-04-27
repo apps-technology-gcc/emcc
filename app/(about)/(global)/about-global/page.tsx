@@ -25,11 +25,12 @@ import TextContentSection from "@/components/common/TextContentSection";
 import AccordionGroup from "../../components/AccordionGroup";
 import EmccFlag from "@/public/emcc-flag.svg";
 import flag from "@/public/flag.png";
-import SidebarSection from "../../components/SidebarSection";
+
 import BannerSection from "../../components/BannerSection";
 import pageContentJson from "@/src/data/aboutGlobal.json";
 import { PageContent } from "./type";
 import OurRegionSection from "../../components/OurRegionSection";
+import SidebarSection from "../../components/SidebarSection";
 const page = () => {
   const bredList = [
     {
@@ -89,16 +90,25 @@ const page = () => {
       content: "This is the content<br/>This is another paragraph",
     },
   ];
-  const [pageContent, setPageContent] = useState<PageContent>(pageContentJson);
+  const [pageContent, setPageContent] = useState<PageContent>();
   const sideBarData = {
     aboutEMCC: {
       title: "About EMCC Global",
       accordion: {
         title: "About EMCC Global",
         listItems: [
-          "Our History, Our Culture",
-          "Our Strategy",
-          "Our Locations",
+          {
+            id: "1",
+            text: "Our History, Our Culture",
+          },
+          {
+            id: "2",
+            text: "Our Strategy",
+          },
+          {
+            id: "3",
+            text: "Our Locations",
+          },
         ],
       },
       links: [
@@ -213,7 +223,12 @@ const page = () => {
             />
           </div>
           <div className="md:col-span-4">
-            <SidebarSection {...sideBarData} />
+            {/* <SidebarSection {...sideBarData} />
+             */}
+            <SidebarSection
+              {...sideBarData}
+              activeSection="Our History, Our Culture"
+            />
           </div>
         </div>
       </Section>

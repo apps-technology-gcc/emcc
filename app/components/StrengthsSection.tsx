@@ -1,8 +1,9 @@
 import * as React from "react";
 import { StrengthCard } from "./StrengthCard";
-import { StrengthsSectionProps } from "./types";
+// import { StrengthsSectionProps } from "./types";
 import { Text } from "@/src/components/ui/elements/Text";
 import Section from "@/src/components/layout/Section";
+import { StrengthsSectionProps } from "@/src/types";
 
 export const StrengthsSection: React.FC<StrengthsSectionProps> = ({
   strengths,

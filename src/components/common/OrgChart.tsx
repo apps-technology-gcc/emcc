@@ -5,8 +5,8 @@ import dynamic from "next/dynamic";
 import { Icon } from "../ui/elements/Icon";
 import { Text } from "../ui/elements/Text";
 import { cn } from "@/src/lib/utils";
-
-const OrgChart = dynamic(() => import("@dabeng/react-orgchart"), {
+// @ts-ignore
+const OrgChart = dynamic<any>(() => import("@dabeng/react-orgchart"), {
   ssr: false,
   loading: () => <span>Loading...</span>,
 });

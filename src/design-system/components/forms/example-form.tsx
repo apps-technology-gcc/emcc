@@ -39,8 +39,8 @@ export const LoginForm = () => {
         label="Email"
         name="email"
         type="email"
-        register={register}
-        error={errors.email}
+        // register={register}
+        // error={errors.email}
         placeholder="Enter your email"
         fullWidth
       />
@@ -49,8 +49,8 @@ export const LoginForm = () => {
         label="Password"
         name="password"
         type="password"
-        register={register}
-        error={errors.password}
+        // register={register}
+        // error={errors.password}
         placeholder="Enter your password"
         fullWidth
       />

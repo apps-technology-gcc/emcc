@@ -2,8 +2,9 @@ import SectionTitle from "@/src/components/common/SectionTitle";
 import { Icon } from "@/src/components/ui/elements/Icon";
 import Link from "@/src/components/ui/elements/Link";
 import React from "react";
-import EventCard from "../../components/EventCard";
+// import EventCard from "../../components/EventCard";
 import { Button } from "@/src/components/ui/elements/Button";
+import EventCard from "@/src/components/common/EventCard";
 
 interface EventData {
   id: string | number;

@@ -93,21 +93,29 @@ const AccordionList = React.forwardRef<
       <div className={cn(contentVariants({ variant, isOpen }))}>
         {"listItems" in props ? (
           <ul className="flex w-full items-start px-5 flex-col gap-5">
-            {props.listItems.map((item, index) => (
-              <li
-                className={cn(
-                  textVariants({
-                    variant: "navbar",
-                  }),
-                  "ml-4 list-item ",
-                  item.id === activeSection && "text-primary-600 list-disc"
-                )}
-                key={index}
-                color="neutralDark"
-              >
-                {item.text ? item.text : item}
-              </li>
-            ))}
+            {props.listItems.map(
+              (
+                item: {
+                  id: string;
+                  text: string;
+                },
+                index
+              ) => (
+                <li
+                  className={cn(
+                    textVariants({
+                      variant: "navbar",
+                    }),
+                    "ml-4 list-item ",
+                    item.id === activeSection && "text-primary-600 list-disc"
+                  )}
+                  key={index}
+                  color="neutralDark"
+                >
+                  {item.text}
+                </li>
+              )
+            )}
           </ul>
         ) : (
           props.children

@@ -3,7 +3,7 @@ import { cn } from "../../../lib/utils";
 import React from "react";
 
 interface IconProps extends React.HTMLAttributes<HTMLSpanElement> {
-  name?: IconType;
+  name?: IconType | string;
   className?: string;
 }
 

@@ -106,7 +106,18 @@ const Page = () => {
         {/* the header is [Name, Country/Region, Award Level, Award Date, Valid
         Until, Status, Profile ] */}
         <div className="flex flex-col gap-12">
-          <Table data={data} />
+          <Table
+            data={data}
+            columns={[
+              { header: "Name", accessorKey: "name" },
+              { header: "Country/Region", accessorKey: "country" },
+              { header: "Award Level", accessorKey: "awardLevel" },
+              { header: "Award Date", accessorKey: "awardDate" },
+              { header: "Valid Until", accessorKey: "validUntil" },
+              { header: "Status", accessorKey: "status" },
+              { header: "Profile", accessorKey: "profile" },
+            ]}
+          />
           <div className="flex flex-wrap items-center justify-between gap-12">
             <div className="flex  items-center gap-5">
               <div className="flex items-center gap-2.5">

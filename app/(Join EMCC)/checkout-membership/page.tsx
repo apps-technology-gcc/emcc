@@ -23,7 +23,6 @@ import BulletText from "@/src/components/ui/elements/BulletText";
 
 import IconWithText from "@/components/common/IconWithText";
 import { Button } from "@/src/components/ui/elements/Button";
-import Speakers from "@/app/components/Speaker";
 import { Input, Label } from "@/src/components/ui/elements/form/Input";
 import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
 import Checkbox from "@/src/components/ui/elements/form/Checkbox";
@@ -158,14 +157,14 @@ const Page = () => {
                     options={[]}
                     name="country"
                     placeholder="Country"
-                    id="country-1"
+                    // id="country-1"
                   />
                   <SearchSelect
                     label="City"
                     options={[]}
                     name="country"
                     placeholder="Country"
-                    id="country-2"
+                    // id="country-2"
                   />
                 </div>
               </div>

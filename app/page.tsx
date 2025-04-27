@@ -128,7 +128,7 @@ const Page = () => {
     <>
       <ModalWrapper
         isOpen={isOpenMainModal && modalName === "initial"}
-        closeModal={closeModel}
+        closeModel={closeModel}
       >
         <div className="flex w-auto max-w-[504px] flex-col gap-12">
           <div className="flex flex-col gap-5">
@@ -163,7 +163,7 @@ const Page = () => {
       </ModalWrapper>
       <ModalWrapper
         isOpen={isOpenMainModal && modalName === "select_location"}
-        closeModal={closeModel}
+        closeModel={closeModel}
       >
         <div className="flex w-auto md:min-w-[662px] flex-col gap-8">
           <div className="flex items-center gap-12 justify-between">

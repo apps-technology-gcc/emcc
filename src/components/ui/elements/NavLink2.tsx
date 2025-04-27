@@ -82,7 +82,7 @@ const navLinkVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "default",
+      // variant: "default",
       size: "md",
       underline: false,
     },

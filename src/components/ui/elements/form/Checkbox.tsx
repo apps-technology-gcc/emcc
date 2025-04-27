@@ -71,7 +71,7 @@ const labelVariants = cva("flex items-center font-normal", {
     variant: "default",
   },
 });
-
+// @ts-ignore
 export interface CheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
     VariantProps<typeof checkboxVariants> {

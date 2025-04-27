@@ -71,8 +71,8 @@ const page = () => {
       jobType: "Full Time",
       workMode: "Remote",
       applyLink: "#",
-      applied: true,
-      date: "31th Aug, 2024",
+      // applied: true,
+      // date: "31th Aug, 2024",
     },
     {
       logo: "/path-to-logo.png",
@@ -83,8 +83,8 @@ const page = () => {
       jobType: "Full Time",
       workMode: "Remote",
       applyLink: "#",
-      applied: true,
-      date: "31th Aug, 2024",
+      // applied: true,
+      // date: "31th Aug, 2024",
     },
     {
       logo: "/path-to-logo.png",
@@ -95,8 +95,8 @@ const page = () => {
       jobType: "Full Time",
       workMode: "Remote",
       applyLink: "#",
-      applied: true,
-      date: "31th Aug, 2024",
+      // applied: true,
+      // date: "31th Aug, 2024",
     },
     {
       logo: "/path-to-logo.png",
@@ -107,8 +107,8 @@ const page = () => {
       jobType: "Full Time",
       workMode: "Remote",
       applyLink: "#",
-      applied: true,
-      date: "31th Aug, 2024",
+      // applied: true,
+      // date: "31th Aug, 2024",
     },
     {
       logo: "/path-to-logo.png",
@@ -119,8 +119,8 @@ const page = () => {
       jobType: "Full Time",
       workMode: "Remote",
       applyLink: "#",
-      applied: true,
-      date: "31th Aug, 2024",
+      // applied: true,
+      // date: "31th Aug, 2024",
     },
     {
       logo: "/path-to-logo.png",
@@ -131,8 +131,8 @@ const page = () => {
       jobType: "Full Time",
       workMode: "Remote",
       applyLink: "#",
-      applied: true,
-      date: "31th Aug, 2024",
+      // applied: true,
+      // date: "31th Aug, 2024",
     },
   ];
 
@@ -193,7 +193,7 @@ const page = () => {
                 <input
                   id=""
                   placeholder="Search Jobs By Keyword"
-                  class="w-full rounded-sm outline-none px-2.5 py-2 border transition-colors text-body_3 border-border text-neutralDark focus:border-primary-600 placeholder:text-neutralLight h-[32px] text-xs leading-[18px] font-light font-poppins font-poppins text-left border w-full min-h-[40px] text-neutralDark border-border outline-none px-2.5 py-2 focus:border-primary-600  "
+                  className="w-full rounded-sm outline-none px-2.5 py-2 border transition-colors text-body_3 border-border text-neutralDark focus:border-primary-600 placeholder:text-neutralLight h-[32px] text-xs leading-[18px] font-light font-poppins font-poppins text-left border w-full min-h-[40px] text-neutralDark border-border outline-none px-2.5 py-2 focus:border-primary-600  "
                   type="text"
                 />
                 <div className="flex items-center absolute  right-2.5  top-1/2 transform -translate-y-1/2  cursor-pointer">
@@ -205,7 +205,7 @@ const page = () => {
                   <input
                     placeholder="Location"
                     id=""
-                    class="w-full rounded-sm outline-none px-2.5 py-2 border transition-colors text-body_3 border-border text-neutralDark focus:border-primary-600 placeholder:text-neutralLight h-[32px] text-xs leading-[18px] font-light font-poppins font-poppins text-left border w-full min-h-[40px] text-neutralDark border-border outline-none px-2.5 py-2 focus:border-primary-600  "
+                    className="w-full rounded-sm outline-none px-2.5 py-2 border transition-colors text-body_3 border-border text-neutralDark focus:border-primary-600 placeholder:text-neutralLight h-[32px] text-xs leading-[18px] font-light font-poppins font-poppins text-left border w-full min-h-[40px] text-neutralDark border-border outline-none px-2.5 py-2 focus:border-primary-600  "
                     type="text"
                   />
                   <div className="flex items-center absolute  right-2.5  top-1/2 transform -translate-y-1/2  cursor-pointer">

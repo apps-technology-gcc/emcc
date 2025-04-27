@@ -1,10 +1,23 @@
 export type IconType =
+  | "chevron_left"
   | "add"
   | "remove"
   | "edit"
   | "delete"
   | "search"
-  | "description";
+  | "description"
+  | "arrow"
+  | "menu"
+  | "close"
+  | "location"
+  | "location-filled"
+  | "location-outline"
+  | "location-filled"
+  | "location-outline"
+  | "location-filled"
+  | "location-outline"
+  | "location-filled"
+  | "download";
 export interface NavigationItemProps {
   text: string;
 }

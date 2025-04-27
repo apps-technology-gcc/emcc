@@ -2,7 +2,7 @@
 import React from "react";
 import { Text } from "./Text";
 import { Icon } from "./Icon";
-import { IconType } from "@/types/icon";
+import { IconType } from "@/src/types";
 
 // Define types for our navigation items
 interface SubNavItem {

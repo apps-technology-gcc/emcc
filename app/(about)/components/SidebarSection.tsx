@@ -20,7 +20,7 @@ interface SidebarSectionProps {
     };
     links: { text: string; href: string }[];
   };
-  moreAboutUs: {
+  moreAboutUs?: {
     title: string;
     cards: { icon: string; title: string; description: string }[];
   };
@@ -31,23 +31,19 @@ interface SidebarSectionProps {
   };
   moreDetails?: {
     title: string;
-    items: [
-      {
-        title: string;
-        href: string;
-      }
-    ];
+    items: {
+      title: string;
+      href: string;
+    }[];
   };
   downloadHistory?: {
     title: string;
-    items: [
-      {
-        title: string;
-        href: string;
-      }
-    ];
+    items: {
+      title: string;
+      href: string;
+    }[];
   };
-  activeSection?: string;
+  activeSection: string;
 }
 
 const SidebarSection: React.FC<SidebarSectionProps> = ({

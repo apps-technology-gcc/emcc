@@ -20,7 +20,7 @@ const GuidingValuesSection: React.FC<GuidingValuesSectionProps> = ({
       <div className="flex flex-col gap-8">
         {values.map((value) => (
           <div key={value.id}>
-            <Text variant={"h3"} className="text-neutralDark">
+            <Text variant={"card_title_large"} className="text-neutralDark">
               {value.title}
             </Text>
             <Text variant={"body"} className="text-neutral">

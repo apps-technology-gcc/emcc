@@ -66,7 +66,10 @@ export interface BoardPageContent {
       title: string;
       accordion: {
         title: string;
-        listItems: string[];
+        listItems: {
+          text: string;
+          id: string;
+        }[];
       };
       links: SidebarLink[];
     };

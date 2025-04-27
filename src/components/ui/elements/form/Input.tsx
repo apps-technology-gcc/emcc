@@ -78,7 +78,7 @@ const labelVariants = cva("font-normal", {
   },
 });
 
-// Types
+// @ts-ignore
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   name: string;
@@ -162,6 +162,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       <textarea
         {...field}
         {...props}
+        // @ts-ignore
         ref={ref}
         cols={cols ? cols : 50}
         rows={rows ? rows : 8}

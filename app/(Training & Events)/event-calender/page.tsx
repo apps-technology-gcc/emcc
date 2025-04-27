@@ -23,7 +23,7 @@ import BulletText from "@/src/components/ui/elements/BulletText";
 
 import IconWithText from "@/components/common/IconWithText";
 import { Button } from "@/src/components/ui/elements/Button";
-import Speakers from "@/app/components/Speaker";
+// import Speakers from "@/app/components/Speaker";
 import { Input, Label } from "@/src/components/ui/elements/form/Input";
 import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
 import Checkbox from "@/src/components/ui/elements/form/Checkbox";
@@ -104,7 +104,8 @@ const Page = () => {
   const handlePrevMonth = () => {
     console.log("Clicked", calendarRef);
     if (calendarRef.current) {
-      const calendarApi = calendarRef.current.getApi();
+      // @ts-ignore
+      const calendarApi = calendarRef?.current?.getApi();
       calendarApi.prev(); // Move to the previous month
       updateCurrentMonth(calendarApi);
     }
@@ -112,6 +113,7 @@ const Page = () => {
 
   const handleNextMonth = () => {
     if (calendarRef.current) {
+      // @ts-ignore
       const calendarApi = calendarRef.current.getApi();
       calendarApi.next(); // Move to the next month
       updateCurrentMonth(calendarApi);

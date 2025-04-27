@@ -22,10 +22,10 @@ const buttonVariants = cva(baseStyles, {
   },
   defaultVariants: {
     variant: "gradient_one",
-    size: "default",
+    // size: "default",
   },
 });
-
+// @ts-ignore
 interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
@@ -39,7 +39,7 @@ const GradientButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
     {
       className,
       variant,
-      size,
+      // size,
       disabled = false,
       children,
       Icon,
