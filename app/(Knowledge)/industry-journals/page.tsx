@@ -17,7 +17,7 @@ import ICFLogo from "@/public/icf_logo.svg";
 import Logo from "@/public/logo.svg";
 import Image from "next/image";
 import SectionTitle from "@/src/components/common/SectionTitle";
-import AccordionGroup from "@/app/(About)/components/AccordionGroup";
+import AccordionGroup from "@/src/components/common/AccordionGroup";
 
 import MoreAboutUs from "@/src/components/common/MoreAboutUs";
 import sqricon from "@/public/sqricon.svg";

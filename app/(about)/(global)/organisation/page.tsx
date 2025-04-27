@@ -21,10 +21,11 @@ import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
 
 import TextContentSection from "@/components/common/TextContentSection";
-import AccordionGroup from "../../components/AccordionGroup";
+
 import FilingsTable from "../board-and-governance-global/comopnents/FilingsTable";
 import SidebarSection from "../../components/SidebarSection";
 import BoardText from "@/src/components/common/BoardText";
+import AccordionGroup from "@/src/components/common/AccordionGroup";
 const page = () => {
   const bredList = [
     {

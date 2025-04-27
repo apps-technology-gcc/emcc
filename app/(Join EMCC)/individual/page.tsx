@@ -8,7 +8,6 @@ import bgImage from "@/public/about-bg.png";
 import { useEffect, useState } from "react";
 import pageContentJson from "@/src/data/about.json";
 import TextContentSection from "@/src/components/common/TextContentSection";
-import BannerSection from "@/app/(About)/components/BannerSection";
 import SidebarMenu from "@/src/components/common/SideBarMenu";
 import { Text } from "@/src/components/ui/elements/Text";
 import BulletText from "@/src/components/ui/elements/BulletText";
@@ -17,6 +16,7 @@ import MemberBoard from "../components/MemberBoard";
 import ApplyBoard from "@/src/components/common/ApplyBoard";
 import { Button } from "@/src/components/ui/elements/Button";
 import SidebarMembers from "@/src/components/common/SidebarMembers";
+import BannerSection from "@/src/components/common/BannerSection";
 
 const page = () => {
   const [pageContent, setPageContent] = useState<any>(pageContentJson);

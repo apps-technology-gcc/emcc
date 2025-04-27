@@ -22,15 +22,14 @@ import SectionLink from "@/src/components/common/SectionLink";
 import AboutGlobalImg from "@/public/about-global.png";
 import Guiding from "../../components/Guiding";
 import TextContentSection from "@/components/common/TextContentSection";
-import AccordionGroup from "../../components/AccordionGroup";
 import EmccFlag from "@/public/emcc-flag.svg";
 import flag from "@/public/flag.png";
 
-import BannerSection from "../../components/BannerSection";
 import pageContentJson from "@/src/data/aboutGlobal.json";
 import { PageContent } from "./type";
 import OurRegionSection from "../../components/OurRegionSection";
 import SidebarSection from "../../components/SidebarSection";
+import AccordionGroup from "@/src/components/common/AccordionGroup";
 const page = () => {
   const bredList = [
     {

@@ -21,7 +21,6 @@ import MemberCard from "@/src/components/card/MemberCard";
 import SectionLink from "@/src/components/common/SectionLink";
 
 import TextContentSection from "@/components/common/TextContentSection";
-import AccordionGroup from "../../components/AccordionGroup";
 import BoardMember from "../../components/BoardMember";
 import SearchSelect from "@/src/components/ui/elements/form/SearchSelect";
 import Link from "@/src/components/ui/elements/Link";
