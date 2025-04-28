@@ -45,12 +45,19 @@ const page = () => {
           title: "Coaching",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/coaching",
+              id: "definition",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/coaching",
+              id: "guidelines",
+            },
+            {
+              title: "Framework",
+              href: "/coaching",
+              id: "framework",
             },
           ],
         },
@@ -60,12 +67,19 @@ const page = () => {
           title: "Mentoring",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/mentoring",
+              id: "definition",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/mentoring",
+              id: "guidelines",
+            },
+            {
+              title: "Framework",
+              href: "/mentoring",
+              id: "framework",
             },
           ],
         },
@@ -75,12 +89,19 @@ const page = () => {
           title: "Supervision",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/supervision",
+              id: "definition",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/supervision",
+              id: "guidelines",
+            },
+            {
+              title: "Framework",
+              href: "/supervision",
+              id: "framework",
             },
           ],
         },

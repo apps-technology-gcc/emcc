@@ -14,15 +14,17 @@ interface TextSectionProps {
   title?: string;
   texts?: string[];
   color?: string;
+  id?: string;
 }
 
 const TextContentSection: React.FC<TextSectionProps> = ({
   title,
   texts,
   color,
+  id,
 }) => {
   return (
-    <div className="flex flex-col gap-12">
+    <div id={id} className="flex flex-col gap-12">
       {title && <SectionTitle title={title} />}
       {/* <SectionTitle title={title} /> */}
       {texts && texts.length > 0 && (

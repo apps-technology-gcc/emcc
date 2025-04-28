@@ -11,23 +11,28 @@ export const AllNewsCard: React.FC<any> = ({
 }) => {
   return (
     <article className="max-height-[120px] overflow-hidden xs:p-0 flex bg-background flex-nowrap flex-1 shrink gap-5 xs:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
-      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto  h-full w-[120px]">
+      <div className="flex  flex-col items-center self-stretch my-auto  h-full w-[120px]">
         <img
           loading="lazy"
           src={imageUrl}
           alt={imageAlt}
-          className="object-contain flex-1 bg-blend-normal aspect-square "
+          width={120}
+          height={120}
+          className="object-contain min-h-full min-w-[120px] flex-1 bg-blend-normal aspect-square "
         />
       </div>
-      <div className="flex py-1 pr-1 gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 min-w-[240px]">
+      <div className="flex py-1 pr-1 gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 sm:min-w-[240px]">
         <Text
           variant={"card_title_small"}
           className="text-neutralDark line-clamp-2"
         >
           {title}
         </Text>
+
         <Text variant={"body"} className="text-neutral line-clamp-1">
-          {description}
+          {description
+            ? description
+            : "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium incidunt tempora repellendus iusto blanditiis nostrum."}
         </Text>
       </div>
     </article>
@@ -42,16 +47,18 @@ export const PartnersNewsCard: React.FC<{
   tagColor: string;
 }> = ({ imageUrl, title, description, imageAlt, tag, tagColor }) => {
   return (
-    <article className="max-height-[120px] relative overflow-hidden xs:p-0 flex bg-background flex-wrap flex-1 shrink gap-5 xs:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
-      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto  h-full w-[120px]">
+    <article className="max-height-[120px] relative overflow-hidden xs:p-0 flex bg-background  flex-1 shrink gap-5 sm:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
+      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto min-h-full  w-[120px]">
         <img
           loading="lazy"
           src={imageUrl || PartnerImg.src}
           alt={imageAlt}
-          className="object-contain flex-1 bg-blend-normal aspect-square "
+          // height={120}
+          // width={120}
+          className="object-contain flex-1 m-0 w-[120px] bg-blend-normal aspect-square "
         />
       </div>
-      <div className="flex  gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 min-w-[240px] pl-0 pr-5 py-5">
+      <div className="flex  gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 sm:min-w-[240px] pr-5 py-[27px]">
         <div className="absolute top-2.5 right-2.5">
           <Tag style={"style1"} variant={"tag2"}>
             {tag}
@@ -78,16 +85,18 @@ export const LeadershipNewsCard: React.FC<{
   dotColor: string;
 }> = ({ imageUrl, title, description, imageAlt, dotColor }) => {
   return (
-    <article className="max-height-[120px] relative overflow-hidden xs:p-0 flex bg-background flex-wrap flex-1 shrink gap-5 xs:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
-      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto  h-full w-[120px]">
+    <article className="max-height-[120px] relative overflow-hidden xs:p-0 flex bg-background  flex-1 shrink gap-5 xs:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
+      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto  h-full min-w-[120px]">
         <img
           loading="lazy"
           src={imageUrl}
           alt={imageAlt}
-          className="object-contain flex-1 bg-blend-normal aspect-square "
+          width={120}
+          height={120}
+          className="object-contain  min-h-full min-w-[120px]  flex-1 bg-blend-normal aspect-square "
         />
       </div>
-      <div className="flex  gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 min-w-[240px] pl-0 pr-5 py-5">
+      <div className="flex  gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 sm:min-w-[240px] pl-0 pr-5 py-5">
         <div className="flex items-center gap-2.5">
           <div className="flex items-center  h-2.5 w-2.5 min-w-2.5 bg-[#258DED]"></div>
           <Text
@@ -112,16 +121,18 @@ export const EventNewsCard: React.FC<{
   team: string;
 }> = ({ imageUrl, title, imageAlt, date, team }) => {
   return (
-    <article className="max-height-[120px] relative overflow-hidden xs:p-0 flex bg-background flex-wrap flex-1 shrink gap-5 xs:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
-      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto  h-full w-[120px]">
+    <article className="max-height-[120px] relative overflow-hidden xs:p-0 flex bg-background  flex-1 shrink gap-5 sm:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
+      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto  h-full min-w-[120px]">
         <img
           loading="lazy"
           src={imageUrl}
           alt={imageAlt}
-          className="object-contain flex-1 bg-blend-normal aspect-square "
+          width={120}
+          height={120}
+          className="object-contain flex-1 h-full min-w-[120px] bg-blend-normal aspect-square "
         />
       </div>
-      <div className="flex  gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 min-w-[240px] pl-0 pr-5 py-5">
+      <div className="flex  gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 sm:min-w-[240px] pl-0 pr-5 py-5">
         <div className="flex items-center gap-2.5">
           <Text
             variant={"card_title_small"}
@@ -153,16 +164,18 @@ export const CommonNewsCard: React.FC<{
   date: string;
 }> = ({ imageUrl, title, imageAlt, date }) => {
   return (
-    <article className="max-height-[120px] relative overflow-hidden xs:p-0 flex bg-background flex-wrap flex-1 shrink gap-5 xs:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
-      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto  h-full w-[120px]">
+    <article className="max-height-[120px] relative overflow-hidden xs:p-0 flex bg-background flex-1 shrink gap-5 sm:gap-8 items-center self-stretch my-auto rounded-md basis-0 bg-neutral-100 min-w-[240px] max-md:max-w-full">
+      <div className="flex overflow-hidden flex-col items-center self-stretch my-auto  h-full min-w-[120px]">
         <img
           loading="lazy"
           src={imageUrl}
           alt={imageAlt}
-          className="object-contain flex-1 bg-blend-normal aspect-square "
+          width={120}
+          height={120}
+          className="object-contain flex-1 h-full w-[120px] bg-blend-normal aspect-square "
         />
       </div>
-      <div className="flex  gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 min-w-[240px] pl-0 pr-5 py-5">
+      <div className="flex  gap-5 flex-col flex-1 shrink self-stretch my-auto text-sm basis-0 sm:min-w-[240px] pl-0 pr-5 py-5">
         <div className="flex items-center gap-2.5">
           <Text
             variant={"card_title_small"}

@@ -56,6 +56,7 @@ interface AccordionMenuListProps extends BaseAccordionProps {
   listItems: {
     title: string;
     href: string;
+    id?: string;
   }[];
 }
 
@@ -76,7 +77,7 @@ const AccordionMenuList = React.forwardRef<
     activeItem,
     itemColor = "neutralDark",
   } = props;
-
+  console.log("activeItem", activeItem);
   const toggleAccordion = () => setIsOpen(!isOpen);
 
   return (
@@ -106,8 +107,8 @@ const AccordionMenuList = React.forwardRef<
                   className={cn(
                     textVariants({ variant: "navbar" }),
                     `pl-3 hover:list-disc cursor-pointer hover:text-primary-600 ml-5`,
-                    activeItem === item.title && "list-disc ml-5",
-                    activeItem === item.title
+                    activeItem === item.id && "list-disc ml-5",
+                    activeItem === item.id
                       ? `text-primary-600`
                       : "text-neutralDark"
                   )}

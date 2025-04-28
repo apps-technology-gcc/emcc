@@ -17,11 +17,23 @@ const Navbar = () => {
     "About" | "Join EMCC" | "Knowledge" | "Insights" | "More +" | null
   >(null);
   const navLinks = [
-    { text: "About", isactive: activeMenu === "About" },
-    { text: "Join EMCC", isactive: activeMenu === "Join EMCC" },
-    { text: "Knowledge", isactive: activeMenu === "Knowledge" },
-    { text: "Insights", isactive: activeMenu === "Insights" },
-    { text: "More +", isactive: activeMenu === "More +" },
+    { text: "About", href: "/about", isactive: activeMenu === "About" },
+    {
+      text: "Join EMCC",
+      href: "/individual",
+      isactive: activeMenu === "Join EMCC",
+    },
+    {
+      text: "Knowledge",
+      href: "/competency-frameworks",
+      isactive: activeMenu === "Knowledge",
+    },
+    {
+      text: "Insights",
+      href: "/Insights",
+      isactive: activeMenu === "Insights",
+    },
+    { text: "More +", href: "/", isactive: activeMenu === "More +" },
   ];
 
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -62,7 +74,7 @@ const Navbar = () => {
             <NavLink2
               onMouseEnter={() => handleMouseEnter(link.text)}
               onMouseLeave={handleMouseLeave}
-              href="#"
+              href={link?.href}
               variant={"two"}
               key={index}
               className="pt-[4.5px]"

@@ -49,7 +49,7 @@ const page = () => {
       </Breadcrumb>
       <Section bgColor="white">
         <div className="grid grid-cols-1 md:grid-cols-11 gap-16">
-          <div className="col-span-7 flex flex-col gap-20">
+          <div className="md:col-span-7 flex flex-col gap-20">
             <TextContentSection
               title={pageContent.executiveLeadership.title}
               texts={pageContent.executiveLeadership.description}
@@ -65,7 +65,7 @@ const page = () => {
               // linkTitle="Advisory Board Structure"
             />
           </div>
-          <div className="col-span-4">
+          <div className="md:col-span-4">
             <SidebarSection activeSection="" {...pageContent.sidebar} />
           </div>
         </div>

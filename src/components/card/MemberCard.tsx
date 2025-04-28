@@ -23,7 +23,10 @@ const MemberCard = () => {
         />
       </div>
       <div className="pt-12 pb-8 px-5 flex flex-col gap-5 items-center">
-        <Text variant={"card_title_large"} className="text-[#222222]">
+        <Text
+          variant={"card_title_large"}
+          className="text-[#222222] text-center"
+        >
           Mohammad Abdullah
         </Text>
         <div className="flex flex-col items-center justify-center">

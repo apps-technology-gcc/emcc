@@ -41,9 +41,12 @@ const page = () => {
       //     ],
       //   },
       links: [
-        { text: "Individual Membership", href: "/" },
-        { text: "Organisational Membership", href: "/about" },
-        { text: "Training Provider Membership", href: "/about" },
+        { text: "Individual Membership", href: "/individual" },
+        { text: "Organisational Membership", href: "/organisational" },
+        {
+          text: "Training Provider Membership",
+          href: "/training-provider-membership",
+        },
       ],
     },
   ];

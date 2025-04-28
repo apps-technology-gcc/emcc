@@ -30,6 +30,7 @@ import ApplyBoard from "@/src/components/common/ApplyBoard";
 
 const page = () => {
   const [pageContent, setPageContent] = useState<any>(pageContentJson);
+
   const menuData = [
     {
       title: "Communities of Practice",
@@ -42,12 +43,16 @@ const page = () => {
           title: "Coaching",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/coaching",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/coaching",
+            },
+            {
+              title: "Framework",
+              href: "/coaching",
             },
           ],
         },
@@ -57,12 +62,16 @@ const page = () => {
           title: "Mentoring",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/mentoring",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/mentoring",
+            },
+            {
+              title: "Framework",
+              href: "/mentoring",
             },
           ],
         },
@@ -72,12 +81,16 @@ const page = () => {
           title: "Supervision",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/supervision",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/supervision",
+            },
+            {
+              title: "Framework",
+              href: "/supervision",
             },
           ],
         },
@@ -189,7 +202,7 @@ const page = () => {
               in the links.
             </Text>
           </div>
-          <div className="">
+          <div className="sticky">
             <div className="sticky flex flex-col gap-12 top-4 max-h-[calc(100vh)] overflow-y-scroll scrollbar-hide">
               <SidebarMenu menuData={menuData} />
               <ApplyBoard

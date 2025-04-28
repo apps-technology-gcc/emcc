@@ -24,24 +24,14 @@ const page = () => {
     {
       title: "Become a Member",
       menuColor: "primary-100",
-      //   accordion: {
-      //     activeItem: "Coach Register",
-      //     title: "Search a Coach Record",
-      //     listItems: [
-      //       {
-      //         title: "Coach Register",
-      //         href: "/",
-      //       },
-      //       {
-      //         title: "Disciplinary Action",
-      //         href: "/about",
-      //       },
-      //     ],
-      //   },
+
       links: [
-        { text: "Individual Membership", href: "/" },
-        { text: "Organisational Membership", href: "/about" },
-        { text: "Training Provider Membership", href: "/about" },
+        { text: "Individual Membership", href: "/individual" },
+        { text: "Organisational Membership", href: "/organisational" },
+        {
+          text: "Training Provider Membership",
+          href: "/training-provider-membership",
+        },
       ],
     },
   ];

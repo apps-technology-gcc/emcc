@@ -7,7 +7,7 @@ import NavLink2 from "../ui/elements/NavLink2";
 import { Icon } from "../ui/elements/Icon";
 import { cn } from "@/src/lib/utils";
 
-const SidebarMenu = ({ menuData }: any) => {
+const SidebarMenu = ({ menuData, activeSection }: any) => {
   const pathname = usePathname();
 
   return (
@@ -36,7 +36,7 @@ const SidebarMenu = ({ menuData }: any) => {
                   <div className="border-b border-border" key={index}>
                     <AccordionMenuList
                       className="pt-0"
-                      activeItem={link.activeItem}
+                      activeItem={activeSection}
                       itemColor={link.itemColor}
                       title={link.title}
                       listItems={link.listItems}

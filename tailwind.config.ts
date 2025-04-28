@@ -2,7 +2,7 @@ import { colors } from "./src/components/ui/foundations/colors";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "false",
+  darkMode: false,
   content: [
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",

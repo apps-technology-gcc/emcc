@@ -32,6 +32,60 @@ import CtgImg from "@/public/category.png";
 import MemberBoard from "@/src/components/common/MemberBoard";
 
 const page = () => {
+  const sections = [
+    { id: "definition", title: "Definition" },
+    { id: "guidelines", title: "Guidelines" },
+    { id: "framework", title: "Framework" },
+  ];
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    // Create an Intersection Observer with options
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Find the entry with the highest intersection ratio
+        const visibleSection = entries.reduce((max: any, entry: any) => {
+          return entry.intersectionRatio > (max?.intersectionRatio || 0)
+            ? entry
+            : max;
+        }, null);
+
+        // Update active section if we have a visible section
+        if (visibleSection && visibleSection.intersectionRatio > 0) {
+          setActiveSection(visibleSection.target.id);
+        }
+      },
+      {
+        // Root margin to start detecting slightly before the element comes into view
+        rootMargin: "-20% 0px -20% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1], // Multiple thresholds for smoother detection
+      }
+    );
+
+    // Observe all section elements
+    sections.forEach(({ id }) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    // Cleanup function to remove observers
+    return () => {
+      sections.forEach(({ id }) => {
+        const element = document.getElementById(id);
+        if (element) {
+          observer.unobserve(element);
+        }
+      });
+    };
+  }, [sections]); // Add sections as dependency
+
+  // For debugging
+  useEffect(() => {
+    console.log("Active Section:", activeSection);
+  }, [activeSection]);
+
   const [pageContent, setPageContent] = useState<any>(pageContentJson);
   const menuData = [
     {
@@ -45,12 +99,19 @@ const page = () => {
           title: "Coaching",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/coaching",
+              id: "definition",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/coaching",
+              id: "guidelines",
+            },
+            {
+              title: "Framework",
+              href: "/coaching",
+              id: "framework",
             },
           ],
         },
@@ -60,12 +121,19 @@ const page = () => {
           title: "Mentoring",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/mentoring",
+              id: "definition",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/mentoring",
+              id: "guidelines",
+            },
+            {
+              title: "Framework",
+              href: "/mentoring",
+              id: "framework",
             },
           ],
         },
@@ -75,12 +143,19 @@ const page = () => {
           title: "Supervision",
           listItems: [
             {
-              title: "Coach Register",
-              href: "/",
+              title: "Definition",
+              href: "/supervision",
+              id: "definition",
             },
             {
-              title: "Disciplinary Action",
-              href: "/about",
+              title: "Guidelines",
+              href: "/supervision",
+              id: "guidelines",
+            },
+            {
+              title: "Framework",
+              href: "/supervision",
+              id: "framework",
             },
           ],
         },
@@ -186,13 +261,14 @@ const page = () => {
             </div>
 
             <TextContentSection
+              id="definition"
               title="Definition"
               texts={[
                 "Lorem ipsum dolor sit amet consectetur. Non tincidunt augue commodo aliquet. Nulla vitae elementum eget sociis adipiscing vehicula pellentesque. Aenean purus lacus nibh suspendisse tellus felis morbi purus felis. Velit lobortis aenean sem nunc cras. Purus accumsan eu massa nunc scelerisque enim sagittis. Magnis odio massa ultricies eget egestas orci aliquam. Adipiscing ullamcorper eu platea morbi arcu. Nullam elementum in massa duis vel. Elementum amet in ultricies nunc tellus facilisi turpis. Ultrices a in egestas est eu. Lorem quis aenean duis diam pulvinar aliquet nulla aenean consequat. Aliquet massa ac commodo nullam velit tincidunt gravida. Velit tristique amet viverra nulla vulputate turpis nibh libero. Gravida nulla molestie varius tortor in arcu.",
                 "Non at lorem vulputate diam pretium. Tristique lectus sed feugiat dictum sit. Blandit massa facilisis vel nulla aliquet interdum purus. Nec urna sit fringilla eu ullamcorper. Ut dictum pulvinar ornare porttitor.",
               ]}
             />
-            <div className="flex flex-col gap-12">
+            <div id="guidelines" className="flex flex-col gap-12">
               <TextContentSection title="Guidelines" />
               <div className="flex flex-col gap-5">
                 <Text variant={"card_title_large"}>Introduction</Text>
@@ -226,7 +302,7 @@ const page = () => {
               <AccordionGroup items={accordionData} />
             </div>
 
-            <div className="flex flex-col gap-12">
+            <div id="framework" className="flex flex-col gap-12">
               <TextContentSection
                 texts={[
                   "Lorem ipsum dolor sit amet consectetur. Sed tellus lobortis nullam lobortis purus eget suscipit purus. Ipsum nullam felis eget proin a nulla commodo cursus. Sapien urna dui aliquet adipiscing volutpat molestie. Vitae volutpat porta enim montes consequat id mauris.",
@@ -246,7 +322,8 @@ const page = () => {
           </div>
           <div className="">
             <div className="sticky flex flex-col gap-12 top-4 max-h-[calc(100vh)] overflow-y-scroll scrollbar-hide">
-              <SidebarMenu menuData={menuData} />
+              <SidebarMenu menuData={menuData} activeSection={activeSection} />
+              {/* <SidebarSection {...sideBarData} activeSection={activeSection} /> */}
               <ApplyBoard
                 buttonText="Download"
                 title="Thought Leadership & Development"
