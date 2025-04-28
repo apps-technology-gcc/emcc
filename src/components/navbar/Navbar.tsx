@@ -74,7 +74,7 @@ const Navbar = () => {
             <NavLink2
               onMouseEnter={() => handleMouseEnter(link.text)}
               onMouseLeave={handleMouseLeave}
-              href={link?.href}
+              // href={link?.href}
               variant={"two"}
               key={index}
               className="pt-[4.5px]"
